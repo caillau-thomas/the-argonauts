@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import LongCards from "@/app/components/cards/descriptionsCards/descriptionsCards";
 import ShortCardsGroup from "@/app/components/cards/shortCards/shortCardsGroup";
-
+import ButtonEnliste from "@/app/components/buttons/buttonsEnlist";
 export default function ComponenstOverview() {
   return (
     <div className={styles.page}>
@@ -60,6 +60,15 @@ export default function ComponenstOverview() {
           </div>
         </div>
         <h2 style={{width: '100%'}}>Buttons & Logo</h2>
+        <div className={styles.pannels} style={{backgroundColor: 'grey'}}>
+          <div className={styles.heading}>
+            <h3>Buttons</h3><br />
+            Enlist
+          </div>
+          <div className={styles.example}>
+            <ButtonEnliste />
+          </div>
+        </div>
       </main>
       <footer className={styles.footer}>
         TEST
