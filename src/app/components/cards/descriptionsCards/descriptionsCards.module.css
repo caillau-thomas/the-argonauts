@@ -1,0 +1,12 @@
+.card {
+    position: relative;
+    padding: 20px;
+    margin-left: -20;
+    overflow: hidden;
+    text-align: left;
+    clip-Path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    background: rgba(0, 0, 0, 0.571);
+    color: white;
+  }
+  

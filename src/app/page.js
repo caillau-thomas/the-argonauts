@@ -13,18 +13,15 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+
+        Cette page sera la landing page mais pour le moment on la
+        <br />
+        laisse en l etat comme un exemple pour la prise en main
 
         <div className={styles.ctas}>
           <a
             className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
+            href="/pages/componentsOverview"
             rel="noopener noreferrer"
           >
             <Image
@@ -34,7 +31,7 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            Page des components
           </a>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
