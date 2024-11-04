@@ -6,6 +6,7 @@ export default function ComponenstOverview() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h2 style={{width: '100%'}}>Cards</h2>
         <div className={styles.pannels}>
           <div className={styles.heading}>
             <h3>Descriptions Cards</h3><br />
@@ -16,8 +17,8 @@ export default function ComponenstOverview() {
               title="description card"
               description="description card"
               style={{
-                width: '55vw',
-                height: '15vh',
+                width: '25vw',
+                height: '10vh',
                 padding: '30px',
               }} />
           </div>
@@ -33,8 +34,8 @@ export default function ComponenstOverview() {
               description="Ship categorie"
               numCards={8}
               cardStyle={{
-                width: '20vw',
-                height: '15vh',
+                width: '10vw',
+                height: '10vh',
                 padding: '30px',
               }}
             />
@@ -49,15 +50,16 @@ export default function ComponenstOverview() {
             <ShortCardsGroup
               title="Members"
               description="Members"
-              numCards={9}
+              numCards={8}
               cardStyle={{
-                width: '12vw',
-                height: '12vh',
+                width: '10vw',
+                height: '10vh',
                 padding: '30px',
               }}
             />
           </div>
         </div>
+        <h2 style={{width: '100%'}}>Buttons & Logo</h2>
       </main>
       <footer className={styles.footer}>
         TEST
