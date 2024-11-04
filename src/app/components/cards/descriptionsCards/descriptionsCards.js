@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './descriptionsCards.module.css';
 
-const DescriptionsCards = ({ title, description, style }) => {
+const LongCards = ({ title, description, style }) => {
   return (
     <div className={styles.card} style={style}>
       <h2>{title}</h2>
@@ -11,4 +11,4 @@ const DescriptionsCards = ({ title, description, style }) => {
   );
 };
 
-export default DescriptionsCards;
+export default LongCards;
