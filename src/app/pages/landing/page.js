@@ -3,13 +3,14 @@ import LongCards from "../../components/cards/longCards/longCards"
 import ReversedLongCards from "@/app/components/cards/reversedLongCards/reversedLongCards";
 import ButtonsEnlist from "@/app/components/buttons/buttonsEnlist";
 import Heading from "@/app/components/heading/page";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <landing className={styles.landing}>
+      <div className={styles.landing}>
         <Heading />
-      </landing>
+      </div>
       <main id="main" className={styles.main}>
         <div className={styles.about}>
           <div className={styles.aboutTxt}>
@@ -43,7 +44,6 @@ export default function Home() {
       <footer className={styles.footer}>
         <a
           href="/pages/componentsOverview"
-          target="_blank"
           rel="noopener noreferrer"
         >
           Page des components
