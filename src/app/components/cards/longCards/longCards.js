@@ -1,6 +1,5 @@
-// components/DescriptionsCards.js
 import React from 'react';
-import styles from './descriptionsCards.module.css';
+import styles from './longCards.module.css';
 
 const LongCards = ({ title, description, style }) => {
   return (
