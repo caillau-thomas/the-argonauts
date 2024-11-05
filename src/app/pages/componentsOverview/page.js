@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import LongCards from "@/app/components/cards/descriptionsCards/descriptionsCards";
+import LongCards from "@/app/components/cards/longCards/longCards";
 import ShortCardsGroup from "@/app/components/cards/shortCards/shortCardsGroup";
 import ButtonEnliste from "@/app/components/buttons/buttonsEnlist";
 export default function ComponenstOverview() {
