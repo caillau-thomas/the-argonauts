@@ -1,0 +1,27 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --primary-color: #0070f3;
+
+  font-size: 14px;
+
+  --3xs-space: .215em;
+  --2xs-space: .5em;
+  --xs-space: .785em;
+  --s-space: 1em;
+  --m-space: 1.5em;
+  --l-space: 2em;
+  --xl-space: 2.5em;
+  --2xl-space: 3em;
+  --3xl-space: 4em;
+  --4xl-space: 5em;
+  --5xl-space: 6em;
+}
+
+
+body {
+  margin: 0;
+}

@@ -1,3 +1,79 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "simple-import-sort"
+    ],
+    "rules": {
+        "quote-props": ["error", "as-needed"],
+        "react/jsx-uses-react": ["error"],
+        "react/jsx-uses-vars": ["error"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "multiline-ternary": 0,
+        "indent": ["error", 2, { "flatTernaryExpressions": true, "SwitchCase": 1 }],
+        "no-var": "error",
+        "no-console": "warn",
+        "prefer-const": "error",
+        "no-multi-spaces": [
+            "error",
+            {
+            "exceptions": {
+                "ConditionalExpression": true,
+                "VariableDeclarator": true,
+                "ImportDeclaration": true
+            }
+            }
+        ],
+        "key-spacing": ["error", { "align": "value" }],
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never"
+        }],
+        "object-curly-newline": [
+            "error",
+            {
+                "minProperties": 5,
+                "consistent": true,
+                "multiline": true
+            }
+        ],
+        "arrow-parens":[ "error", "as-needed"],
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "semi": [2, "never"],
+        "no-prototype-builtins": "off",
+        "object-curly-spacing": ["error", "always"],
+        "space-in-parens": ["error", "never"],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
+        // "complexity": [ "warn", { "max": 5 }],
+        // "max-statements": [ "warn", { "max": 7 }],
+        // "max-statements-per-line": [ "warn", { "max": 1 }],
+        // "max-nested-callbacks": [ "warn", { "max": 2 }],
+        // "max-depth": [ "warn", { "max": 2 } ],
+        // "max-lines": [ "warn", { "max": 100 } ],
+        // "max-lines-per-function": [ "warn", { "max": 50 } ]
+        }
 }
