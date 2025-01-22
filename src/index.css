@@ -1,27 +1,50 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Fonts */
+  --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1rem;    /* 16px */
+  --font-size-large: 1.25rem;  /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-xxl: 2rem;       /* 32px */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* Colors */
+  --color-primary: #ecf0f1;
+  --color-secondary: #131b23;
+  --color-background: #f8f9fa;
 
-  --primary-color: #0070f3;
+  --color-text-primary: #131b23;
+  --color-text-secondary: #ecf0f1;
 
-  font-size: 14px;
+  /* Spacing */
+  --space-3xs: 0.215em;
+  --space-2xs: 0.5em;
+  --space-xs: 0.785em;
+  --space-s: 1em;
+  --space-m: 1.5em;
+  --space-l: 2em;
+  --space-xl: 2.5em;
+  --space-2xl: 3em;
+  --space-3xl: 4em;
+  --space-4xl: 5em;
+  --space-5xl: 6em;
 
-  --3xs-space: .215em;
-  --2xs-space: .5em;
-  --xs-space: .785em;
-  --s-space: 1em;
-  --m-space: 1.5em;
-  --l-space: 2em;
-  --xl-space: 2.5em;
-  --2xl-space: 3em;
-  --3xl-space: 4em;
-  --4xl-space: 5em;
-  --5xl-space: 6em;
+  /* Border Radius */
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 16px;
+
+  /* Shadows */
+  --shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
-
 
 body {
   margin: 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-medium);
+  color: var(color-text-primary);
+  background-color: var(--color-background);
 }
