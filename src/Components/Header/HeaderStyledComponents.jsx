@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+
+/////////////////////////////
+////// Grands écrans////////
+///////////////////////////
+
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
@@ -8,6 +13,11 @@ export const Header = styled.div`
   background-color: var(--color-primary);
   color: var(--color-text-primary);
   gap: var(--space-s);
+  font-size: var(--font-size-large);
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `
 
 export const HeaderGD = styled.div`
@@ -21,6 +31,10 @@ export const HeaderCentre = styled.div`
   justify-content: center;
   align-items: center;
   gap: var(--space-s);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const Footer = styled.div`
@@ -62,41 +76,6 @@ export const NavLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s;
-
-  &:hover {
-    color: var(--color-secondary);
-  }
-`
-
-export const Dropdown = styled.div`
-  position: relative;
-  display: inline-block;
-
-  &:hover > ul {
-    display: block;
-  }
-
-  ul {
-    display: none;
-    position: absolute;
-    background-color: var(--color-primary);
-    min-width: 18em;
-    box-shadow: var(--shadow-small);
-    z-index: 1;
-    list-style: none;
-    padding: var(--space-3xs);
-    border-radius: var(--radius-medium);
-
-    li {
-      padding: 8px 16px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--color-secondary);
-        color: var(--color-primary);
-      }
-    }
-  }
 `
 
 export const Button = styled.button`
@@ -104,9 +83,54 @@ export const Button = styled.button`
   background-color: var(--color-dark);
   color: var(--color-light);
   border: none;
-  border-radius: var(--radius-medium);
   cursor: pointer;
   transition: background-color 0.3s;
   background-color: var(--color-secondary);
   color: var(--color-primary);
+  font-size: var(--font-size-medium);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`
+////////////////////////////
+////Tablettes-mobiles//////
+//////////////////////////
+
+export const BurgerButton = styled.div`
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+ 
+
+  & > div {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+`
+
+export const DropdownMenu = styled.ul`
+  display: ${({ open }) => (open ? 'flex' : 'none')};
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-primary);
+  box-shadow: var(--shadow-small);
+  padding: var(--space-m);
+  border-radius: var(--radius-medium);
+  z-index: 1;
+  font-size: var(--font-size-xl);
+  margin: var(--space-xs);
+  align-items: center;
 `
