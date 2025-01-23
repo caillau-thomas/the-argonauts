@@ -10,6 +10,8 @@ export const Header = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around; 
+  position: fixed;
+  width: 100%;
   background-color: var(--color-primary);
   color: var(--color-text-primary);
   gap: var(--space-s);
@@ -17,6 +19,7 @@ export const Header = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    position: relative;
   }
 `
 
@@ -127,10 +130,11 @@ export const DropdownMenu = styled.ul`
   position: relative;
   background-color: var(--color-primary);
   box-shadow: var(--shadow-small);
-  padding: var(--space-m);
-  border-radius: var(--radius-medium);
+  padding: var(--space-3xs);
+  padding-bottom: var(--space-m);
+  gap:var(--space-xs);
   z-index: 1;
   font-size: var(--font-size-xl);
-  margin: var(--space-xs);
+  margin: 0;
   align-items: center;
 `
