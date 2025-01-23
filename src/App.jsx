@@ -14,7 +14,7 @@ import {
   HomeIcon,
   Logo,
   NavLink,
-} from './Components/Header/HeaderStyledComponents'
+} from './Components/HeaderStyledComponents'
 
 const Layout = styled.div`
   display: grid;
