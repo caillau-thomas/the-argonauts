@@ -36,7 +36,7 @@ const App = () => {
         {/* HeaderCentre visible sur grand écran */}
         <HeaderCentre>
           <NavLink href="#">L'ORGANISATION</NavLink>
-          <NavLink href="#">NOS SECTIONS</NavLink>
+          <NavLink href="#Sections">NOS SECTIONS</NavLink>
           <NavLink href="#">NOS SERVICES</NavLink>
         </HeaderCentre>
         <BurgerButton onClick={toggleMenu}>
@@ -51,7 +51,7 @@ const App = () => {
       {/* HeaderCentre visible sur mobile et tablette */}
       <DropdownMenu open={menuOpen}>
         <NavLink href="#">L'ORGANISATION</NavLink>
-        <NavLink href="#">NOS SECTIONS</NavLink>
+        <NavLink href="#Sections">NOS SECTIONS</NavLink>
         <NavLink href="#">NOS SERVICES</NavLink>
         <Button>NOUS REJOINDRE</Button>
       </DropdownMenu>

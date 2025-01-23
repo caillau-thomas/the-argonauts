@@ -1,4 +1,5 @@
 :root {
+
   /* Fonts */
   --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-secondary: "Roboto", sans-serif;
@@ -29,9 +30,20 @@
   --space-3xl: 4em;
   --space-4xl: 5em;
   --space-5xl: 6em;
-  --space-6xl: 7em;
-  --space-11xl: 12em;
-  --space-17xl: 18em;
+
+  /* Widths */
+  --width-3xs: 4em;
+  --width-2xs: 8em;
+  --width-xs: 16em;
+  --width-s: 24em;
+  --width-m: 32em;
+  --width-l: 48em;
+  --width-xl: 64em;
+  --width-2xl: 80em;
+  --width-3xl: 96em;
+  --width-4xl: 112em;
+  --width-5xl: 128em;
+
 
   /* Border Radius */
   --radius-small: 4px;
@@ -44,10 +56,17 @@
   --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--font-primary);
   font-size: var(--font-size-medium);
   color: var(color-text-primary);
   background-color: var(--color-background);
+  scroll-behavior: smooth;
 }
+
+
