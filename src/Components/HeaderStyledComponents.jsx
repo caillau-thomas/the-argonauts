@@ -14,12 +14,11 @@ export const Header = styled.div`
   width: 100%;
   background-color: var(--color-primary);
   color: var(--color-text-primary);
-  gap: var(--space-s);
   font-size: var(--font-size-large);
 
   @media (max-width: 1024px) {
-    flex-direction: column;
     position: relative;
+    justify-content: center;
   }
 `
 
@@ -63,6 +62,11 @@ export const HomeIcon = styled.div`
   background-position: center;
   width: 100px;                   
   height: 100px; 
+  
+  @media (max-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
 `
 
 
@@ -83,8 +87,6 @@ export const NavLink = styled.a`
 
 export const Button = styled.button`
   padding: var(--space-s);
-  background-color: var(--color-dark);
-  color: var(--color-light);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -120,14 +122,17 @@ export const BurgerButton = styled.div`
   }
 
   @media (max-width: 1024px) {
+    position: absolute;
+    left: var(--space-s);
     display: flex;
   }
 `
 
-export const DropdownMenu = styled.ul`
-  display: ${({ open }) => (open ? 'flex' : 'none')};
+export const DropdownMenu = styled.span`
+  position: absolute;
+  width: calc(100vw - 2 * var(--space-3xs));
+  display: flex;
   flex-direction: column;
-  position: relative;
   background-color: var(--color-primary);
   box-shadow: var(--shadow-small);
   padding: var(--space-3xs);
@@ -137,4 +142,12 @@ export const DropdownMenu = styled.ul`
   font-size: var(--font-size-xl);
   margin: 0;
   align-items: center;
+  transform: scaleY(0);
+  transition: transform 0.15s;
+  transform-origin: top;
+  
+  &.open {
+    visibility: visible;
+    transform: scaleY(100%);
+  }
 `

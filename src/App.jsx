@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Outlet } from 'react-router'
 import styled from 'styled-components'
 
@@ -15,6 +15,7 @@ import {
   Logo,
   NavLink,
 } from './Components/HeaderStyledComponents'
+import { usePlaceMenu } from './Components/usePlaceMenu.jsx'
 
 const Layout = styled.div`
   display: grid;
@@ -23,13 +24,22 @@ const Layout = styled.div`
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const dropdownRef = useRef()
+  const headerRef = useRef()
+  usePlaceMenu(dropdownRef, headerRef, menuOpen)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
+
   return (
     <Layout>
-      <Header>
+      <Header ref={headerRef}>
+        <BurgerButton onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </BurgerButton>
         <HeaderGD>
           <HomeIcon image="agn-logo.png" />
         </HeaderGD>
@@ -39,17 +49,12 @@ const App = () => {
           <NavLink href="#Sections">NOS SECTIONS</NavLink>
           <NavLink href="#">NOS SERVICES</NavLink>
         </HeaderCentre>
-        <BurgerButton onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </BurgerButton>
         <HeaderGD>
           <Button>NOUS REJOINDRE</Button>
         </HeaderGD>
       </Header>
       {/* HeaderCentre visible sur mobile et tablette */}
-      <DropdownMenu open={menuOpen}>
+      <DropdownMenu className={menuOpen ? 'open' : ''} ref={dropdownRef}>
         <NavLink href="#">L'ORGANISATION</NavLink>
         <NavLink href="#Sections">NOS SECTIONS</NavLink>
         <NavLink href="#">NOS SERVICES</NavLink>
