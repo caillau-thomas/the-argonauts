@@ -11,6 +11,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-around; 
   position: fixed;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
   width: 100%;
   background-color: var(--color-primary);
   color: var(--color-text-primary);
