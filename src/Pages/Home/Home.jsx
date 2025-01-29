@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Squadron422 from '../../assets/Backgrounds/squadron-42-2.jpg'
+import Squadron423 from '../../assets/Backgrounds/squadron-42-3.jpg'
 import { AboutCard,ContentCard,SectionCard } from '../../Components/CardStyledComponents'
 
 const Body = styled.div``
@@ -13,8 +15,8 @@ const LandingSection = styled.div`
   background-image: url("https://image.noelshack.com/fichiers/2025/04/3/1737581775-imgsc.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 `
 
 const SectionAbout = styled.div`
@@ -26,8 +28,11 @@ const SectionAbout = styled.div`
   gap: var(--space-m);
   padding: var(--space-l);
  
-  background-color: var(--color-primary);
-
+  color: var(--color-primary);
+  background-image: url(${Squadron423});  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -46,7 +51,11 @@ const SectionSection = styled.div`
   padding: var(--space-l);
     
   color: var(--color-primary);
-  background-color: var(--color-secondary);
+  background-image: url(${Squadron422});
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   &:has(.SectionCard:hover)
   .SectionCard:not(:hover){

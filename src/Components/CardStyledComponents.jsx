@@ -21,6 +21,7 @@ export const SectionCard = styled.div`
   height: 60vh; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
   transition: all 0.25s ease-in-out;
+  border-radius: 4px;
 `
 
 export const AboutCard = styled.div`
