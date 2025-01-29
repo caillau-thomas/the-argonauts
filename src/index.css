@@ -1,14 +1,16 @@
 :root {
 
   /* Fonts */
-  --font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --font-secondary: "Roboto", sans-serif;
+  --font-primary: 'Oswald', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
   
-  --font-size-small: 0.875rem; /* 14px */
-  --font-size-medium: 1rem;    /* 16px */
-  --font-size-large: 1.25rem;  /* 20px */
-  --font-size-xl: 1.5rem;      /* 24px */
-  --font-size-xxl: 2rem;       /* 32px */
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;    
+  --font-size-1m: 1.6rem;    
+  --font-size-large: 2rem;
+  --font-size-xl: 3rem;
+  --font-size-1xl: 4rem;      
+  --font-size-2xl: 6rem;       
 
   /* Colors */
   --color-primary: #ecf0f1;

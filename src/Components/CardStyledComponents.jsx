@@ -7,8 +7,8 @@ import styled from 'styled-components'
 export const AboutCard = styled.div`
   padding: var(--space-m);
   text-align: center;
+  min-height: 40vh ;
   flex: 1;
-  height: 30vh; 
 `
 ///////////////
 // SECTIONS //
@@ -20,8 +20,7 @@ export const SectionCard = styled.div`
   width: 80%;
   padding: var(--space-m);
   border-radius: 16px;
-
-  background-color: var(--color-background); 
+ 
   color: var(--color-primary);
   border: 2px solid var(--color-border); 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
@@ -29,7 +28,7 @@ export const SectionCard = styled.div`
 `
 export const HeadingCard = styled.div`
   width: 100%;
-  text-align: left;
+  text-align: center;
 `
 
 export const SectionsCardHeading = styled.div`

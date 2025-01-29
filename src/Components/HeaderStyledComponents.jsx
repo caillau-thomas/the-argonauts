@@ -16,7 +16,8 @@ export const Header = styled.div`
   background-color: var(--color-primary);
   color: var(--color-text-primary);
   gap: var(--space-s);
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-1m);
+  font-weight: 200;
 
   @media (max-width: 1024px) {
     flex-direction: column;
