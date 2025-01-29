@@ -35,7 +35,7 @@ const App = () => {
         </HeaderGD>
         {/* HeaderCentre visible sur grand écran */}
         <HeaderCentre>
-          <NavLink href="#">L'ORGANISATION</NavLink>
+          <NavLink href="#Organisation">L'ORGANISATION</NavLink>
           <NavLink href="#Sections">NOS SECTIONS</NavLink>
           <NavLink href="#">NOS SERVICES</NavLink>
         </HeaderCentre>
@@ -50,7 +50,7 @@ const App = () => {
       </Header>
       {/* HeaderCentre visible sur mobile et tablette */}
       <DropdownMenu open={menuOpen}>
-        <NavLink href="#">L'ORGANISATION</NavLink>
+        <NavLink href="#Organisation">L'ORGANISATION</NavLink>
         <NavLink href="#Sections">NOS SECTIONS</NavLink>
         <NavLink href="#">NOS SERVICES</NavLink>
         <Button>NOUS REJOINDRE</Button>
