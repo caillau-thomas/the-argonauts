@@ -13,7 +13,8 @@
   /* Colors */
   --color-primary: #ecf0f1;
   --color-secondary: #131b23;
-  --color-background: #f8f9fa;
+  --color-background: #e2e2e23a;
+  --color-border: #e2e2e27a;
 
   --color-text-primary: #131b23;
   --color-text-secondary: #ecf0f1;

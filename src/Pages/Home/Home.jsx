@@ -1,10 +1,37 @@
 import styled from 'styled-components'
 
+import Squadron421 from '../../assets/Backgrounds/squadron-42-1.jpg'
 import Squadron422 from '../../assets/Backgrounds/squadron-42-2.jpg'
-import Squadron423 from '../../assets/Backgrounds/squadron-42-3.jpg'
-import { AboutCard,ContentCard,SectionCard } from '../../Components/CardStyledComponents'
+import {
+  AboutCard,
+  ContentCard,
+  HeadingCard,
+  SectionCard,
+  SectionsCardHeading,
+} from '../../Components/CardStyledComponents'
 
 const Body = styled.div``
+
+const LandingHeading = styled.div`
+  font-size: xx-large;
+`
+
+const DivHeading = styled.div`
+  font-size: xx-large;
+  width: 30%;
+  text-align: left;
+
+  background-color: var(--color-secondary);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius:8px; 
+  padding: var(--space-2xs);
+  
+`
+
+const Content = styled.div`
+  font-size: medium;
+  display: flex;
+`
 
 const LandingSection = styled.div`
   display: flex;
@@ -22,21 +49,22 @@ const LandingSection = styled.div`
 const SectionAbout = styled.div`
   display: flex;
   align-items: center;
-  height: calc(100vh - 100px); 
+  height: calc(100vh - 100px);
   scroll-margin-top: 100px;
   justify-content: center;
   gap: var(--space-m);
   padding: var(--space-l);
- 
-  color: var(--color-primary);
-  background-image: url(${Squadron423});  background-attachment: fixed;
+
+  color: var(--color-secondary);
+  background-image: url(${Squadron422});
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    min-height: 100vh ;
+    min-height: 100vh;
     scroll-margin-top: 0px;
   }
 `
@@ -45,26 +73,26 @@ const SectionSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 100px); 
+  min-height: calc(100vh - 100px);
   scroll-margin-top: 100px;
   justify-content: center;
-  padding: var(--space-l);
-    
+
+  gap: var(--space-m);
+
   color: var(--color-primary);
-  background-image: url(${Squadron422});
+  background-image: url(${Squadron421});
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
-  &:has(.SectionCard:hover)
-  .SectionCard:not(:hover){
-    opacity:0.4;
+
+  &:has(.SectionCard:hover) .SectionCard:not(:hover) {
+    opacity: 0.4;
   }
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    min-height: 100vh ;
+    min-height: 100vh;
     scroll-margin-top: 0px;
   }
 `
@@ -73,67 +101,44 @@ export const Home = () => {
   return (
     <Body>
       <LandingSection>
-        <h1>
+        <LandingHeading>
           ARGONAUTS
-          <br />
-        </h1>
-
-        <h2>AU-DELÀ DU VERS</h2>
+        </LandingHeading>
       </LandingSection>
-      <SectionAbout id='Organisation'>
+      <SectionAbout id="Organisation">
         <AboutCard>
-          <h1>SECTION INDUSTRIEL & LOGISTIQUE</h1>
-          <p>
-            À LA RECHERCHE DE CHALLENGES LOGISTIQUES ET DE DÉFIS INDUSTRIELS,
-            NOUS ASSURONS L' AUTOSUFFISANCE DES ARGONAUTS ET BÂTISSONS LEUR
-            AVENIR.
-          </p>
-          <p>
+          <SectionsCardHeading>SECTION INDUSTRIEL & LOGISTIQUE</SectionsCardHeading>
+          <Content>
             EXTRAIRE DES RESSOURCES CONDUIRE LES CHAINES LOGISTIQUES BATIR NOS
             INFRASTRUCTURES
-          </p>
+          </Content>
         </AboutCard>
       </SectionAbout>
-      <SectionSection id='Sections'>
-        <h1>NOS SECTIONS</h1>
+      <SectionSection id="Sections">
+        <HeadingCard>
+          <DivHeading>NOS SECTIONS</DivHeading>
+        </HeadingCard>
         <ContentCard>
-          <SectionCard className='SectionCard'>
-            <h1>SECTION INDUSTRIEL & LOGISTIQUE</h1>
-            <p>
-            À LA RECHERCHE DE CHALLENGES LOGISTIQUES ET DE DÉFIS INDUSTRIELS,
-            NOUS ASSURONS L' AUTOSUFFISANCE DES ARGONAUTS ET BÂTISSONS LEUR
-            AVENIR.
-            </p>
-            <p>
-            EXTRAIRE DES RESSOURCES CONDUIRE LES CHAINES LOGISTIQUES BATIR NOS
-            INFRASTRUCTURES
-            </p>
+          <SectionCard className="SectionCard">
+            <SectionsCardHeading>SECTION INDUSTRIEL & LOGISTIQUE</SectionsCardHeading>
+            <Content>
+              EXTRAIRE DES RESSOURCES <br /> CONDUIRE LES CHAINES LOGISTIQUES <br /> BATIR NOS
+              INFRASTRUCTURES
+            </Content>
           </SectionCard>
-          <SectionCard className='SectionCard'>
-            <h1>SECTION DE REPONSE A INCIDENT</h1>
-            <p>
-            À LA RECHERCHE D'ADRÉNALINE ET D'EXCELLENCE, 
-            NOUS ASSURONS, SI NECESSAIRE AU PERIL DE NOS VIES, 
-            LA SÉCURITÉ DES NÔTRES AINSI QUE
-            CELLE DES CITOYENS DU VERSE.
-            </p>
-            <p>
-            ESCORTER NOS CONVOIS REPONDRE AUX BALISE DE 
-            DÉTRESSE DEFENDRE NOS ALLIÉS
-            </p>
+          <SectionCard className="SectionCard">
+            <SectionsCardHeading>SECTION DE REPONSE A INCIDENT</SectionsCardHeading>
+            <Content>
+              ESCORTER NOS CONVOIS <br /> REPONDRE AUX BALISE DE DÉTRESSE DEFENDRE NOS
+              ALLIÉS
+            </Content>
           </SectionCard>
-          <SectionCard className='SectionCard'>
-            <h1>SECTION DE SOUTIEN OPÉRATIONNEL</h1>
-
-            <p>
-            NOUS ASSISTONS LES DIFFÉRENTES SECTIONS DES ARGONAUTS SUR LES PLANS
-            TECHNIQUE ET MÉDICAL, AFIN D’ASSURER LEUR BON FONCTIONNEMENT.
-            </p>
-            <p>ASSURER LA MAINTENANCE DE NOTRE FLOTTE SECOURS AUX BLESSES</p>
+          <SectionCard className="SectionCard">
+            <SectionsCardHeading>SECTION DE SOUTIEN OPÉRATIONNEL</SectionsCardHeading>
+            <Content>ASSURER LA MAINTENANCE DE NOTRE FLOTTE <br /> SECOURS AUX BLESSES</Content>
           </SectionCard>
         </ContentCard>
       </SectionSection>
-      
     </Body>
   )
 }
