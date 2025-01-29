@@ -1,11 +1,18 @@
 import styled from 'styled-components'
 
+////////////////
+//// ABOUT ////
+//////////////
+
 export const AboutCard = styled.div`
   padding: var(--space-m);
   text-align: center;
   flex: 1;
   height: 30vh; 
 `
+///////////////
+// SECTIONS //
+/////////////
 
 export const SectionCard = styled.div`
   flex: 1;
@@ -43,4 +50,13 @@ export const ContentCard = styled.div`
     flex-direction: column;
   }
 `
+////////////////
+//// ENROL ////
+//////////////
 
+export const EnrolCard = styled.div`
+  padding: var(--space-m);
+  text-align: center;
+  flex: 1;
+  height: 30vh; 
+`

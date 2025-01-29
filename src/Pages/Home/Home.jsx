@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 import Squadron421 from '../../assets/Backgrounds/squadron-42-1.jpg'
 import Squadron422 from '../../assets/Backgrounds/squadron-42-2.jpg'
+import Squadron423 from '../../assets/Backgrounds/squadron-42-3.jpg'
 import {
   AboutCard,
   ContentCard,
+  EnrolCard,
   HeadingCard,
   SectionCard,
   SectionsCardHeading,
@@ -97,6 +99,29 @@ const SectionSection = styled.div`
   }
 `
 
+const SectionEnrol = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-m);
+  padding: var(--space-l);
+  height: calc(100vh - 100px);
+  scroll-margin-top: 100px;
+  
+  color: var(--color-secondary);
+  background-image: url(${Squadron423});
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-margin-top: 0px;
+  }
+`
+
 export const Home = () => {
   return (
     <Body>
@@ -139,6 +164,13 @@ export const Home = () => {
           </SectionCard>
         </ContentCard>
       </SectionSection>
+      <SectionEnrol>
+        <EnrolCard>
+          <LandingHeading>
+          ARGONAUTS
+          </LandingHeading>
+        </EnrolCard>
+      </SectionEnrol>
     </Body>
   )
 }
