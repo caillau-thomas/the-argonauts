@@ -15,6 +15,7 @@ export const Header = styled.div`
   background-color: var(--color-primary);
   color: var(--color-text-primary);
   font-size: var(--font-size-large);
+  z-index: 9;
 
   @media (max-width: 1024px) {
     position: relative;
@@ -125,29 +126,5 @@ export const BurgerButton = styled.div`
     position: absolute;
     left: var(--space-s);
     display: flex;
-  }
-`
-
-export const DropdownMenu = styled.span`
-  position: absolute;
-  width: calc(100vw - 2 * var(--space-3xs));
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
-  box-shadow: var(--shadow-small);
-  padding: var(--space-3xs);
-  padding-bottom: var(--space-m);
-  gap:var(--space-xs);
-  z-index: 1;
-  font-size: var(--font-size-xl);
-  margin: 0;
-  align-items: center;
-  transform: scaleY(0);
-  transition: transform 0.15s;
-  transform-origin: top;
-  
-  &.open {
-    visibility: visible;
-    transform: scaleY(100%);
   }
 `

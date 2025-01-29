@@ -7,7 +7,6 @@ import {
   BurgerButton,
   Button,
   Copyright,
-  DropdownMenu,
   Footer,
   Header,
   HeaderCentre,
@@ -16,7 +15,6 @@ import {
   Logo,
   NavLink,
 } from './Components/HeaderStyledComponents'
-import { usePlaceMenu } from './Components/usePlaceMenu.jsx'
 
 const Layout = styled.div`
   display: grid;
@@ -25,9 +23,7 @@ const Layout = styled.div`
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const dropdownRef = useRef()
   const headerRef = useRef()
-  // usePlaceMenu(dropdownRef, headerRef, menuOpen)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -54,13 +50,6 @@ const App = () => {
           <Button>NOUS REJOINDRE</Button>
         </HeaderGD>
       </Header>
-      {/* HeaderCentre visible sur mobile et tablette */}
-      {/*<DropdownMenu className={menuOpen ? 'open' : ''} ref={dropdownRef}>*/}
-      {/*  <NavLink href="#">L'ORGANISATION</NavLink>*/}
-      {/*  <NavLink href="#Sections">NOS SECTIONS</NavLink>*/}
-      {/*  <NavLink href="#">NOS SERVICES</NavLink>*/}
-      {/*  <Button>NOUS REJOINDRE</Button>*/}
-      {/*</DropdownMenu>*/}
       <AnimatedMenu open={menuOpen} onClose={toggleMenu} />
       <Outlet />
       <Footer>
