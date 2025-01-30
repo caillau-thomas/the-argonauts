@@ -45,17 +45,40 @@ const LandingSubHeading = styled.div`
   font-size: var(--font-size-large);
   font-weight: 200;
   letter-spacing: var(--space-2xs);
+  color:  var(--color-tertiary);
 
   @media (max-width: 1024px) {
     font-size: var(--font-size-large);
     font-weight: 200;
-    letter-spacing: var(--space-4xs);
+    letter-spacing: var(--space-3xs);
   }
 `
 
 const Content = styled.div`
-  font-size: medium;
+  font-size: var(--font-size-2m);
+  font-weight: 300;
   display: flex;
+  text-align: justify;
+  justify-content: center;
+`
+
+const SubContent = styled.div`
+  font-size: var(--font-size-1m);
+  color:  var(--color-tertiary);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  justify-content: center;
+`
+
+const SubContentContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 `
 
 const VideoBackgroundContainer = styled.div`
@@ -85,7 +108,7 @@ const SectionAbout = styled.div`
   height: calc(100vh - 100px);
   scroll-margin-top: 100px;
   justify-items: center;
-  padding: var(--space-l);
+  padding: var(--space-l) var(--space-2m); 
 
   color: var(--color-secondary);
   background-image: url(${Squadron422});
@@ -102,25 +125,28 @@ const SectionAbout = styled.div`
 `
 const DivHeading = styled.div`
   font-size: var(--font-size-1xl);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: var(--space-2xs);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
 
   @media (max-width: 1024px) {
     font-size: var(--font-size-1xl);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: var(--space-1xs);
   }
 `
 
 const AboutSubHeading = styled.div`
-  font-size: var(--font-size-1m);
-  font-weight: 200;
+  font-size: var(--font-size-large);
+  font-weight: 400;
   letter-spacing: var(--space-2xs);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  color:  var(--color-tertiary);
 
   @media (max-width: 1024px) {
-    font-size: var(--font-size-1m);
-  font-weight: 200;
-  letter-spacing: var(--space-1xs);
+    font-size: var(--font-size-large);
+    font-weight: 300;
+    letter-spacing: var(--space-3xs);
   }
 `
 
@@ -131,7 +157,7 @@ const SectionSection = styled.div`
   min-height: calc(100vh - 100px);
   scroll-margin-top: 100px;
   justify-content: center;
-
+  padding: var(--space-l) var(--space-2m); 
   gap: var(--space-m);
 
   color: var(--color-primary);
@@ -157,7 +183,7 @@ const SectionEnrol = styled.div`
   align-items: center;
   justify-content: center;
   gap: var(--space-m);
-  padding: var(--space-l);
+  padding: var(--space-l) var(--space-2m); 
   height: calc(100vh - 100px);
   scroll-margin-top: 100px;
 
@@ -216,26 +242,42 @@ export const Home = () => {
               SECTION INDUSTRIEL & LOGISTIQUE
             </SectionsCardHeading>
             <Content>
-              EXTRAIRE DES RESSOURCES <br /> CONDUIRE LES CHAINES LOGISTIQUES{' '}
-              <br /> BATIR NOS INFRASTRUCTURES
+              À LA RECHERCHE DE CHALLENGES LOGISTIQUES ET DE DÉFIS INDUSTRIELS,
+              NOUS ASSURONS L'AUTOSUFFISANCE DES ARGONAUTS ET BÂTISSONS LEUR
+              AVENIR.
             </Content>
+            <SubContentContainer>
+              <SubContent>EXTRACTION / TRAITEMENT DES RESSOURCES</SubContent>
+              <SubContent>COMMERCE</SubContent>
+              <SubContent>CHAINES LOGISTIQUES</SubContent>
+              <SubContent>BASE BUILDING</SubContent>
+            </SubContentContainer>
           </SectionCard>
           <SectionCard className="SectionCard">
             <SectionsCardHeading>
               SECTION DE REPONSE A INCIDENT
             </SectionsCardHeading>
             <Content>
-              ESCORTER NOS CONVOIS <br /> REPONDRE AUX BALISE DE DÉTRESSE
-              DEFENDRE NOS ALLIÉS
+              À LA RECHERCHE D'ADRÉNALINE ET D'EXCELLENCE, NOUS ASSURONS LA SÉCURITÉ DES ARGONAUTS AINSI QUE
+              CELLE DES CITOYENS DU VERSE.
             </Content>
+            <SubContentContainer>
+              <SubContent>ESCORTE</SubContent>
+              <SubContent>PROTECTION RAPPROCHE</SubContent>
+              <SubContent>SAUVETAGE</SubContent>
+            </SubContentContainer>
           </SectionCard>
           <SectionCard className="SectionCard">
-            <SectionsCardHeading>
-              SECTION DE SOUTIEN OPÉRATIONNEL
-            </SectionsCardHeading>
+            <SectionsCardHeading>SECTION D'APPUI</SectionsCardHeading>
             <Content>
-              ASSURER LA MAINTENANCE DE NOTRE FLOTTE <br /> SECOURS AUX BLESSES
+              NOUS ASSISTONS LES DIFFÉRENTES SECTIONS DES ARGONAUTS SUR LES
+              PLANS TECHNIQUE ET MÉDICAL, AFIN D’ASSURER LEUR BON
+              FONCTIONNEMENT.
             </Content>
+            <SubContentContainer>
+              <SubContent>EQUIPE D'INGENIEURIE</SubContent>
+              <SubContent>EQUIPES MEDICALES</SubContent>
+            </SubContentContainer>
           </SectionCard>
         </ContentCard>
       </SectionSection>
