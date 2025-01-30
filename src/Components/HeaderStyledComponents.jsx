@@ -11,6 +11,7 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-around; 
   position: fixed;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
   width: 100%;
   background-color: var(--color-primary);
   color: var(--color-text-primary);
@@ -89,11 +90,13 @@ export const NavLink = styled.a`
 export const Button = styled.button`
   padding: var(--space-s);
   border: none;
+  border-radius: 2px;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  font-size: var(--font-size-medium);
+  color: var(--color-secondary);
+  font-size: var(--font-size-1m);
+  font-family: var(--font-primary);
 
   @media (max-width: 1024px) {
     display: none;
