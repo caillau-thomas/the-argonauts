@@ -25,9 +25,16 @@ const LandingSection = styled.div`
 `
 
 const SectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
   color: var(--color-primary);
   justify-content: center;
   text-align: center;
+  gap: 25px;
+`
+const SubSectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const LandingHeading = styled.div`
@@ -46,7 +53,7 @@ const LandingSubHeading = styled.div`
   font-size: var(--font-size-large);
   font-weight: 200;
   letter-spacing: var(--space-2xs);
-  color:  var(--color-tertiary);
+  color: var(--color-tertiary);
 
   @media (max-width: 1024px) {
     font-size: var(--font-size-large);
@@ -63,9 +70,19 @@ const Content = styled.div`
   justify-content: center;
 `
 
+const AboutContent = styled.div`
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  font-size: var(--font-size-1m);
+  font-weight: 400;
+  letter-spacing: var(--space-3xs);
+  text-shadow: 0px 2px 10px rgb(0, 0, 0);
+`
+
 const SubContent = styled.div`
   font-size: var(--font-size-1m);
-  color:  var(--color-tertiary);
+  color: var(--color-tertiary);
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -109,7 +126,7 @@ const SectionAbout = styled.div`
   height: calc(100vh - 100px);
   scroll-margin-top: 100px;
   justify-items: center;
-  padding: var(--space-l) var(--space-2m); 
+  padding: var(--space-l) var(--space-2m);
 
   color: var(--color-secondary);
   background-image: url(${Squadron422});
@@ -142,10 +159,23 @@ const AboutSubHeading = styled.div`
   font-weight: 400;
   letter-spacing: var(--space-2xs);
   text-shadow: 0px 0px 10px rgb(0, 0, 0);
-  color:  var(--color-tertiary);
+  color: var(--color-tertiary);
 
   @media (max-width: 1024px) {
     font-size: var(--font-size-large);
+    font-weight: 300;
+    letter-spacing: var(--space-3xs);
+  }
+`
+const SectionSubHeading = styled.div`
+  font-size: var(--font-size-large);
+  font-weight: 300;
+  letter-spacing: var(--space-3xs);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  color: var(--color-tertiary);
+
+  @media (max-width: 1024px) {
+    font-size: var(--font-size-1m);
     font-weight: 300;
     letter-spacing: var(--space-3xs);
   }
@@ -158,7 +188,7 @@ const SectionSection = styled.div`
   min-height: calc(100vh - 100px);
   scroll-margin-top: 100px;
   justify-content: center;
-  padding: var(--space-l) var(--space-2m); 
+  padding: var(--space-l) var(--space-2m);
   gap: var(--space-m);
 
   color: var(--color-primary);
@@ -184,7 +214,7 @@ const SectionEnrol = styled.div`
   align-items: center;
   justify-content: center;
   gap: var(--space-m);
-  padding: var(--space-l) var(--space-2m); 
+  padding: var(--space-l) var(--space-2m);
   height: calc(100vh - 100px);
   scroll-margin-top: 100px;
 
@@ -223,8 +253,11 @@ export const Home = () => {
         <AboutCard>
           <SectionContent>
             <DivHeading>NOS MISSION</DivHeading>
-            <AboutSubHeading>LA SECURITE</AboutSubHeading>
-            <AboutSubHeading>ET LE SAUVETAGE</AboutSubHeading>
+            <SubSectionContent>
+              <AboutSubHeading>INTERVENIR POUR PROTEGER</AboutSubHeading>
+              <AboutSubHeading>AGIR POUR SAUVER</AboutSubHeading>
+            </SubSectionContent>
+            <AboutContent>QUELS QU'EN SOIENT LES RISQUES</AboutContent>
           </SectionContent>
         </AboutCard>
         <AboutCard>
@@ -236,6 +269,7 @@ export const Home = () => {
       <SectionSection id="Sections">
         <HeadingCard>
           <DivHeading>NOS SECTIONS</DivHeading>
+          <SectionSubHeading>DES MISSIONS VARIÉES POUR UN ENGAGEMENT COMMUN</SectionSubHeading>
         </HeadingCard>
         <ContentCard>
           <SectionCard className="SectionCard">
@@ -259,8 +293,8 @@ export const Home = () => {
               SECTION DE REPONSE A INCIDENT
             </SectionsCardHeading>
             <Content>
-              À LA RECHERCHE D'ADRÉNALINE ET D'EXCELLENCE, NOUS ASSURONS LA SÉCURITÉ DES ARGONAUTS AINSI QUE
-              CELLE DES CITOYENS DU VERSE.
+              À LA RECHERCHE D'ADRÉNALINE ET D'EXCELLENCE, NOUS ASSURONS LA
+              SÉCURITÉ DES ARGONAUTS AINSI QUE CELLE DES CITOYENS DU VERSE.
             </Content>
             <SubContentContainer>
               <SubContent>ESCORTE</SubContent>

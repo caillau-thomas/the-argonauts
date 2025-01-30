@@ -17,14 +17,11 @@ export const SectionCard = styled.div`
   flex-direction: column;
   flex: 1;
   gap: var(--space-2xl);
-  padding: var(--space-m);
+  padding: var(--space-2xl);
   border-radius: 16px;
 
   color: var(--color-primary);
-  border: 2px solid var(--color-border);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.661);
   transition: all 0.25s ease-in-out;
-  backdrop-filter: blur(10px);
 `
 export const HeadingCard = styled.div`
 padding-top: var(--space-m);
@@ -49,6 +46,10 @@ export const ContentCard = styled.div`
   margin: var(--space-m);
 
   color: var(--color-secondary);
+  backdrop-filter: blur(10px);
+  border: 0.5px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
 
   @media (max-width: 1024px) {
     flex-direction: column;
