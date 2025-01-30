@@ -17,7 +17,7 @@ export const Header = styled.div`
   background-color: var(--color-secondary);
   font-size: var(--font-size-2m);
   font-weight: 200;
-  z-index: 9;
+  z-index: 10;
 
   @media (max-width: 1024px) {
     position: relative;

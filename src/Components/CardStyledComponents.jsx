@@ -4,15 +4,38 @@ import styled from 'styled-components'
 //// ABOUT ////
 //////////////
 
-export const AboutCard = styled.div`
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  min-height: 40vh;
+  gap: 25px;
+
+  color: var(--color-primary);
 `
+
+export const EnrolContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-s);
+  gap:var(--space-l);
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: var(--space-s);
+  }
+`
+
 ///////////////
 // SECTIONS //
 /////////////
 
-export const Card = styled.div`
+
+// Les Cards de sections (SRI, SIL, SA)
+export const SectionsCard = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -24,19 +47,21 @@ export const Card = styled.div`
   transition: all 0.25s ease-in-out;
 `
 export const CardHeading = styled.div`
-padding-top: var(--space-m);
+  padding-top: var(--space-m);
   width: 100%;
   text-align: center;
+
 `
 
-export const CardSubHeading = styled.div`
+// Titre des cards de section ( SRI, SIL, SA)
+export const SectionsCardSubHeading = styled.div` 
   font-size: var(--font-size-large);
   font-weight: 400;
   text-align: center;
   justify-content: center;
 `
-
-export const SectionCards = styled.div`
+// Container des cards de section ( SRI, SIL, SA)
+export const SectionsCardContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,6 +69,7 @@ export const SectionCards = styled.div`
   gap: var(--space-m);
   flex-wrap: wrap;
   margin: var(--space-m);
+  z-index: 2;
 
   color: var(--color-secondary);
   backdrop-filter: blur(10px);
@@ -54,14 +80,5 @@ export const SectionCards = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column;
   }
-`
-////////////////
-//// ENROL ////
-//////////////
-
-export const EnrolCard = styled.div`
-  padding: var(--space-m);
-  text-align: center;
-  flex: 1;
-  height: 30vh;
+  
 `
