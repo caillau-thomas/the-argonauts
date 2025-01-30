@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Outlet } from 'react-router'
 import styled from 'styled-components'
 
+import { AnimatedMenu } from './Components/AnimatedMenu.jsx'
 import {
   BurgerButton,
   Button,
   Copyright,
-  DropdownMenu,
   Footer,
   Header,
   HeaderCentre,
@@ -23,13 +23,20 @@ const Layout = styled.div`
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const headerRef = useRef()
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
+
   return (
     <Layout>
-      <Header>
+      <Header ref={headerRef}>
+        <BurgerButton onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </BurgerButton>
         <HeaderGD>
           <HomeIcon image="agn-logo.png" />
         </HeaderGD>
@@ -39,22 +46,11 @@ const App = () => {
           <NavLink href="#Sections">NOS SECTIONS</NavLink>
           <NavLink href="#">NOS SERVICES</NavLink>
         </HeaderCentre>
-        <BurgerButton onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </BurgerButton>
         <HeaderGD>
           <Button>NOUS REJOINDRE</Button>
         </HeaderGD>
       </Header>
-      {/* HeaderCentre visible sur mobile et tablette */}
-      <DropdownMenu open={menuOpen}>
-        <NavLink href="#Organisation">L'ORGANISATION</NavLink>
-        <NavLink href="#Sections">NOS SECTIONS</NavLink>
-        <NavLink href="#">NOS SERVICES</NavLink>
-        <Button>NOUS REJOINDRE</Button>
-      </DropdownMenu>
+      <AnimatedMenu open={menuOpen} onClose={toggleMenu} />
       <Outlet />
       <Footer>
         <Logo image="made-by-the-community-logo.jpg" />

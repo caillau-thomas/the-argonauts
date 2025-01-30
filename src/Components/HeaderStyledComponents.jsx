@@ -13,16 +13,14 @@ export const Header = styled.div`
   position: fixed;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
   width: 100%;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  gap: var(--space-s);
-  font-size: var(--font-size-2m);
-  font-weight: 200;
-  z-index: 2;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-large);
+  z-index: 9;
 
   @media (max-width: 1024px) {
-    flex-direction: column;
     position: relative;
+    justify-content: center;
   }
 `
 
@@ -66,6 +64,11 @@ export const HomeIcon = styled.div`
   background-position: center;
   width: 100px;                   
   height: 100px; 
+  
+  @media (max-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
 `
 
 
@@ -85,9 +88,7 @@ export const NavLink = styled.a`
 `
 
 export const Button = styled.button`
-  padding: var(--space-2xs);
-  background-color: var(--color-tertiary);
-  color: var(--color-primary);
+  padding: var(--space-s);
   border: none;
   border-radius: 2px;
   font-weight: 400;
@@ -125,21 +126,8 @@ export const BurgerButton = styled.div`
   }
 
   @media (max-width: 1024px) {
+    position: absolute;
+    left: var(--space-s);
     display: flex;
   }
-`
-
-export const DropdownMenu = styled.ul`
-  display: ${({ open }) => (open ? 'flex' : 'none')};
-  flex-direction: column;
-  position: relative;
-  background-color: var(--color-primary);
-  box-shadow: var(--shadow-small);
-  padding: var(--space-3xs);
-  padding-bottom: var(--space-m);
-  gap:var(--space-xs);
-  z-index: 1;
-  font-size: var(--font-size-xl);
-  margin: 0;
-  align-items: center;
 `
