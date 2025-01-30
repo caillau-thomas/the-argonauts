@@ -11,6 +11,7 @@ import {
   SectionCard,
   SectionsCardHeading,
 } from '../../Components/CardStyledComponents'
+import { Button } from '../../Components/HeaderStyledComponents'
 
 const Body = styled.div``
 
@@ -70,7 +71,7 @@ const Content = styled.div`
   justify-content: center;
 `
 
-const AboutContent = styled.div`
+const SectionDescription = styled.div`
   display: flex;
   text-align: justify;
   justify-content: center;
@@ -257,19 +258,27 @@ export const Home = () => {
               <AboutSubHeading>INTERVENIR POUR PROTEGER</AboutSubHeading>
               <AboutSubHeading>AGIR POUR SAUVER</AboutSubHeading>
             </SubSectionContent>
-            <AboutContent>QUELS QU'EN SOIENT LES RISQUES</AboutContent>
+            <SectionDescription>
+              QUELS QU'EN SOIENT LES RISQUES
+            </SectionDescription>
           </SectionContent>
         </AboutCard>
         <AboutCard>
-          <SectionContent>
-            {/* Animation representant les 3 sections */}
-          </SectionContent>
+          <ContentCard>
+            <SectionCard>
+              <SectionContent>10 MEMBRES</SectionContent>
+              <SectionContent>+50 INTERVENTIONS</SectionContent>
+              <SectionContent>+100 VAISSEAUX</SectionContent>
+            </SectionCard>
+          </ContentCard>
         </AboutCard>
       </SectionAbout>
       <SectionSection id="Sections">
         <HeadingCard>
           <DivHeading>NOS SECTIONS</DivHeading>
-          <SectionSubHeading>DES MISSIONS VARIÉES POUR UN ENGAGEMENT COMMUN</SectionSubHeading>
+          <SectionSubHeading>
+            DES MISSIONS VARIÉES POUR UN ENGAGEMENT COMMUN
+          </SectionSubHeading>
         </HeadingCard>
         <ContentCard>
           <SectionCard className="SectionCard">
@@ -317,7 +326,26 @@ export const Home = () => {
         </ContentCard>
       </SectionSection>
       <SectionEnrol>
-        <EnrolCard></EnrolCard>
+        <EnrolCard>
+          <SectionContent>
+            <DivHeading>ET POURQUOI PAS VOUS</DivHeading>
+            <SubSectionContent>
+              <SectionSubHeading>
+                NOUS AVONS DES POSTES A POURVOIR
+              </SectionSubHeading>
+              <SectionSubHeading>
+                ALORS POURQUOI NE PAS TENTER L'AVENTURE ?
+              </SectionSubHeading>
+            </SubSectionContent>
+            <SectionDescription>
+              PEU IMPORTE VOS VAISSEAUX OU VOTRE EXPÉRIENCE DE JEU, NOUS
+              SOMMES PRÊTS À VOUS ACCUEILLIR PARMI NOUS !
+            </SectionDescription>
+            <SectionDescription>
+              <Button>NOUS REJOINDRE</Button>
+            </SectionDescription>
+          </SectionContent>
+        </EnrolCard>
       </SectionEnrol>
     </Body>
   )
