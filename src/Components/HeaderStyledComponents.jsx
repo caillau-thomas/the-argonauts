@@ -13,9 +13,10 @@ export const Header = styled.div`
   position: fixed;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
   width: 100%;
-  background-color: var(--color-primary);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-large);
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  font-size: var(--font-size-2m);
+  font-weight: 200;
   z-index: 9;
 
   @media (max-width: 1024px) {
@@ -88,7 +89,8 @@ export const NavLink = styled.a`
 `
 
 export const Button = styled.button`
-  padding: var(--space-s);
+  padding: var(--space-2xs);
+  background-color: var(--color-tertiary);
   border: none;
   border-radius: 2px;
   font-weight: 400;
@@ -121,7 +123,7 @@ export const BurgerButton = styled.div`
   & > div {
     width: 100%;
     height: 3px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     border-radius: 5px;
   }
 

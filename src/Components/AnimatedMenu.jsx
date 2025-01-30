@@ -20,16 +20,16 @@ const MenuBackground = styled(motion.div)`
   left: 0;
   bottom: 0;
   right: 0;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   z-index: -1;
 `
 
 const MenuLink = styled(motion.a)`
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 0.5rem;
-  color: #0D0C1D;
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.3s linear;
 
