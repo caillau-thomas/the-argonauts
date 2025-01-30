@@ -5,15 +5,19 @@ import Squadron422 from '../../assets/Backgrounds/squadron-42-2.jpg'
 import Squadron423 from '../../assets/Backgrounds/squadron-42-3.jpg'
 import {
   AboutCard,
-  ContentCard,
+  Card,
+  CardHeading,
+  CardSubHeading,
   EnrolCard,
-  HeadingCard,
-  SectionCard,
-  SectionsCardHeading,
+  SectionCards,
 } from '../../Components/CardStyledComponents'
 import { Button } from '../../Components/HeaderStyledComponents'
 
 const Body = styled.div``
+
+//////////////
+// LANDING //
+////////////
 
 const LandingSection = styled.div`
   display: flex;
@@ -23,19 +27,6 @@ const LandingSection = styled.div`
   height: 100vh;
 
   background-color: #000000c2;
-`
-
-const SectionContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: var(--color-primary);
-  justify-content: center;
-  text-align: center;
-  gap: 25px;
-`
-const SubSectionContent = styled.div`
-  display: flex;
-  flex-direction: column;
 `
 
 const LandingHeading = styled.div`
@@ -63,63 +54,11 @@ const LandingSubHeading = styled.div`
   }
 `
 
-const Content = styled.div`
-  font-size: var(--font-size-2m);
-  font-weight: 300;
-  display: flex;
-  text-align: justify;
-  justify-content: center;
-`
+//////////////
+/// ABOUT ///
+////////////
 
-const SectionDescription = styled.div`
-  display: flex;
-  text-align: justify;
-  justify-content: center;
-  font-size: var(--font-size-1m);
-  font-weight: 400;
-  letter-spacing: var(--space-3xs);
-  text-shadow: 0px 2px 10px rgb(0, 0, 0);
-`
-
-const SubContent = styled.div`
-  font-size: var(--font-size-1m);
-  color: var(--color-tertiary);
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: center;
-  justify-content: center;
-`
-
-const SubContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-`
-
-const VideoBackgroundContainer = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -2;
-`
-
-const VideoBackground = styled.iframe`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  pointer-events: none;
-  z-index: -2;
-`
-
-const SectionAbout = styled.div`
+const AboutSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-m);
@@ -142,45 +81,10 @@ const SectionAbout = styled.div`
     scroll-margin-top: 0px;
   }
 `
-const DivHeading = styled.div`
-  font-size: var(--font-size-1xl);
-  font-weight: 400;
-  letter-spacing: var(--space-2xs);
-  text-shadow: 0px 0px 10px rgb(0, 0, 0);
 
-  @media (max-width: 1024px) {
-    font-size: var(--font-size-1xl);
-    font-weight: 400;
-    letter-spacing: var(--space-1xs);
-  }
-`
-
-const AboutSubHeading = styled.div`
-  font-size: var(--font-size-large);
-  font-weight: 400;
-  letter-spacing: var(--space-2xs);
-  text-shadow: 0px 0px 10px rgb(0, 0, 0);
-  color: var(--color-tertiary);
-
-  @media (max-width: 1024px) {
-    font-size: var(--font-size-large);
-    font-weight: 300;
-    letter-spacing: var(--space-3xs);
-  }
-`
-const SectionSubHeading = styled.div`
-  font-size: var(--font-size-large);
-  font-weight: 300;
-  letter-spacing: var(--space-3xs);
-  text-shadow: 0px 0px 10px rgb(0, 0, 0);
-  color: var(--color-tertiary);
-
-  @media (max-width: 1024px) {
-    font-size: var(--font-size-1m);
-    font-weight: 300;
-    letter-spacing: var(--space-3xs);
-  }
-`
+//////////////
+// SECTION //
+////////////
 
 const SectionSection = styled.div`
   display: flex;
@@ -199,7 +103,7 @@ const SectionSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  &:has(.SectionCard:hover) .SectionCard:not(:hover) {
+  &:has(.Card:hover) .Card:not(:hover) {
     opacity: 0.4;
   }
 
@@ -210,7 +114,39 @@ const SectionSection = styled.div`
   }
 `
 
-const SectionEnrol = styled.div`
+const Content = styled.div`
+  font-size: var(--font-size-2m);
+  font-weight: 300;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+`
+
+const SubContent = styled.div`
+  font-size: var(--font-size-1m);
+  color: var(--color-tertiary);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  justify-content: center;
+`
+
+const SubContentContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+`
+
+////////////
+// ENROL //
+//////////
+
+
+const EnrolSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,6 +169,86 @@ const SectionEnrol = styled.div`
   }
 `
 
+//////////////
+// GENERIC //
+////////////
+
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: var(--color-primary);
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+`
+
+
+const Heading = styled.div`
+  font-size: var(--font-size-1xl);
+  font-weight: 400;
+  letter-spacing: var(--space-2xs);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+
+  @media (max-width: 1024px) {
+    font-size: var(--font-size-1xl);
+    font-weight: 400;
+    letter-spacing: var(--space-1xs);
+  }
+`
+
+const SubHeadingContainer = styled.div`
+  font-size: var(--font-size-large);
+  font-weight: 400;
+  letter-spacing: var(--space-2xs);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  color: var(--color-tertiary);
+
+  @media (max-width: 1024px) {
+    font-size: var(--font-size-1m);
+    font-weight: 300;
+    letter-spacing: var(--space-3xs);
+  }
+`
+
+const SubHeading = styled.div`
+  font-size: var(--font-size-large);
+  font-weight: 400;
+  letter-spacing: var(--space-2xs);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  color: var(--color-tertiary);
+
+  @media (max-width: 1024px) {
+    font-size: var(--font-size-1m);
+    font-weight: 300;
+    letter-spacing: var(--space-3xs);
+  }
+`
+
+////////////////
+// VIDEO BGC //
+//////////////
+
+const VideoBackgroundContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+`
+
+const VideoBackground = styled.iframe`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+  z-index: -2;
+`
+
+
 export const Home = () => {
   return (
     <Body>
@@ -245,46 +261,46 @@ export const Home = () => {
             allowFullScreen
           />
         </VideoBackgroundContainer>
-        <SectionContent>
+        <Div>
           <LandingHeading>ARGONAUTS</LandingHeading>
           <LandingSubHeading>AU DELA DU VERS</LandingSubHeading>
-        </SectionContent>
+        </Div>
       </LandingSection>
-      <SectionAbout id="Organisation">
+      <AboutSection id="Organisation">
         <AboutCard>
-          <SectionContent>
-            <DivHeading>NOS MISSION</DivHeading>
-            <SubSectionContent>
-              <AboutSubHeading>INTERVENIR POUR PROTEGER</AboutSubHeading>
-              <AboutSubHeading>AGIR POUR SAUVER</AboutSubHeading>
-            </SubSectionContent>
-            <SectionDescription>
+          <Div>
+            <Heading>NOS MISSION</Heading>
+            <SubHeadingContainer>
+              <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
+              <SubHeading>AGIR POUR SAUVER</SubHeading>
+            </SubHeadingContainer>
+            <Content>
               QUELS QU'EN SOIENT LES RISQUES
-            </SectionDescription>
-          </SectionContent>
+            </Content>
+          </Div>
         </AboutCard>
         <AboutCard>
-          <ContentCard>
-            <SectionCard>
-              <SectionContent>10 MEMBRES</SectionContent>
-              <SectionContent>+50 INTERVENTIONS</SectionContent>
-              <SectionContent>+100 VAISSEAUX</SectionContent>
-            </SectionCard>
-          </ContentCard>
+          <SectionCards>
+            <Card>
+              <Div>10 MEMBRES</Div>
+              <Div>+50 INTERVENTIONS</Div>
+              <Div>+100 VAISSEAUX</Div>
+            </Card>
+          </SectionCards>
         </AboutCard>
-      </SectionAbout>
+      </AboutSection>
       <SectionSection id="Sections">
-        <HeadingCard>
-          <DivHeading>NOS SECTIONS</DivHeading>
-          <SectionSubHeading>
+        <CardHeading>
+          <Heading>NOS SECTIONS</Heading>
+          <SubHeading>
             DES MISSIONS VARIÉES POUR UN ENGAGEMENT COMMUN
-          </SectionSubHeading>
-        </HeadingCard>
-        <ContentCard>
-          <SectionCard className="SectionCard">
-            <SectionsCardHeading>
+          </SubHeading>
+        </CardHeading>
+        <SectionCards>
+          <Card className="Card">
+            <CardSubHeading>
               SECTION INDUSTRIEL & LOGISTIQUE
-            </SectionsCardHeading>
+            </CardSubHeading>
             <Content>
               À LA RECHERCHE DE CHALLENGES LOGISTIQUES ET DE DÉFIS INDUSTRIELS,
               NOUS ASSURONS L'AUTOSUFFISANCE DES ARGONAUTS ET BÂTISSONS LEUR
@@ -296,11 +312,11 @@ export const Home = () => {
               <SubContent>CHAINES LOGISTIQUES</SubContent>
               <SubContent>BASE BUILDING</SubContent>
             </SubContentContainer>
-          </SectionCard>
-          <SectionCard className="SectionCard">
-            <SectionsCardHeading>
+          </Card>
+          <Card className="Card">
+            <CardSubHeading>
               SECTION DE REPONSE A INCIDENT
-            </SectionsCardHeading>
+            </CardSubHeading>
             <Content>
               À LA RECHERCHE D'ADRÉNALINE ET D'EXCELLENCE, NOUS ASSURONS LA
               SÉCURITÉ DES ARGONAUTS AINSI QUE CELLE DES CITOYENS DU VERSE.
@@ -310,9 +326,9 @@ export const Home = () => {
               <SubContent>PROTECTION RAPPROCHE</SubContent>
               <SubContent>SAUVETAGE</SubContent>
             </SubContentContainer>
-          </SectionCard>
-          <SectionCard className="SectionCard">
-            <SectionsCardHeading>SECTION D'APPUI</SectionsCardHeading>
+          </Card>
+          <Card className="Card">
+            <CardSubHeading>SECTION D'APPUI</CardSubHeading>
             <Content>
               NOUS ASSISTONS LES DIFFÉRENTES SECTIONS DES ARGONAUTS SUR LES
               PLANS TECHNIQUE ET MÉDICAL, AFIN D’ASSURER LEUR BON
@@ -322,31 +338,31 @@ export const Home = () => {
               <SubContent>EQUIPE D'INGENIEURIE</SubContent>
               <SubContent>EQUIPES MEDICALES</SubContent>
             </SubContentContainer>
-          </SectionCard>
-        </ContentCard>
+          </Card>
+        </SectionCards>
       </SectionSection>
-      <SectionEnrol>
+      <EnrolSection>
         <EnrolCard>
-          <SectionContent>
-            <DivHeading>ET POURQUOI PAS VOUS</DivHeading>
-            <SubSectionContent>
-              <SectionSubHeading>
+          <Div>
+            <Heading>ET POURQUOI PAS VOUS</Heading>
+            <SubHeadingContainer>
+              <SubHeading>
                 NOUS AVONS DES POSTES A POURVOIR
-              </SectionSubHeading>
-              <SectionSubHeading>
+              </SubHeading>
+              <SubHeading>
                 ALORS POURQUOI NE PAS TENTER L'AVENTURE ?
-              </SectionSubHeading>
-            </SubSectionContent>
-            <SectionDescription>
+              </SubHeading>
+            </SubHeadingContainer>
+            <Content>
               PEU IMPORTE VOS VAISSEAUX OU VOTRE EXPÉRIENCE DE JEU, NOUS
               SOMMES PRÊTS À VOUS ACCUEILLIR PARMI NOUS !
-            </SectionDescription>
-            <SectionDescription>
+            </Content>
+            <Content>
               <Button>NOUS REJOINDRE</Button>
-            </SectionDescription>
-          </SectionContent>
+            </Content>
+          </Div>
         </EnrolCard>
-      </SectionEnrol>
+      </EnrolSection>
     </Body>
   )
 }

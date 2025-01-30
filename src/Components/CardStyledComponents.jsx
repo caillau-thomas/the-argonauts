@@ -12,7 +12,7 @@ export const AboutCard = styled.div`
 // SECTIONS //
 /////////////
 
-export const SectionCard = styled.div`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -23,20 +23,20 @@ export const SectionCard = styled.div`
   color: var(--color-primary);
   transition: all 0.25s ease-in-out;
 `
-export const HeadingCard = styled.div`
+export const CardHeading = styled.div`
 padding-top: var(--space-m);
   width: 100%;
   text-align: center;
 `
 
-export const SectionsCardHeading = styled.div`
+export const CardSubHeading = styled.div`
   font-size: var(--font-size-large);
   font-weight: 400;
   text-align: center;
   justify-content: center;
 `
 
-export const ContentCard = styled.div`
+export const SectionCards = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
