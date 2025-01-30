@@ -13,10 +13,12 @@ export const Header = styled.div`
   position: fixed;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.210);
   width: 100%;
-  background-color: var(--color-primary);
-  color: var(--color-text-primary);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   gap: var(--space-s);
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-2m);
+  font-weight: 200;
+  z-index: 2;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -83,15 +85,17 @@ export const NavLink = styled.a`
 `
 
 export const Button = styled.button`
-  padding: var(--space-s);
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  padding: var(--space-2xs);
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
   border: none;
+  border-radius: 2px;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  font-size: var(--font-size-medium);
+  color: var(--color-secondary);
+  font-size: var(--font-size-1m);
+  font-family: var(--font-primary);
 
   @media (max-width: 1024px) {
     display: none;
