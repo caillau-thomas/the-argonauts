@@ -1,8 +1,8 @@
-# React + Vite
+# argonauts.fr
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site web de l'Organisation Argonauts
 
-Currently, two official plugins are available:
+Argonauts est une organisation de joueurs sur le jeu Star Citizen. À ce jour, le site est encore en développement !
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Page de l'organisation sur le site de Roberts Space Industries :
+https://robertsspaceindustries.com/orgs/ONU
