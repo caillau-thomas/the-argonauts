@@ -43,7 +43,7 @@ const App = () => {
           <NavLink href="#">NOS SERVICES</NavLink>
         </HeaderCentre>
         <HeaderGD>
-          <Button>NOUS REJOINDRE</Button>
+          <Button className="button">NOUS REJOINDRE</Button>
         </HeaderGD>
       </Header>
       <AnimatedMenu open={menuOpen} onClose={toggleMenu} />
