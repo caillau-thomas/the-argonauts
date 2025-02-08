@@ -12,6 +12,7 @@ const StyledMenu = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
 `
 
 const MenuBackground = styled(motion.div)`
@@ -39,7 +40,7 @@ const MenuLink = styled(motion.a)`
   }
 
   &:hover {
-    color: #343078;
+    color: var(--color-tertiary);
   }
 `
 
@@ -56,6 +57,7 @@ const linkVariants = {
   open: {
     y:          0,
     opacity:    1,
+    visibility: 'visible',
     transition: {
       y: { stiffness: 1000, velocity: -100 },
     },
@@ -63,6 +65,7 @@ const linkVariants = {
   closed: {
     y:          -50,
     opacity:    0,
+    visibility: 'hidden',
     transition: {
       y: { stiffness: 1000 },
     },

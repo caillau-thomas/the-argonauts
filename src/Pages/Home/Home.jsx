@@ -12,7 +12,12 @@ import {
   SectionsCardSubHeading,
 } from '../../Components/CardStyledComponents'
 
-const Body = styled.div``
+const Body = styled.div`
+  --scroll-margin-top: 100px;
+  @media (max-width: 1024px) {
+    --scroll-margin-top: 80px;
+  }
+`
 
 //////////////
 // LANDING //
@@ -82,8 +87,8 @@ const LandingSubHeading = styled.div`
 ////////////
 
 const AboutSection = styled.div`
-  height: calc(100vh - 100px);
-  scroll-margin-top: 100px;
+  height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
 
   color: var(--color-secondary);
   background-image: url(${Squadron422});
@@ -114,8 +119,8 @@ const AboutFilter = styled.div`
 ////////////
 
 const SectionSection = styled.div`
-  min-height: calc(100vh - 100px);
-  scroll-margin-top: 100px;
+  min-height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
 
   color: var(--color-primary);
   background-image: url(${Squadron421});
@@ -178,8 +183,8 @@ const SubContentContainer = styled.div`
 //////////
 
 const EnrolSection = styled.div`
-  height: calc(100vh - 100px);
-  scroll-margin-top: 100px;
+  height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
 
   color: var(--color-secondary);
   background-image: url(${Squadron423});
