@@ -1,6 +1,8 @@
 import { motion } from 'motion/react'
 import styled from 'styled-components'
 
+import { Button } from '../Pages/Home/Home.jsx'
+
 const StyledMenu = styled(motion.nav)`
   display: flex;
   flex-direction: column;
@@ -99,13 +101,16 @@ export const AnimatedMenu = ({ open, onClose }) => {
       <MenuBackground variants={backgroundVariants} />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3xl)' }}>
         <MenuLink href="#" variants={linkVariants} onClick={onClose}>
-        L'ORGANISATION
+          L'ORGANISATION
         </MenuLink>
         <MenuLink href="#Sections" variants={linkVariants} onClick={onClose}>
-        NOS SECTIONS
+          NOS SECTIONS
         </MenuLink>
         <MenuLink href="#" variants={linkVariants} onClick={onClose}>
-        NOS SERVICES
+          NOS SERVICES
+        </MenuLink>
+        <MenuLink variants={linkVariants} >
+          <Button>NOUS REJOINDRE</Button>
         </MenuLink>
       </div>
     </StyledMenu>
