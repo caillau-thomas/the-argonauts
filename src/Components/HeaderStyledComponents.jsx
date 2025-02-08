@@ -20,7 +20,6 @@ export const Header = styled.div`
   z-index: 10;
 
   @media (max-width: 1024px) {
-    position: relative;
     justify-content: center;
   }
 `
