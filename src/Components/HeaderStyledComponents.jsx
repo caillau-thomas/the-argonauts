@@ -20,7 +20,6 @@ export const Header = styled.div`
   z-index: 10;
 
   @media (max-width: 1024px) {
-    position: relative;
     justify-content: center;
   }
 `
@@ -29,6 +28,11 @@ export const HeaderGD = styled.div`
   display: flex;
   flex-direction: row;
   gap: var(--space-s);
+  .button {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
 `
 export const HeaderCentre = styled.div`
   display: flex;
@@ -99,37 +103,7 @@ export const Button = styled.button`
   color: var(--color-secondary);
   font-size: var(--font-size-1m);
   font-family: var(--font-primary);
-
-  @media (max-width: 1024px) {
-    display: none;
-  }
 `
 ////////////////////////////
 ////Tablettes-mobiles//////
 //////////////////////////
-
-export const BurgerButton = styled.div`
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 25px;
-  height: 20px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
- 
-
-  & > div {
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-primary);
-    border-radius: 5px;
-  }
-
-  @media (max-width: 1024px) {
-    position: absolute;
-    left: var(--space-s);
-    display: flex;
-  }
-`

@@ -3,8 +3,8 @@ import { Outlet } from 'react-router'
 import styled from 'styled-components'
 
 import { AnimatedMenu } from './Components/AnimatedMenu.jsx'
+import { BurgerIcon } from './Components/BurgerIcon.jsx'
 import {
-  BurgerButton,
   Button,
   Copyright,
   Footer,
@@ -32,11 +32,7 @@ const App = () => {
   return (
     <Layout>
       <Header ref={headerRef}>
-        <BurgerButton onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </BurgerButton>
+        <BurgerIcon open={menuOpen} onClick={toggleMenu} />
         <HeaderGD>
           <HomeIcon image="agn-logo.png" />
         </HeaderGD>
@@ -47,7 +43,7 @@ const App = () => {
           <NavLink href="#">NOS SERVICES</NavLink>
         </HeaderCentre>
         <HeaderGD>
-          <Button>NOUS REJOINDRE</Button>
+          <Button className="button">NOUS REJOINDRE</Button>
         </HeaderGD>
       </Header>
       <AnimatedMenu open={menuOpen} onClose={toggleMenu} />
