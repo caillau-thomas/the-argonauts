@@ -95,13 +95,38 @@ const AboutSection = styled.div`
 
 const AboutFilter = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: var(--space-m);
   align-items: center;
   justify-items: center;
   min-height: calc(100vh - 100px);
-
   background-color: var(--color-filter);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    scroll-margin-top: 0px;
+  }
+`
+
+const AboutTop = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-m);
+  align-items: center;
+  justify-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    scroll-margin-top: 0px;
+  }
+`
+
+const AboutBot = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+  align-items: center;
+  justify-items: center;
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
@@ -279,19 +304,31 @@ export const Home = () => {
       </LandingSection>
       <AboutSection id="Organisation">
         <AboutFilter>
-          <Card>
-            <Heading>NOS MISSION</Heading>
-            <SubHeadingContainer>
-              <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
-              <SubHeading>AGIR POUR SAUVER</SubHeading>
-            </SubHeadingContainer>
-            <Content>QUELS QU'EN SOIENT LES RISQUES</Content>
-          </Card>
-          <Card>
-            <Card>10 MEMBRES</Card>
-            <Card>+50 INTERVENTIONS</Card>
-            <Card>+100 VAISSEAUX</Card>
-          </Card>
+          <AboutTop>
+            <Card>
+              <Heading>NOS MISSION</Heading>
+              <SubHeadingContainer>
+                <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
+                <SubHeading>AGIR POUR SAUVER</SubHeading>
+              </SubHeadingContainer>
+              <Content>QUELS QU'EN SOIENT LES RISQUES</Content>
+            </Card>
+          </AboutTop>
+          <AboutBot>
+            <Card>
+              <Heading>NOS MISSION</Heading>
+              <SubHeadingContainer>
+                <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
+                <SubHeading>AGIR POUR SAUVER</SubHeading>
+              </SubHeadingContainer>
+              <Content>QUELS QU'EN SOIENT LES RISQUES</Content>
+            </Card>
+            <Card>
+              <Card>10 MEMBRES</Card>
+              <Card>+50 INTERVENTIONS</Card>
+              <Card>+100 VAISSEAUX</Card>
+            </Card>
+          </AboutBot>
         </AboutFilter>
       </AboutSection>
       <SectionSection id="Sections">
