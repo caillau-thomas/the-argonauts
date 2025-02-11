@@ -15,29 +15,6 @@ export const Card = styled.div`
 `
 
 ///////////////
-/// ENROLL ///
-/////////////
-
-export const RulesContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: var(--space-m);
-  flex-direction: row;
-  padding: var(--space-m);
-  margin: var(--space-m);
-
-  color: var(--color-primay);
-  backdrop-filter: blur(10px);
-  border: 0.5px solid var(--color-border);
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }`
-
-///////////////
 // SECTIONS //
 /////////////
 
@@ -50,9 +27,7 @@ export const SectionsCard = styled.div`
   gap: var(--space-2xl);
   padding: var(--space-2xl);
   border-radius: 16px;
-
   color: var(--color-primary);
-  transition: all 0.25s ease-in-out;
 `
 export const CardHeading = styled.div`
   padding-top: var(--space-m);
@@ -90,3 +65,47 @@ export const SectionsCardContainer = styled.div`
   }
   
 `
+
+
+///////////////
+//GENERIQUE //
+/////////////
+
+export const BackdropContainer = styled.div`
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  margin: var(--space-m);
+
+  color: var(--color-primay);
+  backdrop-filter: blur(10px);
+  border: 0.5px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }`
+
+export const BackdropAboutContainer = styled.div`
+display: grid;
+align-items: center;
+justify-content: space-around;
+gap: var(--space-m);
+padding: var(--space-m);
+margin: var(--space-m);
+width: 50em;
+
+color: var(--color-primay);
+backdrop-filter: blur(10px);
+border: 0.5px solid var(--color-border);
+border-radius: 4px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
+
+@media (max-width: 1024px) {
+  flex-direction: column;
+}`
+
+

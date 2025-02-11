@@ -5,8 +5,9 @@ import Squadron422 from '../../assets/Backgrounds/squadron-42-2.jpg'
 import Squadron423 from '../../assets/Backgrounds/squadron-42-3.jpg'
 import Video from '../../assets/videoplayback.mp4'
 import {
+  BackdropAboutContainer,
+  BackdropContainer,
   Card,
-  RulesContainer,
   SectionsCard,
   SectionsCardContainer,
   SectionsCardSubHeading,
@@ -93,6 +94,8 @@ const AboutSection = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
 `
 
 const AboutFilter = styled.div`
@@ -101,10 +104,8 @@ const AboutFilter = styled.div`
   gap: var(--space-m);
   align-items: center;
   justify-items: center;
-  min-height: calc(100vh - var(--scroll-margin-top));
-  scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-filter);
-
+  min-height: calc(100vh - 100px);
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     scroll-margin-top: 0px;
@@ -122,17 +123,12 @@ const AboutBot = styled.div`
 const SectionSection = styled.div`
   min-height: calc(100vh - var(--scroll-margin-top));
   scroll-margin-top: var(--scroll-margin-top);
-
   color: var(--color-primary);
   background-image: url(${Squadron421});
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  &:has(.Card:hover) .Card:not(:hover) {
-    opacity: 0.4;
-  }
 `
 
 const SectionsFilter = styled.div`
@@ -181,18 +177,18 @@ const EnrolSection = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
 `
 
 const EnrolFilter = styled.div`
   display: grid;
   align-items: center;
-  min-height: calc(100vh - var(--scroll-margin-top));
-  scroll-margin-top: var(--scroll-margin-top);
   justify-content: center;
   gap: var(--space-m);
   padding: var(--space-l) var(--space-2m);
   grid-template-columns: 1fr;
-
+  min-height: calc(100vh - 100px);
   background-color: var(--color-filter);
 
   @media (max-width: 1024px) {
@@ -280,6 +276,7 @@ export const Button = styled.button`
   padding: var(--space-2xs);
   background-color: var(--color-tertiary);
   border: none;
+  z-index: 13;
   border-radius: 2px;
   font-weight: 400;
   cursor: pointer;
@@ -299,7 +296,8 @@ export const Home = () => {
           </video>
           <Card>
             <LandingHeading>ARGONAUTS</LandingHeading>
-            <LandingSubHeading>AU DELA DU VERS</LandingSubHeading>
+            <LandingSubHeading>NOTRE MISSION COMMENCE</LandingSubHeading>
+            <LandingSubHeading>LÀ OÙ VOTRE INSTINCT VOUS DIT DE FUIR</LandingSubHeading>
           </Card>
         </LandingFilter>
       </LandingSection>
@@ -311,20 +309,19 @@ export const Home = () => {
               <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
               <SubHeading>AGIR POUR SAUVER</SubHeading>
             </SubHeadingContainer>
-            <RulesContainer>
+            <BackdropAboutContainer>
               <Content style={{ textAlign: 'center' }}>
-              SPÉCIALISÉ DANS LA RÉPONSE À INCIDENTS, 
-              NOUS REALISONS NOTAMENT DES OPERATIONS  D'ESCORTE, 
-              DE COUVERTURE AERIENNE, DE PROTECTION AU SOL, 
-              DE RECONNAISSANCE ET DE SAUVETAGE
+                SPÉCIALISÉ DANS LA RÉPONSE À INCIDENTS, NOUS REALISONS NOTAMENT
+                DES OPERATIONS D'ESCORTE, DE COUVERTURE AERIENNE, DE PROTECTION
+                AU SOL, DE RECONNAISSANCE ET DE SAUVETAGE
               </Content>
-            </RulesContainer>
+              <AboutBot>
+                <Card>10 MEMBRES</Card>
+                <Card>+50 INTERVENTIONS</Card>
+                <Card>+100 VAISSEAUX</Card>
+              </AboutBot>
+            </BackdropAboutContainer>
           </Card>
-          <AboutBot>
-            <Card>10 MEMBRES</Card>
-            <Card>+50 INTERVENTIONS</Card>
-            <Card>+100 VAISSEAUX</Card>
-          </AboutBot>
         </AboutFilter>
       </AboutSection>
       <SectionSection id="Sections">
@@ -381,7 +378,7 @@ export const Home = () => {
           </SectionsCardContainer>
         </SectionsFilter>
       </SectionSection>
-      <EnrolSection>
+      <EnrolSection id="Enroll">
         <EnrolFilter>
           <EnrolTop>
             <Card>
@@ -394,15 +391,18 @@ export const Home = () => {
                   NOUS SOMMES PRÊTS À VOUS ACCUEILLIR PARMI NOUS !
                 </SubHeading>
               </SubHeadingContainer>
-              <Content>QUELQUES PREREQUIS:</Content>
-              <RulesContainer>
-                <Content>ETRE AGÉ D'AU MOINS 20 ANS</Content>
-                <Content>ETRE FRANCOPHONE</Content>
-                <Content>N'ETRE AFFILIE A UNE AUCUNE ORGANISATION</Content>
-              </RulesContainer>
-              <Content>
-                <Button>NOUS REJOINDRE</Button>
-              </Content>
+
+              <BackdropContainer>
+                <SectionsCardSubHeading>QUELQUES PREREQUIS</SectionsCardSubHeading>
+                <SubContentContainer>
+                  <Content>ETRE AGÉ D'AU MOINS 20 ANS</Content>
+                  <Content>ETRE FRANCOPHONE</Content>
+                  <Content>N'ETRE AFFILIE A AUCUNE ORGANISATION</Content>
+                </SubContentContainer>
+                <Content>
+                  <Button href="youtube.com">NOUS REJOINDRE</Button>
+                </Content>
+              </BackdropContainer>
             </Card>
           </EnrolTop>
           <EnrolBot>
