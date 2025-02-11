@@ -6,11 +6,12 @@ import Squadron423 from '../../assets/Backgrounds/squadron-42-3.jpg'
 import Video from '../../assets/videoplayback.mp4'
 import {
   Card,
-  EnrolContentContainer,
+  RulesContainer,
   SectionsCard,
   SectionsCardContainer,
   SectionsCardSubHeading,
 } from '../../Components/CardStyledComponents'
+import Offres from '../../Components/Offres'
 
 const Body = styled.div`
   --scroll-margin-top: 100px;
@@ -49,7 +50,6 @@ const LandingFilter = styled.div`
   background-color: var(--color-filter);
 
   @media (max-width: 1024px) {
-    
   }
 `
 
@@ -87,9 +87,6 @@ const LandingSubHeading = styled.div`
 ////////////
 
 const AboutSection = styled.div`
-  height: calc(100vh - var(--scroll-margin-top));
-  scroll-margin-top: var(--scroll-margin-top);
-
   color: var(--color-secondary);
   background-image: url(${Squadron422});
   background-attachment: fixed;
@@ -104,7 +101,8 @@ const AboutFilter = styled.div`
   gap: var(--space-m);
   align-items: center;
   justify-items: center;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-filter);
 
   @media (max-width: 1024px) {
@@ -112,31 +110,9 @@ const AboutFilter = styled.div`
     scroll-margin-top: 0px;
   }
 `
-
-const AboutTop = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-m);
-  align-items: center;
-  justify-items: center;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    scroll-margin-top: 0px;
-  }
-`
-
 const AboutBot = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-m);
-  align-items: center;
-  justify-items: center;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    scroll-margin-top: 0px;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
 `
 
 //////////////
@@ -175,15 +151,6 @@ const SectionsFilter = styled.div`
   }
 `
 
-const Content = styled.div`
-  font-size: var(--font-size-2m);
-  font-weight: 300;
-  display: flex;
-  text-align: justify;
-  justify-content: center;
-  text-shadow: var(--shadow-text);
-`
-
 const SubContent = styled.div`
   font-size: var(--font-size-1m);
   color: var(--color-tertiary);
@@ -208,9 +175,6 @@ const SubContentContainer = styled.div`
 //////////
 
 const EnrolSection = styled.div`
-  height: calc(100vh - var(--scroll-margin-top));
-  scroll-margin-top: var(--scroll-margin-top);
-
   color: var(--color-secondary);
   background-image: url(${Squadron423});
   background-attachment: fixed;
@@ -220,13 +184,14 @@ const EnrolSection = styled.div`
 `
 
 const EnrolFilter = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - var(--scroll-margin-top));
+  scroll-margin-top: var(--scroll-margin-top);
   justify-content: center;
   gap: var(--space-m);
   padding: var(--space-l) var(--space-2m);
+  grid-template-columns: 1fr;
 
   background-color: var(--color-filter);
 
@@ -235,7 +200,27 @@ const EnrolFilter = styled.div`
     scroll-margin-top: 0px;
   }
 `
+const EnrolTop = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-m);
+  padding: var(--space-l) var(--space-2m);
+`
 
+const EnrolBot = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-m);
+  padding: var(--space-l) var(--space-2m);
+  margin-bottom: var(--space-m);
+  @media (max-width: 1080px) {
+    display: none;
+  }
+`
 //////////////
 // GENERIC //
 ////////////
@@ -280,6 +265,17 @@ const SubHeading = styled.div`
     letter-spacing: var(--space-3xs);
   }
 `
+
+const Content = styled.div`
+  font-size: var(--font-size-2m);
+  font-weight: 300;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  text-shadow: var(--shadow-text);
+`
+
 export const Button = styled.button`
   padding: var(--space-2xs);
   background-color: var(--color-tertiary);
@@ -309,30 +305,25 @@ export const Home = () => {
       </LandingSection>
       <AboutSection id="Organisation">
         <AboutFilter>
-          <AboutTop>
-            <Card>
-              <Heading>NOS MISSION</Heading>
-              <SubHeadingContainer>
-                <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
-                <SubHeading>AGIR POUR SAUVER</SubHeading>
-              </SubHeadingContainer>
-              <Content>QUELS QU'EN SOIENT LES RISQUES</Content>
-            </Card>
-          </AboutTop>
+          <Card>
+            <Heading>NOS MISSION</Heading>
+            <SubHeadingContainer>
+              <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
+              <SubHeading>AGIR POUR SAUVER</SubHeading>
+            </SubHeadingContainer>
+            <RulesContainer>
+              <Content style={{ textAlign: 'center' }}>
+              SPÉCIALISÉ DANS LA RÉPONSE À INCIDENTS, 
+              NOUS REALISONS NOTAMENT DES OPERATIONS  D'ESCORTE, 
+              DE COUVERTURE AERIENNE, DE PROTECTION AU SOL, 
+              DE RECONNAISSANCE ET DE SAUVETAGE
+              </Content>
+            </RulesContainer>
+          </Card>
           <AboutBot>
-            <Card>
-              <Heading>NOS MISSION</Heading>
-              <SubHeadingContainer>
-                <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
-                <SubHeading>AGIR POUR SAUVER</SubHeading>
-              </SubHeadingContainer>
-              <Content>QUELS QU'EN SOIENT LES RISQUES</Content>
-            </Card>
-            <Card>
-              <Card>10 MEMBRES</Card>
-              <Card>+50 INTERVENTIONS</Card>
-              <Card>+100 VAISSEAUX</Card>
-            </Card>
+            <Card>10 MEMBRES</Card>
+            <Card>+50 INTERVENTIONS</Card>
+            <Card>+100 VAISSEAUX</Card>
           </AboutBot>
         </AboutFilter>
       </AboutSection>
@@ -392,21 +383,32 @@ export const Home = () => {
       </SectionSection>
       <EnrolSection>
         <EnrolFilter>
-          <Card>
-            <Heading>ET POURQUOI PAS VOUS</Heading>
-            <SubHeadingContainer>
-              <SubHeading>NOUS AVONS DES POSTES A POURVOIR</SubHeading>
-            </SubHeadingContainer>
-            <EnrolContentContainer>
-              <Content>
-                PEU IMPORTE VOS VAISSEAUX OU VOTRE EXPÉRIENCE DE JEU, NOUS
-                SOMMES PRÊTS À VOUS ACCUEILLIR PARMI NOUS !
-              </Content>
+          <EnrolTop>
+            <Card>
+              <Heading>ET POURQUOI PAS VOUS</Heading>
+              <SubHeadingContainer>
+                <SubHeading>
+                  PEU IMPORTE VOS VAISSEAUX OU VOTRE EXPÉRIENCE DE JEU
+                </SubHeading>
+                <SubHeading>
+                  NOUS SOMMES PRÊTS À VOUS ACCUEILLIR PARMI NOUS !
+                </SubHeading>
+              </SubHeadingContainer>
+              <Content>QUELQUES PREREQUIS:</Content>
+              <RulesContainer>
+                <Content>ETRE AGÉ D'AU MOINS 20 ANS</Content>
+                <Content>ETRE FRANCOPHONE</Content>
+                <Content>N'ETRE AFFILIE A UNE AUCUNE ORGANISATION</Content>
+              </RulesContainer>
               <Content>
                 <Button>NOUS REJOINDRE</Button>
               </Content>
-            </EnrolContentContainer>
-          </Card>
+            </Card>
+          </EnrolTop>
+          <EnrolBot>
+            <SubHeading>NOS OPPORTUNITÉES</SubHeading>
+            <Offres />
+          </EnrolBot>
         </EnrolFilter>
       </EnrolSection>
     </Body>

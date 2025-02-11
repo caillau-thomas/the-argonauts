@@ -14,20 +14,28 @@ export const Card = styled.div`
   color: var(--color-primary);
 `
 
-export const EnrolContentContainer = styled.div`
+///////////////
+/// ENROLL ///
+/////////////
+
+export const RulesContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  text-align: center;
-  padding: var(--space-s);
-  gap:var(--space-l);
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--space-m);
+  flex-direction: row;
+  padding: var(--space-m);
+  margin: var(--space-m);
+
+  color: var(--color-primay);
+  backdrop-filter: blur(10px);
+  border: 0.5px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    padding: var(--space-s);
-  }
-`
+  }`
 
 ///////////////
 // SECTIONS //
