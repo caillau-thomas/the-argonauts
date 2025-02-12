@@ -40,7 +40,6 @@ const App = () => {
         <HeaderCentre>
           <NavLink href="#Organisation">L'ORGANISATION</NavLink>
           <NavLink href="#Sections">NOS SECTIONS</NavLink>
-          <NavLink href="#Enroll">NOS SERVICES</NavLink>
         </HeaderCentre>
         <HeaderGD>
           <Button className="button" href="#Enroll">NOUS REJOINDRE</Button>

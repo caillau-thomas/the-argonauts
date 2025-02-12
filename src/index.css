@@ -8,17 +8,18 @@
   --font-size-1m: 1.3rem;    
   --font-size-2m: 1.6rem;    
   --font-size-large: 2rem;
+  --font-size-1l: 2.4rem;
   --font-size-xl: 3rem;
   --font-size-1xl: 4rem;      
-  --font-size-2xl: 6rem;       
-
+  --font-size-2xl: 6rem;
+  
   /* Colors */
   --color-primary: #ecf0f1;
   --color-secondary: #131b23;
   --color-tertiary: #eacb00;
   --color-background: #e2e2e23a;
   --color-border: #ffffff16;
-  --color-filter: #00000030;
+  --color-filter: #00000050;
 
   --color-text-primary: #131b23;
   --color-text-secondary: #ecf0f1;

@@ -95,7 +95,7 @@ const AboutSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   min-height: calc(100vh - var(--scroll-margin-top));
-  scroll-margin-top: var(--scroll-margin-top);
+  scroll-margin-top: 100px;
 `
 
 const AboutFilter = styled.div`
@@ -304,7 +304,7 @@ export const Home = () => {
       <AboutSection id="Organisation">
         <AboutFilter>
           <Card>
-            <Heading>NOS MISSION</Heading>
+            <Heading>TEST</Heading>
             <SubHeadingContainer>
               <SubHeading>INTERVENIR POUR PROTEGER</SubHeading>
               <SubHeading>AGIR POUR SAUVER</SubHeading>

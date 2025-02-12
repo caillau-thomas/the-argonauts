@@ -9,22 +9,30 @@ import enroll5 from '../assets/Backgrounds/enroll5.jpg'
 import enroll6 from '../assets/Backgrounds/enroll6.jpg'
 import enroll7 from '../assets/Backgrounds/enroll7.jpg'
 import enroll8 from '../assets/Backgrounds/enroll8.jpg'
+import {
+  PrimaryCardContent,
+} from '../Components/CardStyledComponents'
 
 const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-gap: var(--space-s);
+display: grid;
+grid-template-columns: 1fr;
+gap: var(--space-2xl);
+ 
+@media (max-width: 1080px) {
+  display: none;
+}
+               
+               
+            
 `
 
 const Container = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: center;
-  height: 30vh;
+  height: 50vh;
+  margin: 0 auto;
   gap: var(--space-s);
-  @media (max-width: 1024px) {
-    
-  }
 `
 
 const Item = styled.div`
@@ -86,7 +94,7 @@ const Item = styled.div`
   }
 
   &:hover {
-    flex: 0 0 380px;
+    flex: 0 0 300px;
     transform: translateY(-30px);
   }
 
@@ -167,23 +175,22 @@ const ItemSecondary = styled.div`
   }
 `
 
-
-
 const Offres = () => {
   return (
     <Wrapper>
+      <PrimaryCardContent style={{ margin: '0 auto', paddingBottom: 'var(--space-s)' }}>NOS OPPORTUNITÉES</PrimaryCardContent>
       <Container>
         <Item>
           <div className="content">
             <h2>INFANTERIE</h2>
             <span>
-            LA SECTION DE REPONSE A INCIDENT RECHERCHES DES PILOTES, DES
-            EQUIPAGES ET DES OPERATEURS AUX SOL, POUR MENER A BIEN SES MISSIONS
-            DE SECURITÉS.
+              LA SECTION DE REPONSE A INCIDENT RECHERCHES DES PILOTES, DES
+              EQUIPAGES ET DES OPERATEURS AUX SOL, POUR MENER A BIEN SES
+              MISSIONS DE SECURITÉS.
             </span>
             <span>
-            MISSIONS:ESCORTE, COUVERTURE AERIENNE, PROTECTION AU SOL,
-            RECONNAISSANCE ETC...{' '}
+              MISSIONS:ESCORTE, COUVERTURE AERIENNE, PROTECTION AU SOL,
+              RECONNAISSANCE ETC...{' '}
             </span>
           </div>
         </Item>
@@ -198,7 +205,10 @@ const Offres = () => {
         <Item>
           <div className="content">
             <h2>PERSONNELS INDUSTRIELLE</h2>
-            <span>NOUS RECHERCHONS DU PERSONNEL POUR L'EXTRACTION ET LE TRAITEMENT DES RESSOURCES.</span>
+            <span>
+              NOUS RECHERCHONS DU PERSONNEL POUR L'EXTRACTION ET LE TRAITEMENT
+              DES RESSOURCES.
+            </span>
             <span>MISSIONS: </span>
             <span>MINAGE, RECYCLAGE, RAFINNAGE</span>
           </div>
@@ -216,26 +226,31 @@ const Offres = () => {
         <ItemSecondary>
           <div className="content">
             <h2>CONSTRUCTION</h2>
-            <span>NOUS RECHERCHONS DU PERSONNEL AFIN DE CONSTRUIRE NOS INFRASTRUCTURES.</span>
+            <span>
+              NOUS RECHERCHONS DU PERSONNEL AFIN DE CONSTRUIRE NOS
+              INFRASTRUCTURES.
+            </span>
             <span>MISSIONS: </span>
-            <span>CONSTRUTION DE BASE, D'AVANT POSTE, DE SITE D'EXTRACTION</span>
+            <span>
+              CONSTRUTION DE BASE, D'AVANT POSTE, DE SITE D'EXTRACTION
+            </span>
           </div>
         </ItemSecondary>
         <ItemSecondary>
           <div className="content">
             <h2>PERSONNEL MEDICALE</h2>
             <span>
-            NOUS RECHERCHONS DU PERSONNEL MEDICALE POUR RENFORCER NOS EQUIPES
+              NOUS RECHERCHONS DU PERSONNEL MEDICALE POUR RENFORCER NOS EQUIPES
             </span>
-            <span>
-            MISSIONS: SAUVETAGE, ASSISTANCE MEDICALE.
-            </span>
+            <span>MISSIONS: SAUVETAGE, ASSISTANCE MEDICALE.</span>
           </div>
         </ItemSecondary>
         <ItemSecondary>
           <div className="content">
             <h2>INGÉNIEURIE</h2>
-            <span>NOUS RECHERCHONS DDES INGÉNIEURS POUR RENFORCER NOS EQUIPES</span>
+            <span>
+              NOUS RECHERCHONS DDES INGÉNIEURS POUR RENFORCER NOS EQUIPES
+            </span>
             <span>MISSIONS: </span>
             <span>MAINTENACE ET REPARATION DE LA FLOTTE</span>
           </div>
@@ -243,8 +258,9 @@ const Offres = () => {
         <ItemSecondary>
           <div className="content">
             <h2>CANDIATER SPONTANÉMENT !</h2>
-            <span>VOUS SOUHAITEZ APPORTER VOTRE EMPREINTE À NOS ACTIVITÉ, 
-              ALORS POSTULEZ SPONTANEMENT AFIN D'APPORTER VOTRE EXPERTISE !
+            <span>
+              VOUS SOUHAITEZ APPORTER VOTRE EMPREINTE À NOS ACTIVITÉ, ALORS
+              POSTULEZ SPONTANEMENT AFIN D'APPORTER VOTRE EXPERTISE !
             </span>
             <span>MISSIONS: </span>
             <span>ESCORTE, COUVERTURE AERIENNE, CHASSE À LA PRIMES</span>
