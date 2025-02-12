@@ -1,1 +1,0 @@
-export { HomeRM } from './HomeRM'
