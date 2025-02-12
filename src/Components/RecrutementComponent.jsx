@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PrimaryJoinCard = styled.div`
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 2fr 4fr 1fr;
 
   @media (max-width: 1080px) {
   }
@@ -34,6 +34,7 @@ export const JoinCardHeading = styled.div`
   justify-content: center;
   font-size: var(--font-size-large);
   font-weight: 400;
+  align-items: right;
   @media (max-width: 1080px) {
     display: flex;
     flex-direction: column;
@@ -58,8 +59,8 @@ export const JoinCardRows = styled.div`
 `
 export const JoinCardRowsHeading = styled.div`
   display: grid;
-  grid-template-columns: 1fr 3fr;
-
+  grid-template-columns: 1fr 9fr;
+  
   @media (max-width: 1080px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -145,9 +146,9 @@ export const HomeIcon = styled.div`
   width: 200px;
   height: 200px;
 
-  @media (max-width: 1024px) {
-    width: 80px;
-    height: 80px;
+  @media (max-width: 1080px) {
+    width: 120px;
+    height: 120px;
   }
 `
 
