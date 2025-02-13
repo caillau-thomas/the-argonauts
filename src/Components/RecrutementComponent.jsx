@@ -1,36 +1,22 @@
 import styled from 'styled-components'
 
+import { H2, H4, H5 } from './GlobalStyle'
+
 /////////////////////////////////////////////////
 
-export const PrimaryJoinCard = styled.div`
+export const Card = styled.div`
   display: grid;
-  grid-template-rows: 2fr 4fr 1fr;
-
+  grid-template-rows: 2fr 1fr 4fr;
+  
   @media (max-width: 1080px) {
   }
 `
 
-export const SecondaryJoinCard = styled.div`
+/////////////////////////////////////////////////
+
+export const CardTop = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 25px;
-  padding: var(--space-m);
-  color: var(--color-primary);
-`
-
-export const TertiaryJoinCard = styled.div`
-  color: var(--color-tertiary);
-  backdrop-filter: blur(10px);
-  border: 0.5px solid var(--color-border);
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
-`
-
-export const TopRows = styled.div`
-  display: grid;
-  grid-template-columns: 0fr 1fr 0fr;
+  flex-direction: row;
   @media (max-width: 1080px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -38,30 +24,7 @@ export const TopRows = styled.div`
     text-align: center;
   }
 `
-export const Columns = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
-  }
-`
-export const BottomRows = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  width: 100%;
-  color: aliceblue;
-
-  @media (max-width: 1080px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-`
-/////////////////////////////////////////////////
-
-export const HeadingContainer = styled.div`
+export const CardTopContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,8 +37,7 @@ export const HeadingContainer = styled.div`
     align-items: center;
   }
 `
-
-export const Heading = styled.div`
+export const HeadingContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -91,73 +53,37 @@ export const Heading = styled.div`
     align-items: center;
   }
 `
-export const HeadingTitle = styled.div`
-  font-weight: 400;
-  color: var(--color-primary);
-  font-size: var(--font-size-1xl);
-  text-shadow: var(--shadow-text);
-`
-export const HeadingSubTitle = styled.div`
-  font-weight: 300;
-  color: var(--color-tertiary);
-  font-size: var(--font-size-1l);
-  text-shadow: var(--shadow-text);
-`
 
 ////////////////////////////////////////////////
 
-export const CardTitle = styled.div`
-  font-size: var(--font-size-large);
-  font-weight: 400;
-  text-align: center;
-  justify-content: center;
-`
-
-export const PrimaryContent = styled.div`
-  font-weight: 300;
-  font-size: var(--font-size-2m);
-  letter-spacing: var(--space-3xs);
-  text-shadow: var(--shadow-text);
-  color: var(--color-primary);
-
-  @media (max-width: 1080px) {
-    font-weight: 300;
-    font-size: var(--font-size-1m);
-    letter-spacing: var(--space-3xs);
-    text-align: justify;
-    justify-content: center;
-  }
-`
-
-export const RulesContainer = styled.div`
+export const TT = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 2fr 3fr;
 `
 
-export const RulesItem = styled.div`
-  color: var(--color-primary);
-  margin: 20px;
-  margin-top: 55px;
-  padding-top: 20px;
-  position: relative;
-  text-align: center;
+export const Columns = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+`
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    background-image: url("https://image.noelshack.com/fichiers/2025/04/3/1737561974-agn-logo.png"); // Remplace par le chemin vers ton image
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+export const LeftColumns = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  
+`
+export const RightColumns = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`
+
+export const LeftContent = styled.div`
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+`
+
+export const RightContent = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr ;
 `
 
 ///////////////////////////////////////
@@ -177,45 +103,47 @@ export const HomeIcon = styled.div`
 
 const Recrutement = () => {
   return (
-    <PrimaryJoinCard>
-      <TopRows>
-        <Heading />
-        <HeadingContainer>
-          <Heading>
+    <Card>
+      <CardTop>
+        <CardTopContainer>
+          <HeadingContainer>
             <HomeIcon image="agn-logo.png" />
-          </Heading>
-          <Heading>
-            <HeadingTitle>REJOINGNEZ NOUS !</HeadingTitle>
-            <HeadingSubTitle>
+          </HeadingContainer>
+          <HeadingContainer>
+            <H2>REJOINGNEZ NOUS !</H2>
+            <H5>
               FAITES PARTIE D'UNE AVENTURE HUMAINE
-            </HeadingSubTitle>
-          </Heading>
-        </HeadingContainer>
-
-        <Heading />
-      </TopRows>
+            </H5>
+          </HeadingContainer>
+        </CardTopContainer>
+        <HeadingContainer />
+      </CardTop>
+      <TT>
+        <H4 style={{ color: 'var(--color-primary)' }}>PLACEHOLDER</H4>
+        <H4 style={{ color: 'var(--color-primary)' }}>PLACEHOLDER</H4>
+      </TT>
       <Columns>
-        <SecondaryJoinCard>
-          <CardTitle>PREREQUIS</CardTitle>
-          <TertiaryJoinCard>
-            <PrimaryContent>
-              Nous sommes prêts à vous accueillir parmi nous, peu importe vos
-              vaisseaux ou votre expérience en jeu. Cependant, voici quelques
-              prérequis importants à prendre en compte:
-            </PrimaryContent>
-            <RulesContainer>
-              <RulesItem>ÊTRE AGÉ D'AU MOINS 20 ANS</RulesItem>
-              <RulesItem>ETRE FRANCOPHONE</RulesItem>
-              <RulesItem>N'ETRE AFFILIE A AUCUNE ORGANISATION</RulesItem>
-            </RulesContainer>
-          </TertiaryJoinCard>
-        </SecondaryJoinCard>
-        <SecondaryJoinCard>
-          <CardTitle>ETAPES DE RECRUTEMENT</CardTitle>
-        </SecondaryJoinCard>
+        <LeftColumns>
+         
+          <H5>PLACEHOLDER</H5>
+          <H5>PLACEHOLDER</H5>
+          <H5>PLACEHOLDER</H5>
+          <H5>PLACEHOLDER</H5>
+        </LeftColumns>
+        <RightColumns>
+          <LeftContent>
+            <H5>PLACEHOLDER</H5>
+            <H5>PLACEHOLDER</H5>
+            <H5></H5>
+          </LeftContent>
+          <RightContent>
+            <H5></H5>
+            <H5>PLACEHOLDER</H5>
+            <H5>PLACEHOLDER</H5>
+          </RightContent>
+        </RightColumns>
       </Columns>
-      <BottomRows>BTN</BottomRows>
-    </PrimaryJoinCard>
+    </Card>
   )
 }
 
