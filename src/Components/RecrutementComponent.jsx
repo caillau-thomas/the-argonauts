@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 
-import { Card } from './CardStyledComponents'
+import { PrimaryJoinCard, SecondaryJoinCard } from './CardStyledComponents'
 import { H2, H5, H6 } from './GlobalStyle'
 
 /////////////////////////////////////////////////
 
 export const Container = styled.div`
   display: grid;
-  grid-template-rows: 2fr 4fr;
-
+  grid-template-rows: 1fr 4fr;
   @media (max-width: 1080px) {
   }
 `
@@ -44,15 +43,11 @@ export const HeadingContainer = styled.div`
   flex-direction: column;
   text-align: left;
   justify-content: center;
-  font-size: var(--font-size-large);
-  font-weight: 400;
-  align-items: right;
   @media (max-width: 1080px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    align-items: center;
   }
 `
 
@@ -60,41 +55,50 @@ export const HeadingContainer = styled.div`
 
 export const Columns = styled.div`
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2fr 4fr;
+  padding-top: 6em;
+  padding-bottom: 10em;
+  justify-content: center;
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: var(--space-5xl);
   }
 `
 
 export const LeftColumns = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+
   gap: 25px;
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 6em;
+  margin-right: 6em;
+  justify-content: left;
   @media (max-width: 1080px) {
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
   }
 `
 export const RightColumns = styled.div`
   display: grid;
+  text-align: left;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
   @media (max-width: 1080px) {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    .Span {
+      display: none;
+    }
   }
 `
 
 export const LeftContent = styled.div`
   display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
+  grid-template-rows: 2fr 2fr 1.5fr;
   gap: 25px;
-  margin-left: 10em;
+  margin-left: 6em;
   @media (max-width: 1080px) {
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
     grid-template-rows: 2fr 2fr;
     .Span {
       display: none;
@@ -104,36 +108,30 @@ export const LeftContent = styled.div`
 
 export const RightContent = styled.div`
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 1.5fr 2fr 2fr;
   gap: 25px;
-  margin-right: 10em;
+  margin-right: 6em;
   @media (max-width: 1080px) {
     grid-template-rows: 2fr 2fr;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
     .Span {
       display: none;
     }
   }
 `
-
-///////////////////////////////////////
+/////////////////////////////////////////////////
 
 export const Button = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-primary);
+  z-index: 3;
   background-color: var(--color-tertiary);
   border: none;
-  border-radius: 2px;
-  color: var(--color-secondary);
-  padding-left: var(--space-large);
-  padding-right: var(--space-large);
-  text-decoration: none;
-  margin: 0;
-  height: 90px;
-  @media (max-width: 1080px) {
-    padding-left: var(--space-s);
-    padding-right: var(--space-s);
-    height: 70px;
-  }
+  border-radius: 4px;
 `
 
 export const HomeIcon = styled.div`
@@ -166,37 +164,46 @@ const Recrutement = () => {
       </ContainerTop>
       <Columns>
         <LeftColumns>
-          <Card>
-            <h3>Etre agé d'au moins 20 ans</h3>
-          </Card>
-          <Card>
-            <h3>Etre agé d'au moins 20 ans</h3>
-          </Card>
-          <Card>
-            <h3>Etre agé d'au moins 20 ans</h3>
-          </Card>
-          <Button>
-            <H6>JE POSTULE</H6>
-          </Button>
+          <PrimaryJoinCard>
+            <H6>Avoir au moins 20 ans</H6>
+          </PrimaryJoinCard>
+          <PrimaryJoinCard>
+            <H6>Etre Francophone</H6>
+          </PrimaryJoinCard>
+          <PrimaryJoinCard>
+            <H6>N'etre afilié à aucune organisation</H6>
+          </PrimaryJoinCard>
+          <PrimaryJoinCard
+            style={{
+              justifyContent:  'end',
+              backgroundColor: '#00000000',
+              border:          '0',
+            }}
+          >
+            <Button href="#Sections">
+              <H6 style={{ color: 'var(--color-secondary)' }}>JE POSTULE</H6>
+            </Button>
+          </PrimaryJoinCard>
         </LeftColumns>
         <RightColumns>
           <LeftContent>
-            <Card>
-              <h3>Etre agé d'au moins 20 ans</h3>
-            </Card>
-            <Card>
-              <h3>Etre agé d'au moins 20 ans</h3>
-            </Card>
+            <SecondaryJoinCard>
+              <H6>Rejoignez le discord de recrutement</H6>
+            </SecondaryJoinCard>
+
+            <SecondaryJoinCard>
+              <H6>Devenez une recrue</H6>
+            </SecondaryJoinCard>
             <span className="Span" />
           </LeftContent>
           <RightContent>
             <span className="Span" />
-            <Card>
-              <h3>Etre agé d'au moins 20 ans</h3>
-            </Card>
-            <Card>
-              <h3>Etre agé d'au moins 20 ans</h3>
-            </Card>
+            <SecondaryJoinCard>
+              <H6>Passez votre entretient individuel</H6>
+            </SecondaryJoinCard>
+            <SecondaryJoinCard>
+              <H6>Rejoignez les Argonauts</H6>
+            </SecondaryJoinCard>
           </RightContent>
         </RightColumns>
       </Columns>

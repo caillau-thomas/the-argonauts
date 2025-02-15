@@ -14,7 +14,7 @@ export const H1 = styled.h1`
     letter-spacing: 0;
   }
 `
-export const H2 = styled.h2`
+export const H2 = styled.h1`
   font-weight: 400;
   color: var(--color-primary);
   font-size: var(--font-size-1xl);
@@ -29,7 +29,7 @@ export const H2 = styled.h2`
   }
 `
 
-export const H3 = styled.div`
+export const H3 = styled.h1`
   font-weight: 400;
   color: var(--color-primary);
   font-size: var(--font-size-xl);
@@ -43,7 +43,7 @@ export const H3 = styled.div`
   }
 `
 
-export const H4 = styled.h4`
+export const H4 = styled.h1`
   font-weight: 200;
   font-size: var(--font-size-xl);
   letter-spacing: var(--space-3xs);
@@ -55,7 +55,7 @@ export const H4 = styled.h4`
     font-size: var(--font-size-2m);
   }
 `
-export const H5 = styled.h5`
+export const H5 = styled.h1`
   font-weight: 200;
   font-size: var(--font-size-1l);
   letter-spacing: var(--space-3xs);
@@ -68,15 +68,13 @@ export const H5 = styled.h5`
     font-size: var(--font-size-2m);
   }
 `
-export const H6 = styled.h6`
-  font-weight: 200;
-  font-size: var(--font-size-s);
-  letter-spacing: var(--space-3xs);
-  color: var(--color-tertiary);
-  text-shadow: var(--shadow-text);
+export const H6 = styled.h1`
+  font-weight: 400;
+  font-size: var(--font-size-large);
+  color: var(--color-primary);
 
   @media (max-width: 1080px) {
-    font-weight: 200;
-    font-size: var(--font-size-xs);
+    font-weight: 400;
+    font-size: var(--font-size-2m);
   }
 `

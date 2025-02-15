@@ -114,7 +114,7 @@ const SectionsBottom = styled.div`
 const Join = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  min-height: calc(100vh - var(--scroll-margin-top));
+  min-height: calc(100vh - 232px);
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-secondary);
 `
@@ -149,8 +149,8 @@ export const Home = () => {
         </Landing>
       </LandingDiv>
       <About id="Organisation">
-        <AboutTop><H1>ARGONAUTS</H1></AboutTop>
-        <AboutMid><H1>ARGONAUTS</H1></AboutMid>
+        <AboutTop></AboutTop>
+        <AboutMid></AboutMid>
         <AboutBottom>
           <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img src="/membres.png" />} />
           <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img src="/vaisseau.png" />}/>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled.div`
+export const PrimaryJoinCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,21 @@ export const Card = styled.div`
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
 `
+export const SecondaryJoinCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+  color: var(--color-primary);
+  padding-left: var(--space-l);
+  padding-right: var(--space-xl);
 
+  background-color: #ffffff34;
+  backdrop-filter: blur(10px);
+  border: 0.5px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
+`
 ////////////////////////////////////////////////////
 ///////////////////OLD HOME////////////////////////
 ///////////////////////////////////////////////////
