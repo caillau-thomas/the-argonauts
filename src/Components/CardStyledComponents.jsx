@@ -1,135 +1,147 @@
 import styled from 'styled-components'
 
-////////////////////////////////////////////////////
-///////////////////OLD HOME////////////////////////
-///////////////////////////////////////////////////
-
-export const PrimaryCard = styled.div`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: 25px;
-
   color: var(--color-primary);
-`
-export const SecondaryCard = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: space-around;
-  align-items: stretch;
 
+  background-color: #ffffff34;
   backdrop-filter: blur(10px);
   border: 0.5px solid var(--color-border);
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
-
-  @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
-  }
-`
-export const TertiaryCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 25px;
-  padding: var(--space-m);
-  color: var(--color-primary);
 `
 
-export const PrimaryCardTitle = styled.div`
-  font-weight: 400;
-  font-size: var(--font-size-2xl);
-  letter-spacing: var(--space-2xs);
-  text-shadow: var(--shadow-text);
-  color: var(--color-primary);
-  
+////////////////////////////////////////////////////
+///////////////////OLD HOME////////////////////////
+///////////////////////////////////////////////////
 
-  @media (max-width: 1080px) {
-    font-weight: 400;
-    font-size: var(--font-size-1xl);
-    letter-spacing: 0;
-  }
-`
+// export const PrimaryCard = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   gap: 25px;
 
-export const PrimaryCardSubTitle = styled.div`
-  font-weight: 200;
-  font-size: var(--font-size-large);
-  letter-spacing: var(--space-2xs);
-  color: var(--color-tertiary);
-  text-shadow: var(--shadow-text);
+//   color: var(--color-primary);
+// `
+// export const SecondaryCard = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   align-items: center;
+//   justify-content: space-around;
+//   align-items: stretch;
 
-  @media (max-width: 1080px) {
-    font-weight: 200;
-    font-size: var(--font-size-2m);
-    letter-spacing: var(--space-3xs);
-  }
-`
+//   backdrop-filter: blur(10px);
+//   border: 0.5px solid var(--color-border);
+//   border-radius: 4px;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
 
-export const SecondaryCardTitle = styled.div`
-  font-weight: 400;
-  color: var(--color-primary);
-  font-size: var(--font-size-1xl);
-  letter-spacing: var(--space-2xs);
-  text-shadow: var(--shadow-text);
+//   @media (max-width: 1080px) {
+//     grid-template-columns: 1fr;
+//   }
+// `
+// export const TertiaryCard = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   gap: 25px;
+//   padding: var(--space-m);
+//   color: var(--color-primary);
+// `
 
-  @media (max-width: 1080px) {
-    font-weight: 400;
-    font-size: var(--font-size-1l);
-    letter-spacing: var(--space-3xs);
-  }
-`
+// export const PrimaryCardTitle = styled.div`
+//   font-weight: 400;
+//   font-size: var(--font-size-2xl);
+//   letter-spacing: var(--space-2xs);
+//   text-shadow: var(--shadow-text);
+//   color: var(--color-primary);
 
-export const SecondaryCardSubTitle = styled.div`
-  font-weight: 400;
-  font-size: var(--font-size-large);
-  letter-spacing: var(--space-2xs);
-  text-shadow: var(--shadow-text);
-  color: var(--color-tertiary);
+//   @media (max-width: 1080px) {
+//     font-weight: 400;
+//     font-size: var(--font-size-1xl);
+//     letter-spacing: 0;
+//   }
+// `
 
-  @media (max-width: 1080px) {
-    font-weight: 300;
-    font-size: var(--font-size-2m);
-    letter-spacing: var(--space-3xs);
-  }
-`
+// export const PrimaryCardSubTitle = styled.div`
+//   font-weight: 200;
+//   font-size: var(--font-size-large);
+//   letter-spacing: var(--space-2xs);
+//   color: var(--color-tertiary);
+//   text-shadow: var(--shadow-text);
 
-export const PrimaryCardContent = styled.div`
-  font-weight: 300;
-  font-size: var(--font-size-2m);
-  letter-spacing: var(--space-3xs);
-  text-shadow: var(--shadow-text);
-  color: var(--color-primary);
-  z-index: 2;
+//   @media (max-width: 1080px) {
+//     font-weight: 200;
+//     font-size: var(--font-size-2m);
+//     letter-spacing: var(--space-3xs);
+//   }
+// `
 
-  @media (max-width: 1080px) {
-    font-weight: 300;
-    font-size: var(--font-size-1m);
-    letter-spacing: var(--space-3xs);
-    text-align: justify;
-  }
-`
+// export const SecondaryCardTitle = styled.div`
+//   font-weight: 400;
+//   color: var(--color-primary);
+//   font-size: var(--font-size-1xl);
+//   letter-spacing: var(--space-2xs);
+//   text-shadow: var(--shadow-text);
 
-export const TertiaryCardTitle = styled.div`
-  font-size: var(--font-size-large);
-  font-weight: 400;
-  text-align: center;
-  justify-content: center;
-`
+//   @media (max-width: 1080px) {
+//     font-weight: 400;
+//     font-size: var(--font-size-1l);
+//     letter-spacing: var(--space-3xs);
+//   }
+// `
 
-export const PrimaryCardList = styled.div`
-  font-size: var(--font-size-1m);
-  color: var(--color-tertiary);
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: center;
-  justify-content: center;
-`
+// export const SecondaryCardSubTitle = styled.div`
+//   font-weight: 400;
+//   font-size: var(--font-size-large);
+//   letter-spacing: var(--space-2xs);
+//   text-shadow: var(--shadow-text);
+//   color: var(--color-tertiary);
 
+//   @media (max-width: 1080px) {
+//     font-weight: 300;
+//     font-size: var(--font-size-2m);
+//     letter-spacing: var(--space-3xs);
+//   }
+// `
+
+// export const PrimaryCardContent = styled.div`
+//   font-weight: 300;
+//   font-size: var(--font-size-2m);
+//   letter-spacing: var(--space-3xs);
+//   text-shadow: var(--shadow-text);
+//   color: var(--color-primary);
+//   z-index: 2;
+
+//   @media (max-width: 1080px) {
+//     font-weight: 300;
+//     font-size: var(--font-size-1m);
+//     letter-spacing: var(--space-3xs);
+//     text-align: justify;
+//   }
+// `
+
+// export const TertiaryCardTitle = styled.div`
+//   font-size: var(--font-size-large);
+//   font-weight: 400;
+//   text-align: center;
+//   justify-content: center;
+// `
+
+// export const PrimaryCardList = styled.div`
+//   font-size: var(--font-size-1m);
+//   color: var(--color-tertiary);
+//   font-weight: 400;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 2px;
+//   text-align: center;
+//   justify-content: center;
+// `
 
 ////////////////////////////////////////////////////
 ////////////////OLD OLD HOME///////////////////////
@@ -150,7 +162,6 @@ export const PrimaryCardList = styled.div`
 //   justify-content: center;
 //   z-index: 0;
 
-  
 //   backdrop-filter: blur(10px);
 //   border: 0.5px solid var(--color-border);
 //   border-radius: 4px;
@@ -175,10 +186,9 @@ export const SecondaryCardList = styled.div`
   background-color: #fff;
 `
 
-
 export const SecondaryCardListElement = styled.div`
   display: grid;
-  grid-template-rows:1fr;
+  grid-template-rows: 1fr;
 `
 
 export const PrimaryCardListElement = styled.div`
