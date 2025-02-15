@@ -18,9 +18,10 @@ export const Container = styled.div`
 export const ContainerTop = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 0;
   @media (max-width: 1080px) {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
   }
@@ -57,12 +58,12 @@ export const HeadingContainer = styled.div`
 
 ////////////////////////////////////////////////
 
-
 export const Columns = styled.div`
   display: grid;
   grid-template-columns: 2fr 3fr;
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 `
 
@@ -74,7 +75,7 @@ export const LeftColumns = styled.div`
   margin-right: 10em;
   @media (max-width: 1080px) {
     margin-left: 5em;
-  margin-right: 5em;
+    margin-right: 5em;
   }
 `
 export const RightColumns = styled.div`
@@ -82,7 +83,7 @@ export const RightColumns = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 25px;
   @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 `
 
@@ -93,7 +94,11 @@ export const LeftContent = styled.div`
   margin-left: 10em;
   @media (max-width: 1080px) {
     margin-left: 5em;
-  margin-right: 5em;
+    margin-right: 5em;
+    grid-template-rows: 2fr 2fr;
+    .Span {
+      display: none;
+    }
   }
 `
 
@@ -103,8 +108,12 @@ export const RightContent = styled.div`
   gap: 25px;
   margin-right: 10em;
   @media (max-width: 1080px) {
+    grid-template-rows: 2fr 2fr;
     margin-left: 5em;
-  margin-right: 5em;
+    margin-right: 5em;
+    .Span {
+      display: none;
+    }
   }
 `
 
@@ -128,7 +137,7 @@ export const Button = styled.button`
 `
 
 export const HomeIcon = styled.div`
-  background-image: url("hHeadingps://image.noelshack.com/fichiers/2025/04/3/1737561974-agn-logo.png");
+  background-image: url("https://image.noelshack.com/fichiers/2025/04/3/1737561974-agn-logo.png");
   background-size: cover;
   background-position: center;
   width: 200px;
@@ -166,18 +175,28 @@ const Recrutement = () => {
           <Card>
             <h3>Etre agé d'au moins 20 ans</h3>
           </Card>
-          <Button><H6>JE POSTULE</H6></Button>
+          <Button>
+            <H6>JE POSTULE</H6>
+          </Button>
         </LeftColumns>
         <RightColumns>
           <LeftContent>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Card>
+              <h3>Etre agé d'au moins 20 ans</h3>
+            </Card>
+            <Card>
+              <h3>Etre agé d'au moins 20 ans</h3>
+            </Card>
+            <span className="Span" />
           </LeftContent>
           <RightContent>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <span className="Span" />
+            <Card>
+              <h3>Etre agé d'au moins 20 ans</h3>
+            </Card>
+            <Card>
+              <h3>Etre agé d'au moins 20 ans</h3>
+            </Card>
           </RightContent>
         </RightColumns>
       </Columns>
