@@ -15,6 +15,7 @@ import {
   Logo,
   NavLink,
 } from './Components/HeaderStyledComponents'
+import { isMediaQuery } from './utils/isMediaQuery.js'
 
 const Layout = styled.div`
   display: grid;
@@ -45,7 +46,7 @@ const App = () => {
           <Button className="button" href="#Enroll">NOUS REJOINDRE</Button>
         </HeaderGD>
       </Header>
-      <AnimatedMenu open={menuOpen} onClose={toggleMenu} />
+      {isMediaQuery('(max-width: 1080px)') && <AnimatedMenu open={menuOpen} onClose={toggleMenu} />}
       <Outlet />
       <Footer>
         <Logo image="made-by-the-community-logo.jpg" />

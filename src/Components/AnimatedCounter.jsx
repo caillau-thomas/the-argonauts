@@ -5,6 +5,8 @@ import {
 import { useEffect,useRef } from 'react'
 import styled from 'styled-components'
 
+import { isMediaQuery } from '../utils/isMediaQuery'
+
 const Layout = styled(motion.div)`
   display: flex;
   align-items: center;
@@ -25,7 +27,7 @@ const Layout = styled(motion.div)`
       line-height: 1;
     }
 
-    & .title {
+    & > .title {
       font-size: var(--font-size-large);
       color: var(--color-primary);
       line-height: 1;
@@ -41,7 +43,7 @@ export const AnimatedCounter = ({
   duration = 1, 
   prefix,
   icon,
-  marginBottom = -300, 
+  marginBottom = isMediaQuery('(max-width: 1080px)') ? 0 : -300, 
 }) => {
   const count = useMotionValue(0)
   const rounded = useTransform(count, latest => Math.round(latest))

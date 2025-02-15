@@ -77,6 +77,7 @@ const AboutBottom = styled.div`
   @media (max-width: 1080px) {
     flex-direction: column;
     gap: var(--space-m);
+    padding: var(--space-m);
   }
 `
 ////////////////////////////////////////
