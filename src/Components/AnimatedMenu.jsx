@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Button } from '../Pages/Home/Home.jsx'
 
 const StyledMenu = styled(motion.nav)`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,10 @@ const StyledMenu = styled(motion.nav)`
   top: 0;
   left: 0;
   z-index: 3;
+
+  @media (max-width: 1080px) {
+    display: flex;
+  }
 `
 
 const MenuBackground = styled(motion.div)`

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import Video from '../../assets/videoplayback.mp4'
+import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
 import Recrutement from '../../Components/RecrutementComponent'
 
@@ -58,9 +59,14 @@ const AboutTop = styled.div`
 `
 const AboutBottom = styled.div`
   display: flex;
-  flex-direction: column;
   min-height: calc(20vh - 50px);
+  justify-content: space-around;
   background-color: var(--color-secondary);
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    gap: var(--space-m);
+  }
 `
 ////////////////////////////////////////
 
@@ -130,7 +136,11 @@ export const Home = () => {
       </LandingDiv>
       <About id="Organisation">
         <AboutTop></AboutTop>
-        <AboutBottom></AboutBottom>
+        <AboutBottom>
+          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img src="/membres.png" />} />
+          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img src="/vaisseau.png" />}/>
+          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img src="/ope.png" />}/>
+        </AboutBottom>
       </About>
       <Sections id="Sections">
         <SectionsTop>
