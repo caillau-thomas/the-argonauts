@@ -50,12 +50,23 @@ const About = styled.div`
   grid-template-columns: 1fr;
   justify-content: center;
   scroll-margin-top: var(--scroll-margin-top);
+  background-color: var(--color-background);
 `
 const AboutTop = styled.div`
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+
+`
+
+const AboutMid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: calc(80vh - 50px);
-  background-color: var(--color-background);
+  @media (max-width: 1080px) {
+    grid-template-columns: 1fr;
+  }
 `
 const AboutBottom = styled.div`
   display: flex;
@@ -72,7 +83,7 @@ const AboutBottom = styled.div`
 
 const Sections = styled.div`
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-columns: 1fr;
   min-height: calc(100vh - var(--scroll-margin-top));
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-background);
@@ -86,8 +97,10 @@ const SectionsTop = styled.div`
 const SectionsMid = styled.div`
   display: grid;
   grid-template-columns: 4fr 6fr;
+  @media (max-width: 1080px) {
+    grid-template-columns: 1fr;
+  }
 `
-
 const SectionsBottom = styled.div`
   display: flex;
   flex-direction: column;
@@ -135,7 +148,8 @@ export const Home = () => {
         </Landing>
       </LandingDiv>
       <About id="Organisation">
-        <AboutTop></AboutTop>
+        <AboutTop><H1>ARGONAUTS</H1></AboutTop>
+        <AboutMid><H1>ARGONAUTS</H1></AboutMid>
         <AboutBottom>
           <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img src="/membres.png" />} />
           <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img src="/vaisseau.png" />}/>
@@ -149,7 +163,9 @@ export const Home = () => {
             <span style={{ color: 'var(--color-tertiary)' }}>SECTIONS</span>
           </H2>
         </SectionsTop>
-        <SectionsMid></SectionsMid>
+        <SectionsMid>
+          
+        </SectionsMid>
         <SectionsBottom>
           <H4 style={{ color: 'var(--color-primary)' }}>
             DECOUVREZ NOS SECTIONS
