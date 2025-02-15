@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import Squadron421 from '../../assets/Backgrounds/squadron-42-1.jpg'
-import Squadron422 from '../../assets/Backgrounds/squadron-42-2.jpg'
 import Video from '../../assets/videoplayback.mp4'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
 import Recrutement from '../../Components/RecrutementComponent'
@@ -56,11 +54,7 @@ const AboutTop = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: calc(80vh - 50px);
-  background-image: url(${Squadron422});
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--color-background);
 `
 const AboutBottom = styled.div`
   display: flex;
@@ -75,11 +69,7 @@ const Sections = styled.div`
   grid-template-rows: 1fr 4fr 1fr;
   min-height: calc(100vh - var(--scroll-margin-top));
   scroll-margin-top: var(--scroll-margin-top);
-  background-image: url(${Squadron421});
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--color-background);
 `
 const SectionsTop = styled.div`
   display: flex;
@@ -88,8 +78,8 @@ const SectionsTop = styled.div`
   justify-content: center;
 `
 const SectionsMid = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
 `
 
 const SectionsBottom = styled.div`
@@ -102,7 +92,7 @@ const SectionsBottom = styled.div`
 ////////////////////////////////////////
 
 const Join = styled.div`
-display: grid;
+  display: grid;
   grid-template-columns: 1fr;
   min-height: calc(100vh - var(--scroll-margin-top));
   scroll-margin-top: var(--scroll-margin-top);
