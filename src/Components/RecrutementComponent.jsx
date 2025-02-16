@@ -110,13 +110,14 @@ export const LeftContent = styled.div`
 
 export const RightContent = styled.div`
   display: grid;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr;
   gap: 50px;
   margin-right: 12em;
   min-width: 30em;
   @media (max-width: 1080px) {
     margin-left: 2em;
     margin-right: 2em;
+    grid-template-rows: 2fr 2fr;
     min-width: 0em;
     .Span {
       display: none;
