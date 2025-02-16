@@ -58,7 +58,7 @@ export const Columns = styled.div`
   grid-template-columns: 2fr 4fr;
   padding-top: 6em;
   padding-bottom: 10em;
-  justify-content: center;
+
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
     gap: var(--space-5xl);
@@ -68,21 +68,21 @@ export const Columns = styled.div`
 export const LeftColumns = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-
-  gap: 25px;
-  margin-left: 6em;
-  margin-right: 6em;
-  justify-content: left;
+  gap: 50px;
+  margin-left: 12em;
+  min-width: 30em;
   @media (max-width: 1080px) {
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    min-width: 0em;
   }
 `
 export const RightColumns = styled.div`
   display: grid;
-  text-align: left;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  text-align: left;
+  gap: 50px;
+  
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
     .Span {
@@ -93,12 +93,14 @@ export const RightColumns = styled.div`
 
 export const LeftContent = styled.div`
   display: grid;
-  grid-template-rows: 2fr 2fr 1.5fr;
-  gap: 25px;
-  margin-left: 6em;
+  grid-template-rows: 2fr 2fr 1fr;
+  gap: 50px;
+  margin-left: 12em;
+  min-width: 30em;
   @media (max-width: 1080px) {
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    min-width: 0em;
     grid-template-rows: 2fr 2fr;
     .Span {
       display: none;
@@ -108,13 +110,14 @@ export const LeftContent = styled.div`
 
 export const RightContent = styled.div`
   display: grid;
-  grid-template-rows: 1.5fr 2fr 2fr;
-  gap: 25px;
-  margin-right: 6em;
+  grid-template-rows: 2fr 2fr;
+  gap: 50px;
+  margin-right: 12em;
+  min-width: 30em;
   @media (max-width: 1080px) {
-    grid-template-rows: 2fr 2fr;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    min-width: 0em;
     .Span {
       display: none;
     }
@@ -164,13 +167,13 @@ const Recrutement = () => {
       </ContainerTop>
       <Columns>
         <LeftColumns>
-          <PrimaryJoinCard>
+          <PrimaryJoinCard backgroundImage="/src/assets/Icons/image_18.png">
             <H6>Avoir au moins 20 ans</H6>
           </PrimaryJoinCard>
-          <PrimaryJoinCard>
+          <PrimaryJoinCard backgroundImage="/src/assets/Icons/image_20.png">
             <H6>Etre Francophone</H6>
           </PrimaryJoinCard>
-          <PrimaryJoinCard>
+          <PrimaryJoinCard backgroundImage="/src/assets/Icons/image_19.png">
             <H6>N'etre afilié à aucune organisation</H6>
           </PrimaryJoinCard>
           <PrimaryJoinCard
@@ -187,22 +190,22 @@ const Recrutement = () => {
         </LeftColumns>
         <RightColumns>
           <LeftContent>
-            <SecondaryJoinCard>
+            <SecondaryJoinCard backgroundImage="/src/assets/Icons/img21.png">
               <H6>Rejoignez le discord de recrutement</H6>
             </SecondaryJoinCard>
 
-            <SecondaryJoinCard>
+            <SecondaryJoinCard backgroundImage="/src/assets/Icons/img23.png">
               <H6>Devenez une recrue</H6>
             </SecondaryJoinCard>
             <span className="Span" />
           </LeftContent>
           <RightContent>
             <span className="Span" />
-            <SecondaryJoinCard>
+            <SecondaryJoinCard backgroundImage="/src/assets/Icons/img22.png">
               <H6>Passez votre entretient individuel</H6>
             </SecondaryJoinCard>
-            <SecondaryJoinCard>
-              <H6>Rejoignez les Argonauts</H6>
+            <SecondaryJoinCard backgroundImage="/src/assets/Icons/img24.png">
+              <H6>Devenez membre des Argonauts</H6>
             </SecondaryJoinCard>
           </RightContent>
         </RightColumns>
