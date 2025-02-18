@@ -63,14 +63,14 @@ const AboutTop = styled.div`
 const AboutMid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(80vh - 50px);
+  min-height: calc(80vh - var(--scroll-margin-top));
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
   }
 `
 const AboutBottom = styled.div`
   display: flex;
-  min-height: calc(20vh - 50px);
+  min-height: 20vh;
   justify-content: space-around;
   background-color: var(--color-secondary);
 
@@ -152,9 +152,9 @@ export const Home = () => {
         <AboutTop></AboutTop>
         <AboutMid></AboutMid>
         <AboutBottom>
-          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img src="/membres.png" />} />
-          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img src="/vaisseau.png" />}/>
-          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img src="/ope.png" />}/>
+          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/membres.png" />} />
+          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/vaisseau.png" />}/>
+          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/ope.png" />}/>
         </AboutBottom>
       </About>
       <Sections id="Sections">

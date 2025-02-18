@@ -8,7 +8,11 @@ import { H2, H5, H6 } from './GlobalStyle'
 export const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 4fr;
+  margin-right: 6em;
+  margin-left: 6em;
   @media (max-width: 1080px) {
+    margin-left: 2em;
+    margin-right: 2em;
   }
 `
 
@@ -17,7 +21,8 @@ export const Container = styled.div`
 export const ContainerTop = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0;
+  margin-right: -6em;
+  margin-left: -6em;
   @media (max-width: 1080px) {
     display: flex;
     flex-direction: column;
@@ -55,10 +60,10 @@ export const HeadingContainer = styled.div`
 
 export const Columns = styled.div`
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 3fr 5fr;
   padding-top: 6em;
   padding-bottom: 10em;
-
+  gap: var(--space-5xl);
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
     gap: var(--space-5xl);
@@ -69,13 +74,6 @@ export const LeftColumns = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  margin-left: 12em;
-  min-width: 30em;
-  @media (max-width: 1080px) {
-    margin-left: 2em;
-    margin-right: 2em;
-    min-width: 0em;
-  }
 `
 export const RightColumns = styled.div`
   display: grid;
@@ -83,6 +81,7 @@ export const RightColumns = styled.div`
   text-align: left;
   gap: 50px;
   
+
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
     .Span {
@@ -95,12 +94,8 @@ export const LeftContent = styled.div`
   display: grid;
   grid-template-rows: 2fr 2fr 1fr;
   gap: 50px;
-  margin-left: 12em;
-  min-width: 30em;
+
   @media (max-width: 1080px) {
-    margin-left: 2em;
-    margin-right: 2em;
-    min-width: 0em;
     grid-template-rows: 2fr 2fr;
     .Span {
       display: none;
@@ -112,13 +107,9 @@ export const RightContent = styled.div`
   display: grid;
   grid-template-rows: 1fr 2fr 2fr;
   gap: 50px;
-  margin-right: 12em;
-  min-width: 30em;
+
   @media (max-width: 1080px) {
-    margin-left: 2em;
-    margin-right: 2em;
     grid-template-rows: 2fr 2fr;
-    min-width: 0em;
     .Span {
       display: none;
     }
