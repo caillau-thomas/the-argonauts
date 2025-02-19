@@ -51,7 +51,7 @@ export const Footer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: var(--space-s);
-  background-color: var(--color-secondary);
+  background-color: black;
   color: var(--color-text-secondary);
   padding: var(--space-s);
 `
