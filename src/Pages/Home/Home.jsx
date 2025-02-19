@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import Video from '../../assets/videoplayback.mp4'
-
 import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
 import Recrutement from '../../Components/RecrutementComponent'
@@ -58,6 +57,7 @@ const AboutTop = styled.div`
   flex-direction: row;
   text-align: center;
   justify-content: center;
+`
 
 const AboutMid = styled.div`
   display: grid;
