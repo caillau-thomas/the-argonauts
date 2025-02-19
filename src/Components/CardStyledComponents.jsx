@@ -6,6 +6,7 @@ export const PrimaryJoinCard = styled.div`
   justify-content: center;
   text-align: center;
   color: var(--color-primary);
+  padding: var(--space-s);
 
   background-color: #ffffff34;
   backdrop-filter: blur(10px);
@@ -41,8 +42,7 @@ export const SecondaryJoinCard = styled.div`
   justify-content: start;
   text-align: left;
   color: var(--color-primary);
-  padding-left: var(--space-l);
-  padding-right: var(--space-xl);
+  padding: var(--space-s);
 
   background-color: #ffffff34;
   backdrop-filter: blur(10px);

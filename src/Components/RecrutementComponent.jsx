@@ -28,6 +28,8 @@ export const ContainerTop = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-right: 0em;
+    margin-left: 0em;
   }
 `
 export const ContainerTopContainer = styled.div`
@@ -120,13 +122,11 @@ export const RightContent = styled.div`
 export const Button = styled.button`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: var(--color-primary);
   z-index: 3;
   background-color: var(--color-tertiary);
   border: none;
   border-radius: 4px;
+  padding: var(--space-m);
 `
 
 export const HomeIcon = styled.div`
@@ -168,24 +168,15 @@ const Recrutement = () => {
           <PrimaryJoinCard backgroundImage="/src/assets/Icons/image_19.png">
             <H6>N'etre afilié à aucune organisation</H6>
           </PrimaryJoinCard>
-          <PrimaryJoinCard
-            style={{
-              justifyContent:  'end',
-              backgroundColor: '#00000000',
-              border:          '0',
-            }}
-          >
-            <Button href="#Sections">
-              <H6 style={{ color: 'var(--color-secondary)' }}>JE POSTULE</H6>
-            </Button>
-          </PrimaryJoinCard>
+          <Button href="#Sections">
+            <H6 style={{ color: 'var(--color-secondary)' }}>JE POSTULE</H6>
+          </Button>
         </LeftColumns>
         <RightColumns>
           <LeftContent>
             <SecondaryJoinCard backgroundImage="/src/assets/Icons/img21.png">
               <H6>Rejoignez le discord de recrutement</H6>
             </SecondaryJoinCard>
-
             <SecondaryJoinCard backgroundImage="/src/assets/Icons/img23.png">
               <H6>Devenez une recrue</H6>
             </SecondaryJoinCard>
