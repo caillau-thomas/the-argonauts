@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import Video from '../../assets/videoplayback.mp4'
+
 import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
 import Recrutement from '../../Components/RecrutementComponent'
@@ -58,8 +59,6 @@ const AboutTop = styled.div`
   text-align: center;
   justify-content: center;
 
-`
-
 const AboutMid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -68,6 +67,7 @@ const AboutMid = styled.div`
     grid-template-columns: 1fr;
   }
 `
+
 const AboutBottom = styled.div`
   display: flex;
   min-height: 20vh;
@@ -95,6 +95,7 @@ const SectionsTop = styled.div`
   text-align: center;
   justify-content: center;
 `
+
 const SectionsMid = styled.div`
   display: grid;
   grid-template-columns: 4fr 6fr;
