@@ -43,7 +43,7 @@ export const AnimatedCounter = ({
   duration = 1, 
   prefix,
   icon,
-  marginBottom = isMediaQuery('(max-width: 1080px)') ? 0 : -300, 
+  marginBottom = isMediaQuery('(max-width: 1080px)') ? 0 : - window.innerHeight * 0.03,
 }) => {
   const count = useMotionValue(0)
   const rounded = useTransform(count, latest => Math.round(latest))

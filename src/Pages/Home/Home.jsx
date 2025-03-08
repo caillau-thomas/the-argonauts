@@ -4,7 +4,9 @@ import Video from '../../assets/videoplayback.mp4'
 import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
+import { IncidentResponseTimeline } from '../../Components/IncidentResponseTimeline'
 import Recrutement from '../../Components/RecrutementComponent'
+import { SectionsTimeline } from '../../Components/SectionsTimeline.jsx'
 
 const Body = styled.div`
   --scroll-margin-top: 100px;
@@ -152,25 +154,14 @@ export const Home = () => {
           <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/ope.png" />}/>
         </AboutBottom>
       </About>
-      <Sections id="Sections">
+      <Sections id="Sections" style={{ gridTemplateRows: 'max-content 1fr' }}>
         <SectionsTop>
           <H2>
             DECOUVREZ NOS{' '}
             <span style={{ color: 'var(--color-tertiary)' }}>SECTIONS</span>
           </H2>
         </SectionsTop>
-        <SectionsMid>
-          
-        </SectionsMid>
-        <SectionsBottom>
-          <H4 style={{ color: 'var(--color-primary)' }}>
-            DECOUVREZ NOS SECTIONS
-          </H4>
-          <H4>
-            <span style={{ color: 'var(--color-primary)' }}>POUR UN </span>
-            ENGAGEMENT COMMUN
-          </H4>
-        </SectionsBottom>
+        <SectionsTimeline />
       </Sections>
       <Join id="Enrol">
         <Recrutement />
