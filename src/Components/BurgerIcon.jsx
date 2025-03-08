@@ -18,7 +18,7 @@ const BurgerButton = styled.button`
     outline: none;
   }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     position: absolute;
     left: var(--space-s);
     display: flex;

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import Video from '../../assets/videoplayback.mp4'
+import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
 import Recrutement from '../../Components/RecrutementComponent'
@@ -52,20 +53,12 @@ const About = styled.div`
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-background);
 `
-const AboutTop = styled.div`
+const AboutContent = styled.div`
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: center;
-`
-
-const AboutMid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: calc(80vh - var(--scroll-margin-top));
-  @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
-  }
 `
 
 const AboutBottom = styled.div`
@@ -150,8 +143,9 @@ export const Home = () => {
         </Landing>
       </LandingDiv>
       <About id="Organisation">
-        <AboutTop></AboutTop>
-        <AboutMid></AboutMid>
+        <AboutContent>
+          <AboutComponent />
+        </AboutContent>
         <AboutBottom>
           <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/membres.png" />} />
           <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/vaisseau.png" />}/>

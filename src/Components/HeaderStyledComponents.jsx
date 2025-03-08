@@ -19,7 +19,7 @@ export const Header = styled.div`
   font-weight: 200;
   z-index: 10;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     justify-content: center;
   }
 `
@@ -29,7 +29,7 @@ export const HeaderGD = styled.div`
   flex-direction: row;
   gap: var(--space-s);
   .button {
-    @media (max-width: 1024px) {
+    @media (max-width: 1080px) {
       display: none;
     }
   }
@@ -41,7 +41,7 @@ export const HeaderCentre = styled.div`
   align-items: center;
   gap: var(--space-s);
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     display: none;
   }
 `
@@ -70,7 +70,7 @@ export const HomeIcon = styled.div`
   width: 100px;                   
   height: 100px; 
   
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     width: 80px;
     height: 80px;
   }
