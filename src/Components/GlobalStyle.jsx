@@ -78,3 +78,14 @@ export const H6 = styled.h1`
     font-size: var(--font-size-2m);
   }
 `
+
+export const H7 = styled.h2`
+  font-weight: 300;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin: 0;
+  @media (max-width: 1080px) {
+    font-weight: 300;
+    font-size: var(--font-size-1l);
+  }
+`

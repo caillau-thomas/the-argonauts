@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { PrimaryJoinCard, SecondaryJoinCard } from './CardStyledComponents'
-import { H2, H5, H6 } from './GlobalStyle'
+import { H2, H5, H6, H7 } from './GlobalStyle'
 
 /////////////////////////////////////////////////
 
@@ -68,7 +68,8 @@ export const Columns = styled.div`
   gap: var(--space-5xl);
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
-    gap: var(--space-5xl);
+    padding-top: 3em;
+    gap: var(--space-3xl);
   }
 `
 
@@ -76,12 +77,18 @@ export const LeftColumns = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
+  @media (max-width: 1080px) {
+    text-align: center;
+  }
 `
 export const RightColumns = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: left;
   gap: 50px;
+  @media (max-width: 1080px) {
+    text-align: center;
+  }
   
 
   @media (max-width: 1080px) {
@@ -94,7 +101,7 @@ export const RightColumns = styled.div`
 
 export const LeftContent = styled.div`
   display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
+  grid-template-rows: 0.5fr 2fr 2fr 0.5fr;
   gap: 50px;
 
   @media (max-width: 1080px) {
@@ -159,6 +166,7 @@ const Recrutement = () => {
       </ContainerTop>
       <Columns>
         <LeftColumns>
+          <H7>LES PREREQUIS</H7>
           <PrimaryJoinCard backgroundImage="/src/assets/Icons/image_18.png">
             <H6>Avoir au moins 20 ans</H6>
           </PrimaryJoinCard>
@@ -174,6 +182,7 @@ const Recrutement = () => {
         </LeftColumns>
         <RightColumns>
           <LeftContent>
+            <H7>LE RECRUTEMENT</H7>
             <SecondaryJoinCard backgroundImage="/src/assets/Icons/img21.png">
               <H6>Rejoignez le discord de recrutement</H6>
             </SecondaryJoinCard>
