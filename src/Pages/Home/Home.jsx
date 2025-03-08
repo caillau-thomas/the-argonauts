@@ -4,7 +4,6 @@ import Video from '../../assets/videoplayback.mp4'
 import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
-import { IncidentResponseTimeline } from '../../Components/IncidentResponseTimeline'
 import Recrutement from '../../Components/RecrutementComponent'
 import { SectionsTimeline } from '../../Components/SectionsTimeline.jsx'
 
@@ -149,9 +148,9 @@ export const Home = () => {
           <AboutComponent />
         </AboutContent>
         <AboutBottom>
-          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/membres.png" />} />
-          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/vaisseau.png" />}/>
-          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/ope.png" />}/>
+          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
+          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100%' }} src="/vaisseau.png" />}/>
+          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />}/>
         </AboutBottom>
       </About>
       <Sections id="Sections" style={{ gridTemplateRows: 'max-content 1fr' }}>

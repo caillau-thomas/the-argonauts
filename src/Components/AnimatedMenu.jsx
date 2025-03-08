@@ -14,7 +14,7 @@ const StyledMenu = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 0;
 `
 
 const MenuBackground = styled(motion.div)`
@@ -97,7 +97,7 @@ const backgroundVariants = {
 
 export const AnimatedMenu = ({ open, onClose }) => {
   return (
-    <StyledMenu initial={false} animate={open ? 'open' : 'closed'} variants={menuVariants}>
+    <StyledMenu initial={false} animate={open ? 'open' : 'closed'} variants={menuVariants} style={{ zIndex: open ? 3 : 1 }}>
       <MenuBackground variants={backgroundVariants} />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3xl)' }}>
         <MenuLink href="#Organisation" variants={linkVariants} onClick={onClose}>

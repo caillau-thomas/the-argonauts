@@ -43,7 +43,9 @@ const App = () => {
           <NavLink href="#Sections">NOS SECTIONS</NavLink>
         </HeaderCentre>
         <HeaderGD>
-          <Button className="button" href="#Enroll">NOUS REJOINDRE</Button>
+          <a href="#Enrol">
+            <Button className="button">NOUS REJOINDRE</Button>
+          </a>
         </HeaderGD>
       </Header>
       {isMediaQuery('(max-width: 1080px)') && <AnimatedMenu open={menuOpen} onClose={toggleMenu} />}

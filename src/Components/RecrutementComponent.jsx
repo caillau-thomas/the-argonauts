@@ -126,14 +126,18 @@ export const RightContent = styled.div`
 `
 /////////////////////////////////////////////////
 
-export const Button = styled.button`
+export const Link = styled.a`
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 1;
   background-color: var(--color-tertiary);
   border: none;
   border-radius: 4px;
-  padding: var(--space-m);
+  padding: var(--space-s);
+  text-decoration: none;
+  color: var(--color-secondary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
+  text-align: center;
 `
 
 export const HomeIcon = styled.div`
@@ -176,9 +180,9 @@ const Recrutement = () => {
           <PrimaryJoinCard backgroundImage="/src/assets/Icons/image_19.png">
             <H6>N'etre afilié à aucune organisation</H6>
           </PrimaryJoinCard>
-          <Button href="#Sections">
+          <Link href="https://discord.gg/cdraKK43HS" target="_blank">
             <H6 style={{ color: 'var(--color-secondary)' }}>JE POSTULE</H6>
-          </Button>
+          </Link>
         </LeftColumns>
         <RightColumns>
           <LeftContent>

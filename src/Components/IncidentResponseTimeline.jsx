@@ -23,9 +23,7 @@ const VerticalLine = styled(motion.div)`
   left: 16px;
   top: 29px;
   width: 2px;
-  //height: calc(100% - 120px - 65px);
   height: calc(100% - var(--space-l));
-  //background-color: var(--color-tertiary);
   background: linear-gradient(to bottom, var(--color-tertiary) 0%, var(--color-tertiary) calc(100% - 120px - 50px), var(--color-background) calc(100% - 5px));
   border-radius: 50%;
   transform-origin: top;
@@ -39,7 +37,6 @@ const TimelinePoint = styled(motion.div)`
   border-radius: 50%;
   background-color: var(--color-background);
   border: 2px solid var(--color-tertiary);
-  z-index: 2;
 `
 
 const Section = styled(motion.div)`
