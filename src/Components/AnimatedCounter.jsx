@@ -1,4 +1,3 @@
-// import { motion, useAnimation } from 'framer-motion'
 import {
   animate, motion, useInView,useMotionValue, useTransform, 
 } from 'motion/react'
@@ -13,6 +12,16 @@ const Layout = styled(motion.div)`
   justify-content: center;
   padding: var(--space-s);
   gap: var(--space-xs);
+  
+  & > .icon {
+    height: 100px;
+    width: 100px;
+    
+    @media (max-width: 1080px) {
+      height: 80px;
+      width: 80px;
+    }
+  }
 
   & >.content {
     display: flex;
@@ -32,6 +41,15 @@ const Layout = styled(motion.div)`
       color: var(--color-primary);
       line-height: 1;
     }
+
+    @media (max-width: 1080px) {
+      .icon {
+        height: 80px;
+        width: 80px;
+      }
+      
+      .number { font-size: var(--font-size-1l); }
+      .title { font-size: var(--font-size-2m); }
   }
 
  
@@ -43,7 +61,7 @@ export const AnimatedCounter = ({
   duration = 1, 
   prefix,
   icon,
-  marginBottom = isMediaQuery('(max-width: 1080px)') ? 0 : -300, 
+  marginBottom = isMediaQuery('(max-width: 1080px)') ? 0 : - window.innerHeight * 0.03,
 }) => {
   const count = useMotionValue(0)
   const rounded = useTransform(count, latest => Math.round(latest))

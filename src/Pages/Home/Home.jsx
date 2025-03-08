@@ -5,6 +5,7 @@ import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter'
 import { H1, H2, H4 } from '../../Components/GlobalStyle'
 import Recrutement from '../../Components/RecrutementComponent'
+import { SectionsTimeline } from '../../Components/SectionsTimeline.jsx'
 
 const Body = styled.div`
   --scroll-margin-top: 100px;
@@ -147,30 +148,19 @@ export const Home = () => {
           <AboutComponent />
         </AboutContent>
         <AboutBottom>
-          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/membres.png" />} />
-          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/vaisseau.png" />}/>
-          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100px', width: '100px' }} src="/ope.png" />}/>
+          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
+          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100%' }} src="/vaisseau.png" />}/>
+          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />}/>
         </AboutBottom>
       </About>
-      <Sections id="Sections">
+      <Sections id="Sections" style={{ gridTemplateRows: 'max-content 1fr' }}>
         <SectionsTop>
           <H2>
             DECOUVREZ NOS{' '}
             <span style={{ color: 'var(--color-tertiary)' }}>SECTIONS</span>
           </H2>
         </SectionsTop>
-        <SectionsMid>
-          
-        </SectionsMid>
-        <SectionsBottom>
-          <H4 style={{ color: 'var(--color-primary)' }}>
-            DECOUVREZ NOS SECTIONS
-          </H4>
-          <H4>
-            <span style={{ color: 'var(--color-primary)' }}>POUR UN </span>
-            ENGAGEMENT COMMUN
-          </H4>
-        </SectionsBottom>
+        <SectionsTimeline />
       </Sections>
       <Join id="Enrol">
         <Recrutement />
