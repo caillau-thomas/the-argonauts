@@ -89,3 +89,41 @@ export const H7 = styled.h2`
     font-size: var(--font-size-1l);
   }
 `
+export const P = styled.h3`
+  font-weight: 300;
+  font-size: var(--font-size-large);
+  color: var(--color-primary);
+  margin: 0;
+  text-align: start;
+  @media (max-width: 1080px) {
+    font-weight: 300;
+    font-size: var(--font-size-2m);
+  }
+`
+export const H8 = styled.h1`
+  font-weight: 400;
+  margin: 0;
+  font-size: var(--font-size-1m);
+  letter-spacing: var(--space-3xs);
+  color: var(--color-tertiary);
+  text-shadow: var(--shadow-text);
+
+  @media (max-width: 1080px) {
+    font-weight: 200;
+    font-size: var(--font-size-medium);
+  }
+`
+export const H9 = styled.h1`
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-primary);
+  font-size: var(--font-size-1xl);
+  letter-spacing: var(--space-3xs);
+  text-shadow: var(--shadow-text);
+
+  @media (max-width: 1080px) {
+    font-weight: 400;
+    font-size: var(--font-size-1l);
+    letter-spacing: var(--space-3xs);
+  }
+`

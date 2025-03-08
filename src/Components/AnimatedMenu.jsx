@@ -100,16 +100,13 @@ export const AnimatedMenu = ({ open, onClose }) => {
     <StyledMenu initial={false} animate={open ? 'open' : 'closed'} variants={menuVariants}>
       <MenuBackground variants={backgroundVariants} />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3xl)' }}>
-        <MenuLink href="#" variants={linkVariants} onClick={onClose}>
+        <MenuLink href="#Organisation" variants={linkVariants} onClick={onClose}>
           L'ORGANISATION
         </MenuLink>
         <MenuLink href="#Sections" variants={linkVariants} onClick={onClose}>
           NOS SECTIONS
         </MenuLink>
-        <MenuLink href="#" variants={linkVariants} onClick={onClose}>
-          NOS SERVICES
-        </MenuLink>
-        <MenuLink variants={linkVariants} >
+        <MenuLink href="#Enrol" variants={linkVariants} onClick={onClose}>
           <Button>NOUS REJOINDRE</Button>
         </MenuLink>
       </div>
