@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Home from '../../public/assets/Icons/homeIcon.png'
+import Home from '/assets/Icons/homeIcon.png'
 
 
 /////////////////////////////

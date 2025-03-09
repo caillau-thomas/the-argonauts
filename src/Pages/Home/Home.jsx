@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-import Video from '../../../public/assets/videoplayback.mp4'
+import Video from '/assets/videoplayback.mp4'
+
 import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter.jsx'
 import {
