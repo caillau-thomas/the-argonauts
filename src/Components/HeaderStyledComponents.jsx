@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Home from '../../public/assets/Icons/homeIcon.png'
+
 
 /////////////////////////////
 ////// Grands écrans////////
@@ -64,15 +66,16 @@ export const Copyright = styled.div`
 `
 
 export const HomeIcon = styled.div`
-  background-image: url('https://image.noelshack.com/fichiers/2025/04/3/1737561974-agn-logo.png'); 
-  background-size: cover;        
+  background-image: url(${Home}); 
+  background-size: auto;
+  background-repeat: no-repeat;
   background-position: center;
   width: 100px;                   
   height: 100px; 
   
   @media (max-width: 1080px) {
-    width: 80px;
-    height: 80px;
+    width: 100px;                   
+    height: 100px;
   }
 `
 

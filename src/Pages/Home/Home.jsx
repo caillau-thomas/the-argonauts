@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
-import Video from '../../assets/videoplayback.mp4'
+import Video from '../../../public/assets/videoplayback.mp4'
 import AboutComponent from '../../Components/About'
-import { AnimatedCounter } from '../../Components/AnimatedCounter'
-import { H1, H2, H4 } from '../../Components/GlobalStyle'
+import { AnimatedCounter } from '../../Components/AnimatedCounter.jsx'
+import {
+  H1, H2, H4, H6,
+  H8, H9,
+} from '../../Components/GlobalStyle.jsx'
 import Recrutement from '../../Components/RecrutementComponent'
 import { SectionsTimeline } from '../../Components/SectionsTimeline.jsx'
 
@@ -50,58 +53,67 @@ const Landing = styled.div`
 const About = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center;
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-background);
 `
 const AboutContent = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
-  min-height: calc(80vh - var(--scroll-margin-top));
+  align-items: center;
+  padding: var(--space-2xl) 0;
 `
 
 const AboutBottom = styled.div`
   display: flex;
-  min-height: 20vh;
+  min-height: 12vh;
   justify-content: space-around;
   background-color: var(--color-secondary);
-
+  
   @media (max-width: 1080px) {
     flex-direction: column;
-    gap: var(--space-m);
-    padding: var(--space-m);
   }
 `
+export const AboutHeading = styled.div`
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+  justify-content: center;
+`
+export const AboutColumns = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+export const Aboutrows = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+`
+
 ////////////////////////////////////////
 
 const Sections = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  min-height: calc(100vh - var(--scroll-margin-top));
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-background);
+  padding: var(--space-2xl) 0;
+  gap: 25px;
 `
-const SectionsTop = styled.div`
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
-`
-
-const SectionsMid = styled.div`
-  display: grid;
-  grid-template-columns: 4fr 6fr;
-  @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
-  }
-`
-const SectionsBottom = styled.div`
+const SectionsHeading = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+`
+const SectionsBottom = styled.div`
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  
 `
 
 ////////////////////////////////////////
@@ -109,7 +121,7 @@ const SectionsBottom = styled.div`
 const Join = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  min-height: calc(100vh - 232px);
+  padding: var(--space-2xl) 0;
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-secondary);
 `
@@ -145,22 +157,42 @@ export const Home = () => {
       </LandingDiv>
       <About id="Organisation">
         <AboutContent>
+          <AboutHeading>
+            <AboutColumns>
+              <H9>AGIR</H9>
+            </AboutColumns>
+            <AboutColumns>
+              <Aboutrows>
+                <H8>POUR PROTEGER</H8>
+              </Aboutrows>
+              <Aboutrows >
+                <H8>POUR SAUVER</H8>
+              </Aboutrows>
+            </AboutColumns>
+          </AboutHeading>
           <AboutComponent />
         </AboutContent>
         <AboutBottom>
           <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
-          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100%' }} src="/vaisseau.png" />}/>
-          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />}/>
+          <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100%' }} src="/vaisseau.png" />} />
+          <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />} />
         </AboutBottom>
       </About>
       <Sections id="Sections" style={{ gridTemplateRows: 'max-content 1fr' }}>
-        <SectionsTop>
+        <SectionsHeading>
           <H2>
             DECOUVREZ NOS{' '}
             <span style={{ color: 'var(--color-tertiary)' }}>SECTIONS</span>
           </H2>
-        </SectionsTop>
-        <SectionsTimeline />
+        </SectionsHeading>
+        <SectionsBottom>
+          <SectionsTimeline />
+        </SectionsBottom>
+        <SectionsHeading>
+          <H6>
+            DES MISSIONS VARIEES POUR UN ENGAGEMENT COMMUNS
+          </H6>
+        </SectionsHeading>
       </Sections>
       <Join id="Enrol">
         <Recrutement />

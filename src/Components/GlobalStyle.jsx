@@ -94,7 +94,7 @@ export const P = styled.h3`
   font-size: var(--font-size-large);
   color: var(--color-primary);
   margin: 0;
-  text-align: start;
+  text-align: justify;
   @media (max-width: 1080px) {
     font-weight: 300;
     font-size: var(--font-size-2m);
