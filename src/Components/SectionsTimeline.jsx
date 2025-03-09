@@ -1,18 +1,17 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import incident from '../assets/Sections/Incidents.png'
-import logistique from '../assets/Sections/logistique.png'
+import logistique from '../../public//assets/Sections/logistique.png'
+import incident from '../../public/assets/Sections/Incidents.png'
 import { isMediaQuery } from '../utils/isMediaQuery.js'
-import { H6 } from './GlobalStyle.jsx'
 import { IncidentResponseTimeline } from './IncidentResponseTimeline.jsx'
 
 const Layout = styled.div`
   display: grid;
   grid-template-columns: 4fr 6fr;
   grid-template-rows: repeat(2, max-content);
-  padding: var(--space-s);
-  
+  width: 80%;
+  padding: var(--space-s) var(--space-m);
   & > .title {
     grid-column: 1 / -1;
     text-align: center;
@@ -31,6 +30,9 @@ const Layout = styled.div`
   
   @media (max-width: 1080px) {
     grid-template-columns: 1fr;
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-s) var(--space-l);
   }
 `
 
@@ -53,7 +55,6 @@ export const SectionsTimeline = () => {
           setFade(false)
         }, 200)
       }} />
-      <H6 className="title">DES MISSIONS VARIEES POUR UN ENGAGEMENT COMMUNS</H6>
     </Layout>
   )
 }
