@@ -119,8 +119,9 @@ const SectionsBottom = styled.div`
 ////////////////////////////////////////
 
 const Join = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: var(--space-2xl) 0;
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-secondary);

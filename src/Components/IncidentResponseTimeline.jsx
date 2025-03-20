@@ -56,7 +56,7 @@ const SectionContent = styled(motion.div)`
   background-color: #4a5061;
   border-radius: 4px;
   padding: var(--space-m);
-  height: calc(120px - 2 * var(--space-m));
+  min-height: calc(120px - 2 * var(--space-m));
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `
 
@@ -73,9 +73,9 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
   }, [isInView])
 
   const sections = [
-    { id: 1, title: 'SECTION DE REPONSE A INCIDENTS' },
-    { id: 2, title: 'SECTION INDUSTRIEL & LOGISTIQUE' },
-    { id: 3, title: 'SECTION D\'APPUIE' },
+    { id: 1, content: 'Protecteurs de l’ombre, nous escortons, secourons et défendons. Quel que soit le danger, nous veillons sur les nôtres et sur les citoyens du Verse.', title: 'SECTION DE REPONSE A INCIDENTS' },
+    { id: 2, content: 'Forgeant notre autonomie, nous extrayons, transportons et construisons. De l’exploitation des ressources à la logistique de haute précision, nous bâtissons l’avenir des Argonauts.', title: 'SECTION INDUSTRIEL & LOGISTIQUE' },
+    { id: 3, content: 'Soutien vital des Argonauts, nous réparons, soignons et sécurisons. De la maintenance de notre flotte au secours des blessés, nous assurons la continuité des opérations.', title: 'SECTION D\'APPUIE' },
   ]
 
   const lineVariants = {
@@ -106,9 +106,15 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
   const titleVariants = {
     hidden:  { opacity: 0, x: -20 },
     visible: i => ({
-      opacity:    1,
-      x:          0,
-      transition: {
+      fontWeight:    '300',
+      color:         'var(--color-primary)',
+      fontSize:      'var(--font-size-large)',
+      letterSpacing: 'var(--space-3xs)',
+      textShadow:    'var(--shadow-text)',
+      margin:        0,
+      opacity:       1,
+      x:             0,
+      transition:    {
         delay:    0.5 + i * 0.2,
         duration: 0.5,
         ease:     'easeOut',
@@ -119,9 +125,13 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
   const contentVariants = {
     hidden:  { opacity: 0, y: 20 },
     visible: i => ({
-      opacity:    1,
-      y:          0,
-      transition: {
+      fontWeight:    '200',
+      color:         'var(--color-primary)',
+      fontSize:      'var(--font-size-2m)',
+      letterSpacing: 'var(--space-3xs)',
+      opacity:       1,
+      y:             0,
+      transition:    {
         delay:    0.7 + i * 0.2,
         duration: 0.4,
         ease:     'easeOut',
@@ -158,7 +168,7 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
               animate={isVisible ? 'visible' : 'hidden'}
               variants={contentVariants}
             >
-              Placeholder{index}
+              {section.content}
             </SectionContent>
           </Section>
         ))}
