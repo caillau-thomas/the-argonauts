@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import logistique from '../../public//assets/Sections/logistique.png'
-import incident from '../../public/assets/Sections/Incidents.png'
+import incident from '/assets/Sections/Incidents.png'
+import logistique from '/assets/Sections/logistique.png'
+
 import { isMediaQuery } from '../utils/isMediaQuery.js'
 import { IncidentResponseTimeline } from './IncidentResponseTimeline.jsx'
 

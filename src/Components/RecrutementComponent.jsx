@@ -169,13 +169,13 @@ const Recrutement = () => {
       <Columns>
         <LeftColumns>
           <H7>PREREQUIS</H7>
-          <PrimaryJoinCard backgroundImage="./public/assets/Icons/image_18.png">
+          <PrimaryJoinCard backgroundImage="/assets/Icons/image_18.png">
             <H6>Avoir au moins 20 ans</H6>
           </PrimaryJoinCard>
-          <PrimaryJoinCard backgroundImage="./public/assets/Icons/image_20.png">
+          <PrimaryJoinCard backgroundImage="/assets/Icons/image_20.png">
             <H6>Etre Francophone</H6>
           </PrimaryJoinCard>
-          <PrimaryJoinCard backgroundImage="./public/assets/Icons/image_19.png">
+          <PrimaryJoinCard backgroundImage="/assets/Icons/image_19.png">
             <H6>N'etre afilié à aucune organisation</H6>
           </PrimaryJoinCard>
           <Link href="https://discord.gg/cdraKK43HS" target="_blank">
@@ -188,18 +188,18 @@ const Recrutement = () => {
             <SecondaryJoinCard backgroundImage="/assets/Icons/img21.png">
               <H6>Rejoignez le discord de recrutement</H6>
             </SecondaryJoinCard>
-            <SecondaryJoinCard backgroundImage="./public/assets/Icons/img23.png">
+            <SecondaryJoinCard backgroundImage="/assets/Icons/img23.png">
               <H6>Devenez une recrue</H6>
             </SecondaryJoinCard>
             <span className="Span" />
-            
+
           </LeftContent>
           <RightContent>
             <span className="Span" />
-            <SecondaryJoinCard backgroundImage="./public/assets/Icons/img22.png">
+            <SecondaryJoinCard backgroundImage="/assets/Icons/img22.png">
               <H6>Passez votre entretient individuel</H6>
             </SecondaryJoinCard>
-            <SecondaryJoinCard backgroundImage="./public/assets/Icons/img24.png">
+            <SecondaryJoinCard backgroundImage="/assets/Icons/img24.png">
               <H6>Devenez membre des Argonauts</H6>
             </SecondaryJoinCard>
             <span className="Span" />
