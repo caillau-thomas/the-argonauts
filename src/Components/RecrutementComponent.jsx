@@ -188,16 +188,16 @@ const Recrutement = () => {
             <SecondaryJoinCard backgroundImage="/assets/Icons/img21.png">
               <H6>Rejoignez le discord de recrutement</H6>
             </SecondaryJoinCard>
-            <SecondaryJoinCard backgroundImage="/assets/Icons/img23.png">
-              <H6>Devenez une recrue</H6>
+            <SecondaryJoinCard backgroundImage="/assets/Icons/img22.png">
+              <H6>Passez votre entretient individuel</H6>
             </SecondaryJoinCard>
             <span className="Span" />
-
           </LeftContent>
           <RightContent>
             <span className="Span" />
-            <SecondaryJoinCard backgroundImage="/assets/Icons/img22.png">
-              <H6>Passez votre entretient individuel</H6>
+
+            <SecondaryJoinCard backgroundImage="/assets/Icons/img23.png">
+              <H6>Devenez une recrue</H6>
             </SecondaryJoinCard>
             <SecondaryJoinCard backgroundImage="/assets/Icons/img24.png">
               <H6>Devenez membre des Argonauts</H6>

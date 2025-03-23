@@ -33,7 +33,7 @@ const Layout = styled.div`
     grid-template-columns: 1fr;
     width: 100%;
     justify-content: center;
-    padding: var(--space-s) var(--space-l);
+    padding: var(--space-s) var(--space-m) var(--space-s) var(--space-xs);
   }
 `
 

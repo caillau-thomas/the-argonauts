@@ -72,7 +72,7 @@ const AboutBottom = styled.div`
   justify-content: space-around;
   background-color: var(--color-secondary);
   
-  @media (max-width: 1080px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `
