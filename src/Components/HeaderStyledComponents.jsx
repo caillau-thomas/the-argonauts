@@ -73,9 +73,8 @@ export const HomeIcon = styled.div`
   width: 100px;                   
   height: 100px; 
   
-  @media (max-width: 1080px) {
-    width: 100px;                   
-    height: 100px;
+  @media (max-width: 1080px) {     
+    height: 80px;
   }
 `
 

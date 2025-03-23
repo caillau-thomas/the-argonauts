@@ -4,6 +4,7 @@ export const PrimaryJoinCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   text-align: center;
   color: var(--color-primary);
   padding: var(--space-s);
@@ -65,6 +66,8 @@ export const SecondaryJoinCard = styled.div`
     background-position: center;
 
     @media (max-width: 1080px) {
+      width: 35px; 
+      height: 35px; 
       left: 50%;
       top: -20px;
   }

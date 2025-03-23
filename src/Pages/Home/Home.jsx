@@ -72,7 +72,7 @@ const AboutBottom = styled.div`
   justify-content: space-around;
   background-color: var(--color-secondary);
   
-  @media (max-width: 1080px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `
@@ -120,8 +120,9 @@ const SectionsBottom = styled.div`
 ////////////////////////////////////////
 
 const Join = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: var(--space-2xl) 0;
   scroll-margin-top: var(--scroll-margin-top);
   background-color: var(--color-secondary);
