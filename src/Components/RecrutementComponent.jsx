@@ -58,6 +58,7 @@ export const HeadingContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding: 0 var(--space-2xs);
   }
 `
 
@@ -184,7 +185,7 @@ const Recrutement = () => {
         </LeftColumns>
         <RightColumns>
           <LeftContent>
-            <H7>LE RECRUTEMENT</H7>
+            <H7>RECRUTEMENT</H7>
             <SecondaryJoinCard backgroundImage="/assets/Icons/img21.png">
               <H6>Rejoignez le discord de recrutement</H6>
             </SecondaryJoinCard>
