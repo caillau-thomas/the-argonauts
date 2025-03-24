@@ -32,13 +32,10 @@ const About = () => {
       <Layout>
         <AboutCard>
           <P>
-            Fondée en 2015, nous sommes spécialisée dans la sécurité et le sauvetage.
-          </P>
-          <P>
-            Afin de mener à bien nos missions, nous avons structuré notre organisation en plusieurs sections, chacune couvrant des activités essentielles à notre bon fonctionnement.
-          </P>
-          <P>
-            Être un Argonauts ne se limite donc pas à nos activités principales, c’est appartenir à un groupe aux activités variées, unies par un engagement commun.
+            Fondée en 2015, notre organisation, de taille modeste, est en plein essor dans les domaines de la sécurité et du sauvetage.
+            Nous collaborons avec d’autres organisations afin de les aider à mener à bien leurs missions. <br /><br />
+            Pour garantir l’efficacité de nos opérations, nous avons structuré nos activités en plusieurs sections, chacune couvrant un domaine clé.
+            Être un Argonauts, c’est faire partie d’un ensemble aux compétences diversifiées, uni par un engagement commun.
           </P>
         </AboutCard>
       </Layout>

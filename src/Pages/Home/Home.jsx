@@ -108,6 +108,9 @@ const SectionsHeading = styled.div`
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  @media (max-width: 1080px) {
+    padding: 0 var(--space-2xs);
+  }
 `
 const SectionsBottom = styled.div`
   display: flex;
@@ -168,7 +171,7 @@ export const Home = () => {
                 <H8>POUR PROTEGER</H8>
               </Aboutrows>
               <Aboutrows >
-                <H8>POUR SAUVER</H8>
+                <H8 style={{ lineHeight: 1 }}>POUR SAUVER</H8>
               </Aboutrows>
             </AboutColumns>
           </AboutHeading>
