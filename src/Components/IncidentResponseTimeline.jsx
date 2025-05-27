@@ -59,14 +59,12 @@ const SectionTitle = styled(motion.h3)`
   font-size: var(--font-size-large);
   font-weight: 300;
   padding-bottom: 0.5rem;
-  letter-spacing: 3px;
   text-shadow: var(--shadow-text);
   margin: 0;
   text-align: left;
   
   @media (max-width: 1080px) {
-    font-size: var(--font-size-1m);
-    letter-spacing: 2px;
+    font-size: var(--font-size-2m);
   }
 `
 
@@ -76,16 +74,16 @@ const SectionContent = styled(motion.div)`
   padding: var(--space-s);
   height: calc(150px - 2 * var(--space-s));
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-weight: 200;
+  font-weight: 300;
   color: var(--color-primary);
-  font-size: var(--font-size-1m);
-  letter-spacing: 3px;
+  font-size: var(--font-size-large);
   display: flex;
   align-items: center;
   
   @media (max-width: 1080px) {
-    height: calc(250px - 2 * var(--space-s));
+    height: calc(180px - 2 * var(--space-s));
     text-align: left;
+    font-size: var(--font-size-2m);
   }
 `
 
@@ -103,9 +101,9 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
   }, [isInView])
 
   const sections = [
-    { id: 1, content: 'Protecteurs de l’ombre, nous escortons, secourons et défendons. Quel que soit le danger, nous veillons sur les nôtres et sur les citoyens du Verse.', title: 'SECTION DE REPONSE A INCIDENTS' },
-    { id: 2, content: 'Forgeant notre autonomie, nous extrayons, transportons et construisons. De l’exploitation des ressources à la logistique de haute précision, nous bâtissons l’avenir des Argonauts.', title: 'SECTION INDUSTRIEL & LOGISTIQUE' },
-    { id: 3, content: 'Soutien vital des Argonauts, nous réparons, soignons et sécurisons. De la maintenance de notre flotte au secours des blessés, nous assurons la continuité des opérations.', title: 'SECTION D\'APPUIE' },
+    { id: 1, content: 'Escorter et secourir. Nous veillons sur les nôtres et sur les citoyens du Verse.', title: 'REPONSE A INCIDENTS' },
+    { id: 2, content: 'Forger notre autonomie, extraire, transporter, construire, façonner notre avenir.', title: 'INDUSTRIE & LOGISTIQUE' },
+    { id: 3, content: 'Du maintien de la flotte au secours des blessés, nous assurerons la continuité des opérations.', title: 'SOUTIEN' },
   ]
 
   const lineVariants = {
@@ -160,8 +158,8 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
   }
 
   const sizes = {
-    main:   { distance: 150, title: 55, gap: 24, threshold: 7 },
-    mobile: { distance: 250, title: 39, gap: 24, threshold: 1 },
+    main:   { distance: 140, title: 55, gap: 24, threshold: 7 },
+    mobile: { distance: 180, title: 39, gap: 24, threshold: 1 },
   }
   const pointSpacing = Object.values(isMobile ? sizes.mobile : sizes.main).slice(0,3).reduce((acc, size) => acc + size, 0)
 
