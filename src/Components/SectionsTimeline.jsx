@@ -2,8 +2,8 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import incident from '/assets/Sections/Incidents.png'
-import logistique from '/assets/Sections/logistique.png'
 
+// import logistique from '/assets/Sections/logistique.png'
 import { isMediaQuery } from '../utils/isMediaQuery.js'
 import { IncidentResponseTimeline } from './IncidentResponseTimeline.jsx'
 
@@ -22,9 +22,11 @@ const Layout = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
     
     & > img {
-      width: 75%;
+      width: 100%;
       height: auto;
     }
   }
@@ -37,7 +39,7 @@ const Layout = styled.div`
   }
 `
 
-const images = [incident, logistique, incident]
+const images = [incident, incident, incident]
 
 export const SectionsTimeline = () => {
   const [currentImage, setCurrentImage] = useState(0)
@@ -50,7 +52,7 @@ export const SectionsTimeline = () => {
         {!isMobile && <img src={images[currentImage]} style={{ opacity: fade ? 0 : 1, transition: 'opacity 0.3s ease-in-out' }} />}
       </div>
       <IncidentResponseTimeline onHoverSection={index => {
-        setFade(true)
+        setFade(false)
         setTimeout(() => {
           setCurrentImage(index)
           setFade(false)
