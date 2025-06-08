@@ -67,7 +67,7 @@ export const Copyright = styled.div`
 
 export const HomeIcon = styled.div`
   background-image: url(${Home}); 
-  background-size: auto;
+  background-size: 7rem;
   background-repeat: no-repeat;
   background-position: center;
   width: 100px;                   

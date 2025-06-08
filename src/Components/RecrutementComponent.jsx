@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Logo from '/assets/Icons/Logo.png'
+
 import { PrimaryJoinCard, SecondaryJoinCard } from './CardStyledComponents'
 import { H2, H5, H6, H7 } from './GlobalStyle'
 
@@ -39,6 +41,7 @@ export const ContainerTopContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 2em;
 
   @media (max-width: 1080px) {
     display: flex;
@@ -46,6 +49,7 @@ export const ContainerTopContainer = styled.div`
     justify-content: center;
     text-align: center;
     align-items: center;
+    gap: 0em;
   }
 `
 export const HeadingContainer = styled.div`
@@ -141,7 +145,7 @@ export const Link = styled.a`
 `
 
 export const HomeIcon = styled.div`
-  background-image: url("https://image.noelshack.com/fichiers/2025/04/3/1737561974-agn-logo.png");
+  background-image: url(${Logo});
   background-size: cover;
   background-position: center;
   width: 150px;
@@ -177,7 +181,7 @@ const Recrutement = () => {
             <H6>Etre Francophone</H6>
           </PrimaryJoinCard>
           <PrimaryJoinCard backgroundImage="/assets/Icons/image_19.png">
-            <H6>N'etre afilié à aucune organisation</H6>
+            <H6>N'etre affilié à aucune organisation</H6>
           </PrimaryJoinCard>
           <Link href="https://discord.gg/cdraKK43HS" target="_blank">
             <H6 style={{ color: 'var(--color-secondary)' }}>JE POSTULE</H6>
