@@ -187,7 +187,7 @@ export const Home = () => {
         <SectionsHeading>
           <H2>
             DECOUVREZ NOS{' '}
-            <span style={{ color: 'var(--color-tertiary)' }}>SECTIONS</span>
+            <span style={{ color: 'var(--color-tertiary)' }}>BRANCHES</span>
           </H2>
         </SectionsHeading>
         <SectionsBottom>

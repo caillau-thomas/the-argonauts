@@ -40,7 +40,7 @@ const App = () => {
         {/* HeaderCentre visible sur grand écran */}
         <HeaderCentre>
           <NavLink href="#Organisation">L'ORGANISATION</NavLink>
-          <NavLink href="#Sections">NOS SECTIONS</NavLink>
+          <NavLink href="#Sections">NOS BRANCHES</NavLink>
         </HeaderCentre>
         <HeaderGD>
           <a href="#Enrol">
