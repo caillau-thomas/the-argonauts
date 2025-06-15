@@ -183,7 +183,7 @@ const Recrutement = () => {
           <PrimaryJoinCard backgroundImage="/assets/Icons/image_19.png">
             <H6>N'etre affilié à aucune organisation</H6>
           </PrimaryJoinCard>
-          <Link href="https://discord.gg/cdraKK43HS" target="_blank">
+          <Link href="https://discord.gg/pstjHFHSSk" target="_blank">
             <H6 style={{ color: 'var(--color-secondary)' }}>JE POSTULE</H6>
           </Link>
         </LeftColumns>
