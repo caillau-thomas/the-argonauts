@@ -4,7 +4,7 @@ import App from './App'
 import { Home } from './Pages/Home/Home'
 
 export const Router = () => (
-  <BrowserRouter basename='/the-argonauts/'>
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
