@@ -9,7 +9,7 @@ import { IncidentResponseTimeline } from './IncidentResponseTimeline.jsx'
 
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: 4fr 6fr;
+  grid-template-columns: 6fr;
   grid-template-rows: repeat(2, max-content);
   width: 80%;
   padding: var(--space-s) var(--space-m);
@@ -39,7 +39,7 @@ const Layout = styled.div`
   }
 `
 
-const images = [incident, incident, incident]
+// const images = [incident, incident, incident]
 
 export const SectionsTimeline = () => {
   const [currentImage, setCurrentImage] = useState(0)
@@ -49,7 +49,7 @@ export const SectionsTimeline = () => {
   return (
     <Layout>
       <div className="description">
-        {!isMobile && <img src={images[currentImage]} style={{ opacity: fade ? 0 : 1, transition: 'opacity 0.3s ease-in-out' }} />}
+        {/* {!isMobile && <img src={images[currentImage]} style={{ opacity: fade ? 0 : 1, transition: 'opacity 0.3s ease-in-out' }} />} */}
       </div>
       <IncidentResponseTimeline onHoverSection={index => {
         setFade(false)

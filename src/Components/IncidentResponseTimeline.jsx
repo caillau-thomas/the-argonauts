@@ -57,7 +57,7 @@ const Section = styled(motion.div)`
 const SectionTitle = styled(motion.h3)`
   color: var(--color-primary);
   font-size: var(--font-size-large);
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: 0.5rem;
   text-shadow: var(--shadow-text);
   margin: 0;
@@ -101,9 +101,8 @@ export const IncidentResponseTimeline = ({ onHoverSection }) => {
   }, [isInView])
 
   const sections = [
-    { id: 1, content: 'Escorter et secourir. Nous veillons sur les nôtres et sur les citoyens du Verse.', title: 'REPONSE A INCIDENTS' },
-    { id: 2, content: 'Forger notre autonomie, extraire, transporter, construire, façonner notre avenir.', title: 'INDUSTRIE & LOGISTIQUE' },
-    { id: 3, content: 'Du maintien de la flotte au secours des blessés, nous assurerons la continuité des opérations.', title: 'SOUTIEN' },
+    { id: 1, content: 'Spécialisées dans la sécurité et le sauvetage, regroupe les unités de combat et les équipes médicales', title: 'REPONSE A INCIDENTS' },
+    { id: 2, content: 'Regroupe l’ensemble des métiers industriels et civils nécessaires au bon fonctionnement de l’organisation', title: 'SOUTIEN ET LOGISTIQUE' },
   ]
 
   const lineVariants = {

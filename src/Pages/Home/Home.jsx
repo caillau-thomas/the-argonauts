@@ -157,7 +157,7 @@ export const Home = () => {
         </video>
         <Landing>
           <H1>ARGONAUTS</H1>
-          <H4>AU DELA DU VERSE</H4>
+          <H4>À TRAVERS LA TEMPÊTE</H4>
         </Landing>
       </LandingDiv>
       <About id="Organisation">
@@ -178,7 +178,7 @@ export const Home = () => {
           <AboutComponent />
         </AboutContent>
         <AboutBottom>
-          <AnimatedCounter endNumber={10} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
+          <AnimatedCounter endNumber={8} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
           <AnimatedCounter endNumber={100} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100%' }} src="/vaisseau.png" />} />
           <AnimatedCounter endNumber={50} title="OPERATIONS" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />} />
         </AboutBottom>
