@@ -33,12 +33,12 @@ const PhotoGallery = () => {
     borderRadius: '8px',
     boxShadow:    '0 4px 8px rgba(0,0,0,0.1)',
     transition:   'transform 0.3s ease',
-    transform:    isHovered ? 'scale(1.05)' : 'scale(1)',
+    transform:    isHovered ? 'scale(1.12)' : 'scale(1)',
   })
 
   const imgStyle = {
     width:     '100%',
-    height:    '200px',
+    height:    '280px',
     objectFit: 'cover',
     display:   'block',
   }

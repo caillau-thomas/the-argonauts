@@ -120,6 +120,17 @@ const SectionsBottom = styled.div`
   justify-content: center;
   
 `
+const Gal = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  scroll-margin-top: var(--scroll-margin-top);
+  background-color: var(--color-background);
+  padding: var(--space-m) var(--space-2xl);
+  @media (max-width: 1080px) {
+      padding: var(--space-m) 0;
+  }
+  gap: 25px;
+`
 
 ////////////////////////////////////////
 
@@ -201,9 +212,9 @@ export const Home = () => {
           </H6>
         </SectionsHeading> */}
       </Sections>
-      <Sections id="Irl">
+      <Gal id="Irl">
         <PhotoGallery />
-      </Sections>
+      </Gal>
       <Join id="Enrol">
         <Recrutement />
       </Join>
