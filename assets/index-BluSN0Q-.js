@@ -248,7 +248,7 @@ Please change the parent <Route path="${M}"> to <Route path="${M==="/"?"*":`${M}
     grid-template-columns: 1fr;
     padding: var(--space-s) var(--space-m);
   }
-`,sT=()=>N.jsx(iT,{children:N.jsx(oT,{children:N.jsx(ZP,{children:N.jsxs(nT,{children:["Fondée en 2955, nous sommes une organisation spécialisée dans la sécurité et le sauvetage.",N.jsx("br",{}),N.jsx("br",{}),"Notre efficacité repose sur la complémentarité de nos rôles, unissant l’expertise opérationnelle, logistique et technique au service d’un même engagement.",N.jsx("br",{}),N.jsx("br",{})," Fidèles à notre vocation, nous assurons également la sécurité d’organisations partenaires, leur permettant de mener à bien leurs missions."]})})})}),va=t=>typeof window>"u"||typeof window.matchMedia!="function"?!1:window.matchMedia(t).matches,aT=q($t.div)`
+`,sT=()=>N.jsx(iT,{children:N.jsx(oT,{children:N.jsx(ZP,{children:N.jsxs(nT,{children:["Fondée en 2953, nous sommes une organisation spécialisée dans la sécurité et le sauvetage.",N.jsx("br",{}),N.jsx("br",{}),"Notre efficacité repose sur la complémentarité de nos rôles, unissant l’expertise opérationnelle, logistique et technique au service d’un même engagement.",N.jsx("br",{}),N.jsx("br",{})," Fidèles à notre vocation, nous assurons la sécurité d’organisations partenaires, leur permettant de mener à bien leurs missions, même au travers des pires tempêtes."]})})})}),va=t=>typeof window>"u"||typeof window.matchMedia!="function"?!1:window.matchMedia(t).matches,aT=q($t.div)`
   display: flex;
   align-items: center;
   justify-content: center;
