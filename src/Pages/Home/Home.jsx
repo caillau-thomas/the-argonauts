@@ -4,6 +4,7 @@ import Video from '/assets/videoplayback.mp4'
 
 import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter.jsx'
+import PhotoGallery from '../../Components/Gallery.jsx'
 import {
   H1, H2, H4, H6,
   H8, H9,
@@ -160,6 +161,7 @@ export const Home = () => {
           <H4>À TRAVERS LA TEMPÊTE</H4>
         </Landing>
       </LandingDiv>
+      
       <About id="Organisation">
         <AboutContent>
           <AboutHeading>
@@ -193,11 +195,14 @@ export const Home = () => {
         <SectionsBottom>
           <SectionsTimeline />
         </SectionsBottom>
-        <SectionsHeading>
+        {/* <SectionsHeading>
           <H6>
-            DES MISSIONS VARIEES POUR UN ENGAGEMENT COMMUNS
+            Des missions variées pour un engagement communs
           </H6>
-        </SectionsHeading>
+        </SectionsHeading> */}
+      </Sections>
+      <Sections id="Irl">
+        <PhotoGallery />
       </Sections>
       <Join id="Enrol">
         <Recrutement />

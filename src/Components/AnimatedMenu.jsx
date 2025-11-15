@@ -106,6 +106,9 @@ export const AnimatedMenu = ({ open, onClose }) => {
         <MenuLink href="#Sections" variants={linkVariants} onClick={onClose}>
           NOS BRANCHES
         </MenuLink>
+        <MenuLink href="#Irl" variants={linkVariants} onClick={onClose}>
+          AU DELA DU JEU
+        </MenuLink>
         <MenuLink href="#Enrol" variants={linkVariants} onClick={onClose}>
           <Button>NOUS REJOINDRE</Button>
         </MenuLink>

@@ -41,6 +41,7 @@ const App = () => {
         <HeaderCentre>
           <NavLink href="#Organisation">L'ORGANISATION</NavLink>
           <NavLink href="#Sections">NOS BRANCHES</NavLink>
+          <NavLink href="#Irl">AU DELA DU JEU</NavLink>
         </HeaderCentre>
         <HeaderGD>
           <a href="#Enrol">
