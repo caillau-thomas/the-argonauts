@@ -15,7 +15,7 @@ const PhotoGallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null)
 
   const galleryStyle = {
-    margin:          0,
+    margin:          0, // ICI POUR MODIFIER LA LARGEUR MAIS FAUT LE FAIRE POUR CHAQUE RESOLUTION !!
     padding:         '0 var(--space-m) var(--space-2xl) var(--space-m)',
     backgroundColor: 'var(--color-background)',
     textAlign:       'center',
@@ -33,12 +33,12 @@ const PhotoGallery = () => {
     borderRadius: '8px',
     boxShadow:    '0 4px 8px rgba(0,0,0,0.1)',
     transition:   'transform 0.3s ease',
-    transform:    isHovered ? 'scale(1.12)' : 'scale(1)',
+    transform:    isHovered ? 'scale(1.04)' : 'scale(1)',
   })
 
   const imgStyle = {
     width:     '100%',
-    height:    '280px',
+    height:    '350px',
     objectFit: 'cover',
     display:   'block',
   }
