@@ -34,7 +34,7 @@ const Layout = styled.div`
     grid-template-columns: 1fr;
     width: 100%;
     justify-content: center;
-    padding: var(--space-s) var(--space-m) var(--space-s) var(--space-xs);
+    padding: var(--space-s) var(--space-m) var(--space-s) var(--space-m);
   }
 `
 
@@ -42,7 +42,7 @@ export const Branches = () => {
   return (
     <Layout>
       <AboutCard>
-        <H6>
+        <H6 style={{ textAlign: 'justify' }}>
           Notre organisation est divisée en deux branches, la branche Réponse à incidents, 
           qui mène les missions de sécurité et de sauvetage, et la branche Soutien logistique, 
           qui assure notre autonomie. Chacune regroupe différentes boucles de gameplay réparties 
