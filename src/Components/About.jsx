@@ -39,7 +39,6 @@ const About = () => {
             Au-delà des opérations de terrain, notre efficacité repose sur des rôles civils, industriels et logistiques, indispensables à la préparation, au soutien et à la pérennité de nos activités.
             <br /><br />
             Notre organisation adopte ainsi une approche multirôle, mobilisant l’ensemble des boucles de gameplay au service d’un engagement commun.
-            <br /><br />
             C’est cette complémentarité qui fait notre force et nous permet d’accompagner et de soutenir les autres.
           </P>
         </AboutCard>

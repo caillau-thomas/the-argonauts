@@ -59,6 +59,21 @@ const App = () => {
           projet est un site de fans et n'est en aucun cas affilié à Cloud
           Imperium Games.
         </Copyright>
+        <Copyright>
+          <a
+            href="https://caillau-thomas.github.io/portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              width:          '100%',
+              textAlign:      'center', 
+              textDecoration: 'none', 
+              color:          'inherit', 
+            }}
+          >
+    Site réalisé par M. Thomas CAILLAU
+          </a>
+        </Copyright>
       </Footer>
     </Layout>
   )
