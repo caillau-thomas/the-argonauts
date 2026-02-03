@@ -4,13 +4,14 @@ import Video from '/assets/videoplayback.mp4'
 
 import AboutComponent from '../../Components/About'
 import { AnimatedCounter } from '../../Components/AnimatedCounter.jsx'
+// import { SectionsTimeline } from '../../Components/SectionsTimeline.jsx'
+import { Branches } from '../../Components/Branches.jsx'
 import PhotoGallery from '../../Components/Gallery.jsx'
 import {
-  H1, H2, H4, H6,
+  H1, H2, H4,
   H8, H9,
 } from '../../Components/GlobalStyle.jsx'
 import Recrutement from '../../Components/RecrutementComponent'
-import { SectionsTimeline } from '../../Components/SectionsTimeline.jsx'
 
 const Body = styled.div`
   --scroll-margin-top: 100px;
@@ -204,7 +205,8 @@ export const Home = () => {
           </H2>
         </SectionsHeading>
         <SectionsBottom>
-          <SectionsTimeline />
+          {/* <SectionsTimeline /> */}
+          <Branches />
         </SectionsBottom>
         {/* <SectionsHeading>
           <H6>
