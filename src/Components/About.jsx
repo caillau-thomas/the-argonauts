@@ -8,7 +8,7 @@ import { P } from './GlobalStyle'
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   justify-content: center;  
   @media (max-width: 1080px) {
     width: 100%;
@@ -33,9 +33,14 @@ const About = () => {
         <AboutCard>
           <P>
             Fondée en 2953, nous sommes une organisation spécialisée dans la sécurité et le sauvetage.
-            <br /><br />Notre efficacité repose sur la complémentarité de nos rôles, unissant l’expertise opérationnelle, 
-            logistique et technique au service d’un même engagement.<br /><br /> Fidèles à notre vocation, nous assurons 
-            la sécurité d’organisations partenaires, leur permettant de mener à bien leurs missions, même au travers des pires tempêtes.
+            Notre vocation est de protéger, soutenir et secourir les citoyens du Verse, quels qu’en soient les risques, même à travers les pires tempêtes.
+            <br /><br />
+            Mais être un Argonauts ne se limite pas au combat ou au sauvetage.
+            Au-delà des opérations de terrain, notre efficacité repose sur des rôles civils, industriels et logistiques, indispensables à la préparation, au soutien et à la pérennité de nos activités.
+            <br /><br />
+            Notre organisation adopte ainsi une approche multirôle, mobilisant l’ensemble des boucles de gameplay au service d’un engagement commun.
+            <br /><br />
+            C’est cette complémentarité qui fait notre force et nous permet d’accompagner et de soutenir les autres.
           </P>
         </AboutCard>
       </Layout>

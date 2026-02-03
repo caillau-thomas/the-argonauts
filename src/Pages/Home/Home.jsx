@@ -214,12 +214,12 @@ export const Home = () => {
           </H6>
         </SectionsHeading> */}
       </Sections>
-      <Gal id="Irl">
-        <PhotoGallery />
-      </Gal>
       <Join id="Enrol">
         <Recrutement />
       </Join>
+      <Gal id="Irl">
+        <PhotoGallery />
+      </Gal>
     </Body>
   )
 }

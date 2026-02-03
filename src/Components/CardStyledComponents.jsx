@@ -51,7 +51,7 @@ export const SecondaryJoinCard = styled.div`
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.191);
 
-  position: relative; 
+  position: relative;
   
   &::after {
     content: "";

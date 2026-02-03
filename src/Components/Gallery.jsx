@@ -50,6 +50,10 @@ const PhotoGallery = () => {
         AU DELA DU{' '}
           <span style={{ color: 'var(--color-tertiary)' }}>JEU</span>
         </H2>
+        <H6 style={{ textAlign: 'justify' }}>
+          <br />Bien plus qu’un groupe de jeu, nous dépassons le cadre virtuel en nous retrouvant lors d’événements IRL, notamment les Bar Citizen.
+Le but est de se retrouver le temps d’une soirée, de partager ensemble, mais aussi avec d’autres organisations francophones !<br /><br /> 
+        </H6>
       </div>
       <div style={gridStyle}>
         {photos.map((photo, index) => (
@@ -63,9 +67,6 @@ const PhotoGallery = () => {
           </div>
         ))}
       </div>
-      <H6>
-        <br />Evénements IRL et Bar Citizens
-      </H6>
     </div>
   )
 }

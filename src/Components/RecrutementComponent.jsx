@@ -166,7 +166,7 @@ const Recrutement = () => {
           </HeadingContainer>
           <HeadingContainer>
             <H2>REJOINGNEZ NOUS</H2>
-            <H5>FAITES PARTIE D'UNE AVENTURE HUMAINE</H5>
+            <H5>DEVENEZ UN ARGONAUTS !</H5>
           </HeadingContainer>
         </ContainerTopContainer>
         <HeadingContainer />
