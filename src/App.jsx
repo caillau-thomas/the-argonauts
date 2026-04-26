@@ -6,7 +6,6 @@ import { AnimatedMenu } from './Components/AnimatedMenu.jsx'
 import { BurgerIcon } from './Components/BurgerIcon.jsx'
 import {
   Button,
-  Copyright,
   Footer,
   Header,
   HeaderCentre,
@@ -53,27 +52,66 @@ const App = () => {
       <Outlet />
       <Footer>
         <Logo image="made-by-the-community-logo.jpg" />
-        <Copyright>
-          © 2025 Argonauts - Star Citizen®, Roberts Space Industries® et Cloud
-          Imperium® sont des marques déposées de Cloud Imperium Rights LLC. Ce
-          projet est un site de fans et n'est en aucun cas affilié à Cloud
-          Imperium Games.
-        </Copyright>
-        <Copyright>
-          <a
-            href="https://caillau-thomas.github.io/portfolio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              width:          '100%',
-              textAlign:      'center', 
-              textDecoration: 'none', 
-              color:          'inherit', 
-            }}
-          >
-    Site réalisé par M. Thomas CAILLAU
-          </a>
-        </Copyright>
+        <div className="footer-content">
+          <div className="footer-links">
+            <a
+              href="https://robertsspaceindustries.com/en/orgs/ONU"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color:          '#ffffff',
+                textDecoration: 'none',
+                borderBottom:   '1px solid transparent',
+                transition:     'all 0.3s ease',
+              }}
+              onMouseEnter={e => e.target.style.borderBottom = '1px solid #ffffff'}
+              onMouseLeave={e => e.target.style.borderBottom = '1px solid transparent'}
+            >
+              Page RSI
+            </a>
+            <a
+              href="https://discord.gg/TmKrUHjB65"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color:          '#ffffff',
+                textDecoration: 'none',
+                borderBottom:   '1px solid transparent',
+                transition:     'all 0.3s ease',
+              }}
+              onMouseEnter={e => e.target.style.borderBottom = '1px solid #ffffff'}
+              onMouseLeave={e => e.target.style.borderBottom = '1px solid transparent'}
+            >
+              Discord
+            </a>
+          </div>
+
+          <div className="footer-prevention">
+            ©2026 Argonauts - Star Citizen®, Roberts Space Industries® et 
+            Cloud Imperium® sont des marques déposées de Cloud Imperium Rights 
+            LLC. Ce projet est un site de fans et n'est en aucun cas affilié à 
+            Cloud Imperium Games.
+          </div>
+
+          <div className="footer-credit">
+            Site créé par <strong>Thomas C.   </strong>{' '}
+            <a
+              href="https://caillau-thomas.github.io/portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color:          '#ffffff',
+                textDecoration: 'none',
+                borderBottom:   '1px solid transparent',
+                transition:     'all 0.3s ease',
+              }}
+              onMouseEnter={e => e.target.style.borderBottom = '1px solid #ffffff'}
+              onMouseLeave={e => e.target.style.borderBottom = '1px solid transparent'}
+            >
+              Portfolio
+            </a>
+          </div>
+        </div>
       </Footer>
     </Layout>
   )

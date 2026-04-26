@@ -192,16 +192,16 @@ export const Home = () => {
           <AboutComponent />
         </AboutContent>
         <AboutBottom>
-          <AnimatedCounter endNumber={14} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
+          <AnimatedCounter endNumber={12} title="MEMBRES" prefix="+" icon={<img style={{ height: '100%' }} src="/membres.png" />} />
           <AnimatedCounter endNumber={140} title="VAISSEAUX" prefix="+" icon={<img style={{ height: '100%' }} src="/vaisseau.png" />} />
-          <AnimatedCounter endNumber={50} title="ASSISTANCES" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />} />
+          <AnimatedCounter endNumber={50} title="INTERVENTIONS" prefix="+" icon={<img style={{ height: '100%' }} src="/ope.png" />} />
         </AboutBottom>
       </About>
       <Sections id="Sections" style={{ gridTemplateRows: 'max-content 1fr' }}>
         <SectionsHeading>
           <H2>
             DECOUVREZ NOS{' '}
-            <span style={{ color: 'var(--color-tertiary)' }}>BRANCHES</span>
+            <span style={{ color: 'var(--color-tertiary)' }}>SECTIONS</span>
           </H2>
         </SectionsHeading>
         <SectionsBottom>

@@ -43,10 +43,10 @@ export const Branches = () => {
     <Layout>
       <AboutCard>
         <H6 style={{ textAlign: 'justify' }}>
-          Notre organisation est divisée en deux branches : la Réponse à incidents, 
-          qui mène les missions de sécurité et de sauvetage, et le Soutien logistique, 
-          qui assure notre autonomie. On retrouve au sein de ces deux branches différents 
-          groupes spécialisés par boucle de gameplay. <br /><br />
+          Notre organisation se structure en deux sections complémentaires : 
+          le service action, dédié aux interventions, et la section d’appui, 
+          qui garantit notre autonomie. Chacune regroupe des groupe spécialisées, 
+          organisées par boucles de gameplay. <br /><br />
         </H6>
       </AboutCard>
       <div className="description">

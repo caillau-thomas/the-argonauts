@@ -104,7 +104,7 @@ export const AnimatedMenu = ({ open, onClose }) => {
           L'ORGANISATION
         </MenuLink>
         <MenuLink href="#Sections" variants={linkVariants} onClick={onClose}>
-          NOS BRANCHES
+          NOS SECTIONS
         </MenuLink>
         <MenuLink href="#Irl" variants={linkVariants} onClick={onClose}>
           AU DELA DU JEU

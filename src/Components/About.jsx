@@ -32,13 +32,14 @@ const About = () => {
       <Layout>
         <AboutCard>
           <P>
-            Fondée en 2953, nous sommes une organisation spécialisée dans la sécurité et le sauvetage.
-            Notre vocation est de protéger, soutenir et secourir les citoyens du Verse, quels qu’en soient les risques, même à travers les pires tempêtes.
+            Fondée en 2953, nous sommes une force de réaction rapide, capable d’intervenir dans des situations critiques et variées.
+            Notre vocation est protéger et secourir les citoyens du Verse, quelles qu'en soient les risques.
             <br /><br />
-            Mais être un Argonauts ne se limite pas au combat ou au sauvetage.
-            Au-delà des opérations de terrain, notre efficacité repose sur des rôles civils, industriels et logistiques, indispensables à la préparation, au soutien et à la pérennité de nos activités.
+            Mais être un Argonaut ne se limite pas aux interventions.
+            Au-delà des opérations de terrain, notre efficacité repose sur des rôles civils, industriels et logistiques, 
+            indispensables à la préparation, au soutien et à la pérennité de nos activités.
+            Notre organisation adopte une approche multirôle, mobilisant l’ensemble des boucles de gameplay au service d’un engagement commun.
             <br /><br />
-            Notre organisation adopte ainsi une approche multirôle, mobilisant l’ensemble des boucles de gameplay au service d’un engagement commun.
             C’est cette complémentarité qui fait notre force et nous permet d’accompagner et de soutenir les autres.
           </P>
         </AboutCard>
@@ -48,3 +49,4 @@ const About = () => {
 }
 
 export default About
+

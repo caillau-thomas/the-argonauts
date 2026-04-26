@@ -49,20 +49,94 @@ export const HeaderCentre = styled.div`
 `
 
 export const Footer = styled.div`
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 999;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-s);
   background-color: black;
   color: var(--color-text-secondary);
-  padding: var(--space-s);
-`
+  padding: 40px 20px 20px;
+  margin-top: auto;
 
-export const Copyright = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--space-s);
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Augmenté pour mobile */
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center; /* Centré par défaut */
+    width: 100%;
+  }
+
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 16px; /* Plus de padding pour mobile */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    display: inline-block; /* Important pour le clic */
+    min-height: 10px; /* Hauteur minimale pour mobile */
+    line-height: 1.4;
+  }
+
+  .footer-links a:hover,
+  .footer-links a:active,
+  .footer-links a:focus {
+    color: #6f4caf;
+    border-bottom: 2px solid #4CAF50;
+  }
+
+  .footer-prevention {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .footer-credit {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 16px;
+    color: #888;
+    width: 100%;
+  }
+
+  .footer-credit a {
+    color: #ffffff !important;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 15px 20px;
+    
+    .footer-links {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      font-size: 20px;
+      padding: 14px 20px; 
+      flex: 1;
+      max-width: 80px;
+      text-align: center;
+    }
+  }
 `
 
 export const HomeIcon = styled.div`
