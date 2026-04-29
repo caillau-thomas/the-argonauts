@@ -34,7 +34,7 @@ const About = () => {
           <P>
             Fondée en 2953, nous sommes une organisation spécialisée dans les opérations de sécurité et de 
             sauvetage, capable d'intervenir dans des situations critiques et variées.
-            Notre vocation est protéger et secourir les citoyens du Verse, quelles qu'en soient les risques.
+            Notre vocation est de protéger et secourir les citoyens du Verse, quelles qu'en soient les risques.
             <br /><br />
             Mais être un Argonaut ne se limite pas aux interventions.
             Au-delà des opérations de terrain, notre efficacité repose sur des rôles civils, industriels et logistiques, 
