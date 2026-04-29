@@ -32,7 +32,8 @@ const About = () => {
       <Layout>
         <AboutCard>
           <P>
-            Fondée en 2953, nous sommes une force de réaction rapide, capable d’intervenir dans des situations critiques et variées.
+            Fondée en 2953, nous sommes une organisation spécialisée dans les opérations de sécurité et de 
+            sauvetage, capable d'intervenir dans des situations critiques et variées.
             Notre vocation est protéger et secourir les citoyens du Verse, quelles qu'en soient les risques.
             <br /><br />
             Mais être un Argonaut ne se limite pas aux interventions.
