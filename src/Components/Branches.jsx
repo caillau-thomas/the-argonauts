@@ -45,8 +45,8 @@ export const Branches = () => {
         <H6 style={{ textAlign: 'justify' }}>
           Notre organisation se structure en deux sections complémentaires : 
           le section d'interventions (S.I), dédiée aux opérations, et la section d’appui, 
-          qui garantit notre autonomie. Chacune regroupe des groupe spécialisées, 
-          organisées par boucles de gameplay. <br /><br />
+          qui garantit notre autonomie. Chacune est constituée de groupes spécialisés, 
+          organisés par boucles de gameplay. <br /><br />
         </H6>
       </AboutCard>
       <div className="description">
